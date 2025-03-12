@@ -22,7 +22,7 @@ public class FuncionActualizar {
         juego.cartasRestantes.setText(juego.numCartasRestantes + "");
     }
     //Función para comprobar el número de vidas restantes.
-    private void comprobarVidas(Juego juego){
+    public static void comprobarVidas(Juego juego){
         //Si al vida supera las vidas máximas, se pondrá a estas automáticamente.
         if (juego.vidas > juego.vidaMaxima){
             juego.vidas = juego.vidaMaxima;

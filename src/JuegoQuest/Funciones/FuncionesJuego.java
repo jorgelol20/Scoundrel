@@ -31,7 +31,7 @@ public class FuncionesJuego {
     }
     public static void funcionCurar(Juego juego, Carta cartaCuracion){
         System.out.println(juego.curacionDisponible);
-        if (juego.curacionDisponible && juego.vidas != 20) {
+        if (juego.curacionDisponible && juego.vidaMaxima != juego.vidas) {
             juego.vidas += cartaCuracion.getValorCarta().valor;
             juego.textoLogs += "Te curaste "+ cartaCuracion.getValorCarta().valor+"\n";
         }else{

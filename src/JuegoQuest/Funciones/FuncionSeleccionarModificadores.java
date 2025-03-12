@@ -12,29 +12,31 @@ import java.awt.event.ActionListener;
 public class FuncionSeleccionarModificadores {
     private JPanel panelModificadores;
     private JButton selecMod1;
+    private Modificador mod1;
     private JButton selecMod2;
+    private Modificador mod2;
     private JButton selecMod3;
+    private Modificador mod3;
     private JLabel nombreMod1;
     private JLabel nombreMod2;
     private JLabel nombreMod3;
     private JLabel descripcionMod1;
     private JLabel descripcionMod2;
     private JLabel descripcionMod3;
+    private JButton saltarButton;
+
     public FuncionSeleccionarModificadores(Juego juego) {
         JFrame frame2 = new JFrame("Modificadores");
-        frame2.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        frame2.setIconImage(Main.frame.getIconImage());
+        frame2.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         frame2.setBounds(0,0, 1300, 768);
-        frame2.setLocationRelativeTo(Main.frame);
         frame2.setUndecorated(true);
+        frame2.setLocationRelativeTo(Main.frame);
         frame2.setContentPane(panelModificadores);
         frame2.setVisible(true);
-        int[] numModificadores = new int[Modificador.modificadores.size()];
-        for(int i = 0; i< Modificador.modificadores.size(); i++) {
-            numModificadores[i] = (int) (Math.random() * Modificador.modificadores.size());
-        }
-        Modificador mod1 = Modificador.modificadores.get(numModificadores[0]);
-        Modificador mod2 = Modificador.modificadores.get(numModificadores[1]);
-        Modificador mod3 = Modificador.modificadores.get(numModificadores[2]);
+        mod1 = new Modificador(Modificador.obtenerModificador());
+        mod2 = new Modificador(Modificador.obtenerModificador());
+        mod3 = new Modificador(Modificador.obtenerModificador());
         nombreMod1.setText(mod1.nombre);
         nombreMod2.setText(mod2.nombre);
         nombreMod3.setText(mod3.nombre);
@@ -45,27 +47,33 @@ public class FuncionSeleccionarModificadores {
         selecMod1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                aplicar(juego, mod1);
+                FuncionSeleccionarModificadores.aplicar(juego, mod1);
                 frame2.dispose();
             }
         });
         selecMod2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                aplicar(juego, mod2);
+                FuncionSeleccionarModificadores.aplicar(juego, mod2);
                 frame2.dispose();
             }
         });
         selecMod3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                aplicar(juego, mod3);
+                FuncionSeleccionarModificadores.aplicar(juego, mod3);
+                frame2.dispose();
+            }
+        });
+        saltarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
                 frame2.dispose();
             }
         });
     }
-    public void aplicar(Juego juego, Modificador modificador) {
-        modificador.aplicarModificador(juego);
-        juego.mainPanel.repaint();
+    public static void aplicar(Juego juego, Modificador modificador) {
+        Modificador.aplicarModificador(modificador,juego);
+
     }
 }

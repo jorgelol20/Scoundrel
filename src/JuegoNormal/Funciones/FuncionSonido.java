@@ -58,7 +58,7 @@ public class FuncionSonido {
                         FloatControl controlVolumen = (FloatControl) reproductor.getControl(FloatControl.Type.MASTER_GAIN);
                         float min = controlVolumen.getMinimum(); // Volumen mínimo en dB
                         float max = 0.0f; // Volumen máximo en dB (normal)
-                        float volumenDB = min + (max - min) * 0.99f;
+                        float volumenDB = min + (max - min) * 0.5f;
                         controlVolumen.setValue(volumenDB);
                         reproductor.start();
                         while (reproductor.isRunning()) {
