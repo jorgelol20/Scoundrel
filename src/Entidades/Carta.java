@@ -1,5 +1,5 @@
 package Entidades;
-import Funciones.FuncionesInicio;
+import JuegoNormal.Funciones.FuncionesInicio;
 
 public class Carta {
     public enum Palo{

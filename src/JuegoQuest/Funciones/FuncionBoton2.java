@@ -1,9 +1,8 @@
-package Funciones;
+package JuegoQuest.Funciones;
 
-import JuegoPrincipal.Juego;
+import JuegoQuest.Juego;
 
-import static Funciones.FuncionesJuego.*;
-import static JuegoPrincipal.Juego.*;
+import static JuegoQuest.Funciones.FuncionesJuego.*;
 
 public class FuncionBoton2 {
     public static void funcionBoton(Juego juego){

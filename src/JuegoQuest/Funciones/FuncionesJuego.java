@@ -1,9 +1,8 @@
-package Funciones;
+package JuegoQuest.Funciones;
 
 import Entidades.Carta;
-import JuegoPrincipal.Juego;
-import JuegoPrincipal.Juego.*;
-
+import JuegoQuest.Juego.SonidosJuego;
+import JuegoQuest.Juego;
 
 import javax.swing.*;
 
@@ -28,7 +27,7 @@ public class FuncionesJuego {
                         + cartaArmaSeleccionada.getNombreCarta() + " y no \nrecibiste daño\n ";
             }
         }
-        new FuncionSonido(SonidosJuego.GirarCarta).reproducirSonido();
+        new FuncionSonido(Juego.SonidosJuego.GirarCarta).reproducirSonido();
     }
     public static void funcionCurar(Juego juego, Carta cartaCuracion){
         System.out.println(juego.curacionDisponible);
@@ -40,7 +39,7 @@ public class FuncionesJuego {
         }
         juego.curacionDisponible = false;
 
-        new FuncionSonido(SonidosJuego.GirarCarta).reproducirSonido();
+        new FuncionSonido(Juego.SonidosJuego.GirarCarta).reproducirSonido();
     }
     public static void funcionArma(Juego juego, JButton cartaBoton, Carta cartaArma){
         juego.cartaArmaSeleccionadaLabel.setIcon(cartaBoton.getIcon());
@@ -51,6 +50,6 @@ public class FuncionesJuego {
         juego.ultimoEnemigoAsimilado = null;
         juego.ultimoEnemigoAsimiladoLabel.setIcon(null);
         juego.enemigoMuyFuerte = false;
-        new FuncionSonido(SonidosJuego.GirarCarta).reproducirSonido();
+        new FuncionSonido(Juego.SonidosJuego.GirarCarta).reproducirSonido();
     }
 }

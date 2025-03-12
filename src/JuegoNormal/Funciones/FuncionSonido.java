@@ -1,6 +1,6 @@
-package Funciones;
+package JuegoNormal.Funciones;
 
-import static JuegoPrincipal.Juego.*;
+import static JuegoNormal.Juego.*;
 
 import javax.sound.sampled.*;
 import java.io.File;
@@ -58,7 +58,7 @@ public class FuncionSonido {
                         FloatControl controlVolumen = (FloatControl) reproductor.getControl(FloatControl.Type.MASTER_GAIN);
                         float min = controlVolumen.getMinimum(); // Volumen mínimo en dB
                         float max = 0.0f; // Volumen máximo en dB (normal)
-                        float volumenDB = min + (max - min) * 0.5f;
+                        float volumenDB = min + (max - min) * 0.99f;
                         controlVolumen.setValue(volumenDB);
                         reproductor.start();
                         while (reproductor.isRunning()) {

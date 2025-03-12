@@ -1,8 +1,7 @@
-package Funciones;
-import static Funciones.FuncionesJuego.*;
-import static JuegoPrincipal.Juego.*;
+package JuegoNormal.Funciones;
+import static JuegoNormal.Funciones.FuncionesJuego.*;
 
-import JuegoPrincipal.Juego;
+import JuegoNormal.Juego;
 
 public class FuncionBoton4 {
     public static void funcionBoton(Juego juego){

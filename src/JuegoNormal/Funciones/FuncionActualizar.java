@@ -1,11 +1,10 @@
-package Funciones;
+package JuegoNormal.Funciones;
 
-import JuegoPrincipal.Juego;
-import JuegoPrincipal.Main;
-import JuegoPrincipal.MenuFin;
+import JuegoNormal.Juego;
+import Menus.Main;
+import Menus.MenuFin;
 
 import javax.swing.*;
-import java.awt.*;
 
 public class FuncionActualizar {
     public void actualizaciones(Juego juego) {
@@ -42,7 +41,7 @@ public class FuncionActualizar {
         }
         //Se la vida es menor o igual a 0, saldrá la pantalla de GameOver
         if (juego.vidas <= 0) {
-            MenuFin.llamarPantallaFinal(new MenuFin(),juego.victoria);
+            MenuFin.llamarPantallaFinal(new MenuFin(),juego.victoria, juego.juegoNormal);
         }
         juego.numVida.setText(juego.vidas + "");
     }

@@ -1,4 +1,6 @@
-package JuegoPrincipal;
+package Menus;
+
+import JuegoNormal.Juego;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -10,7 +12,8 @@ public class MenuFin extends JPanel {
     private JButton reintentarButton;
     private JButton salirButton;
     private JButton menuPrincipalButton;
-    public void pantallaFinal(boolean victoria){
+    private static boolean juegoNormal;
+    public void pantallaFinal(boolean victoria) {
         if(victoria){
             imagenFondo.setIcon(new ImageIcon("src/resources/sprites/victoria.png"));
         }else{
@@ -18,14 +21,23 @@ public class MenuFin extends JPanel {
         }
         Main.frame.setContentPane(this.mainPanel);
     }
-    public static void llamarPantallaFinal(MenuFin menuFin, Boolean victoria){
+    public static void llamarPantallaFinal(MenuFin menuFin, Boolean victoria, Boolean juegoNormalB) {
+        if (juegoNormalB) {
+            juegoNormal = true;
+        }else{
+            juegoNormal = false;
+        }
         menuFin.pantallaFinal(victoria);
     }
     public MenuFin() {
         reintentarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-               new Juego();
+                if(juegoNormal){
+                    new JuegoNormal.Juego();
+                }else{
+                    new JuegoQuest.Juego();
+                }
             }
         });
         menuPrincipalButton.addActionListener(new ActionListener() {

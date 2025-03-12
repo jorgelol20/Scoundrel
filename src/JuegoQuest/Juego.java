@@ -1,19 +1,20 @@
-package JuegoPrincipal;
+package JuegoQuest;
 
-import Funciones.*;
+import Entidades.Carta;
+import Entidades.Modificador;
+import JuegoQuest.Funciones.*;
+import Menus.Main;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
-import Funciones.FuncionActualizar;
-import Entidades.Carta;
-
 public class Juego extends JFrame {
     private FuncionActualizar funcionActualizar = new FuncionActualizar();
     public JPanel mainPanel;
     public static ArrayList<Carta> cartasMazo = new ArrayList<Carta>();
+    public static ArrayList<Modificador> modificadoresMazo = new ArrayList<Modificador>();
     public JLabel mazo;
     private Carta cartaSeleccionada;
     public JLabel cartaArmaSeleccionadaLabel;
@@ -37,16 +38,21 @@ public class Juego extends JFrame {
     public Carta enemigoActual;
     public boolean enemigoMuyFuerte = false;
     public int vidas = 20;
+    public int vidaMaxima = 20;
     public boolean curacionDisponible = true;
     public JTextArea log;
     public JLabel ultimoEnemigoAsimiladoLabel;
     public Carta ultimoEnemigoAsimilado;
     public String textoLogs = "";
     public boolean victoria = false;
+    public boolean juegoNormal = false;
 
     public Juego() {
         Main.frame.setContentPane(mainPanel);
-        FuncionesInicio.crearBaraja();
+        modificadoresMazo.clear();
+        Modificador.cargarModificadores();
+        FuncionesInicio.crearBaraja(this);
+        new FuncionSeleccionarModificadores(this);
         obtener4Cartas();
         funcionActualizar.actualizaciones(this);
         carta1Boton.addActionListener(new ActionListener() {

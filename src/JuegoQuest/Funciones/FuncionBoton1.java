@@ -1,13 +1,6 @@
-package Funciones;
-
-import JuegoPrincipal.Juego;
-
-import static JuegoPrincipal.Juego.*;
-import JuegoPrincipal.*;
-import Entidades.*;
-import static Funciones.FuncionesJuego.*;
-
-import javax.swing.*;
+package JuegoQuest.Funciones;
+import JuegoQuest.Juego;
+import static JuegoQuest.Funciones.FuncionesJuego.*;
 
 public class FuncionBoton1 {
     public static void funcionBoton(Juego juego) {

@@ -1,6 +1,7 @@
-package JuegoPrincipal;
+package Menus;
 
-import Funciones.FuncionSonido;
+import JuegoNormal.Funciones.FuncionSonido;
+import JuegoNormal.Juego;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -34,13 +35,13 @@ public class Main {
         empezarPartidaBoton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new Juego();
+                new JuegoNormal.Juego();
             }
         });
         empezarQuestBoton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                new JuegoQuest.Juego();
             }
         });
         salirBoton.addActionListener(new ActionListener() {
