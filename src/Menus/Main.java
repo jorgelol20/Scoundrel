@@ -1,7 +1,6 @@
 package Menus;
 
 import JuegoNormal.Funciones.FuncionSonido;
-import JuegoNormal.Juego;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -31,6 +30,8 @@ public class Main {
     private JButton empezarQuestBoton;
     private JButton salirBoton;
     private JPanel panelMenu;
+    private JButton aprenderAJugarButton;
+
     public Main() {
         empezarPartidaBoton.addActionListener(new ActionListener() {
             @Override
@@ -48,6 +49,12 @@ public class Main {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.exit(0);
+            }
+        });
+        aprenderAJugarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
             }
         });
     }

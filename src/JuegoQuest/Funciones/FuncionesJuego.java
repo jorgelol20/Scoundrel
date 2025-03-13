@@ -9,6 +9,9 @@ import javax.swing.*;
 public class FuncionesJuego {
     public static void funcionAtaque(Juego juego, Carta cartaArmaSeleccionada, boolean enemigoMuyFuerte, Carta cartaEnemigo, JButton cartaBoton){
         int danyoTotal = calcularDanyo(cartaEnemigo, juego);
+        if (cartaEnemigo.getNombreCarta().contains("ReyPica")) {
+
+        }
         if (cartaArmaSeleccionada == null || (enemigoMuyFuerte && cartaEnemigo.getValorCarta().valor >= juego.ultimoEnemigoCarta.getValorCarta().valor)) {
             juego.vidas -= danyoTotal;
             juego.textoLogs += "Recibiste " + danyoTotal + " de puro pecho\n";
@@ -33,8 +36,8 @@ public class FuncionesJuego {
     }
     public static void funcionCurar(Juego juego, Carta cartaCuracion){
         if (juego.curacionDisponible && juego.vidaMaxima != juego.vidas) {
-            juego.vidas += cartaCuracion.getValorCarta().valor;
-            juego.textoLogs += "Te curaste "+ cartaCuracion.getValorCarta().valor+"\n";
+            juego.vidas += cartaCuracion.getValorCarta().valor + juego.efectoExtraCuracion;
+            juego.textoLogs += "Te curaste "+ (cartaCuracion.getValorCarta().valor+juego.efectoExtraCuracion)+"\n";
         }else{
             juego.textoLogs += "No te curaste y tiraste la poción \n";
         }

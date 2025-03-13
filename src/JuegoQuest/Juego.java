@@ -42,15 +42,29 @@ public class Juego extends JFrame {
     public boolean curacionDisponible = true;
     public JTextArea log;
     public JLabel ultimoEnemigoAsimiladoLabel;
+    public JLabel mod1;
+    public JLabel mod2;
+    public JLabel mod3;
+    public JLabel mod4;
+    public JLabel mod5;
+    public JLabel mod6;
+    public JLabel mod7;
+    public JLabel mod8;
+    public JLabel mod9;
+    public JLabel mod10;
     public Carta ultimoEnemigoAsimilado;
     public String textoLogs = "";
     public boolean victoria = false;
     public boolean juegoNormal = false;
+    public boolean questDracula = false;
+    public int posicionModDracula = 0;
 
+    public int contadorModificador = 1;
     public int multiplicadorDanyoTreboles = 1;
     public int danyoExtraTreboles = 0;
     public int multiplicadorDanyoPicas = 1;
     public int danyoExtraPicas = 0;
+    public int efectoExtraCuracion = 0;
 
     public Juego() {
         Main.frame.setContentPane(mainPanel);

@@ -8,7 +8,7 @@ public class FuncionBoton1 {
         if (juego.carta1.getNombreCarta().contains("Diamante")) {
             funcionArma(juego, juego.carta1Boton,juego.carta1);
         } else if (juego.carta1.getNombreCarta().contains("Pica") || juego.carta1.getNombreCarta().contains("Trebol")) {
-            funcionAtaque(juego, juego.cartaArmaSeleccionada, juego.enemigoMuyFuerte, juego.enemigoActual, juego.carta1Boton);
+            funcionAtaque(juego, juego.cartaArmaSeleccionada, juego.enemigoMuyFuerte, juego.carta1, juego.carta1Boton);
         } else if (juego.carta1.getNombreCarta().contains("Corazon")) {
             funcionCurar(juego, juego.carta1);
         }

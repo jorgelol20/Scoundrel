@@ -10,7 +10,6 @@ public class FuncionActualizar {
     public void actualizaciones(Juego juego) {
         juego.botonAccion.setIcon(new ImageIcon(Juego.iconosBoton.Seleccionar.iconosBoton));
         juego.botonAccion.setRolloverIcon(new ImageIcon(Juego.iconosBoton.Seleccionar.iconosBoton));
-        juego.enemigoMuyFuerte = false;
         comprobarVidas(juego);
         desactivarBotones(juego);
         comprobacionesCartas(juego);

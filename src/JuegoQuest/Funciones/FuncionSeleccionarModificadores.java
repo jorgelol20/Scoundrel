@@ -24,6 +24,9 @@ public class FuncionSeleccionarModificadores {
     private JLabel descripcionMod2;
     private JLabel descripcionMod3;
     private JButton saltarButton;
+    private JLabel iconoMod1;
+    private JLabel iconoMod2;
+    private JLabel iconoMod3;
 
     public FuncionSeleccionarModificadores(Juego juego) {
         JFrame frame2 = new JFrame("Modificadores");
@@ -43,6 +46,9 @@ public class FuncionSeleccionarModificadores {
         descripcionMod1.setText(mod1.descripcion);
         descripcionMod2.setText(mod2.descripcion);
         descripcionMod3.setText(mod3.descripcion);
+        iconoMod1.setIcon(new ImageIcon(mod1.icono));
+        iconoMod2.setIcon(new ImageIcon(mod2.icono));
+        iconoMod3.setIcon(new ImageIcon(mod3.icono));
         panelModificadores.setLayout(new BorderLayout());
         selecMod1.addActionListener(new ActionListener() {
             @Override

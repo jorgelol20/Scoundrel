@@ -39,7 +39,7 @@
               <text value=""/>
             </properties>
           </component>
-          <component id="2b996" class="javax.swing.JLabel">
+          <component id="2b996" class="javax.swing.JLabel" binding="iconoMod1">
             <constraints>
               <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="2" fill="0" indent="0" use-parent-layout="false">
                 <minimum-size width="64" height="64"/>
@@ -130,7 +130,7 @@
               <text value="Label"/>
             </properties>
           </component>
-          <component id="403c0" class="javax.swing.JLabel">
+          <component id="403c0" class="javax.swing.JLabel" binding="iconoMod2">
             <constraints>
               <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="2" fill="0" indent="0" use-parent-layout="false">
                 <minimum-size width="64" height="64"/>
@@ -198,7 +198,7 @@
               <text value="Label"/>
             </properties>
           </component>
-          <component id="a8b34" class="javax.swing.JLabel">
+          <component id="a8b34" class="javax.swing.JLabel" binding="iconoMod3">
             <constraints>
               <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="2" fill="0" indent="0" use-parent-layout="false">
                 <minimum-size width="64" height="64"/>
