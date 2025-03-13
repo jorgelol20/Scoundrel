@@ -11,7 +11,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 public class Juego extends JFrame {
-    private FuncionActualizar funcionActualizar = new FuncionActualizar();
+    public FuncionActualizar funcionActualizar = new FuncionActualizar();
     public JPanel mainPanel;
     public static ArrayList<Carta> cartasMazo = new ArrayList<Carta>();
     public static ArrayList<Modificador> modificadoresMazo = new ArrayList<Modificador>();
@@ -183,7 +183,6 @@ public class Juego extends JFrame {
                 } else if (cartaSeleccionada == carta4) {
                     FuncionBoton4.funcionBoton(Juego.this);
                 }
-                funcionActualizar.actualizaciones(Juego.this);
             }
         });
     }

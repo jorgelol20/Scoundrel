@@ -8,11 +8,12 @@ public class FuncionBoton3{
         if (juego.carta3.getNombreCarta().contains("Diamante")) {
             funcionArma(juego, juego.carta3Boton,juego.carta3);
         } else if (juego.carta3.getNombreCarta().contains("Pica") || juego.carta3.getNombreCarta().contains("Trebol")) {
-            funcionAtaque(juego, juego.cartaArmaSeleccionada, juego.enemigoMuyFuerte, juego.carta3, juego.carta3Boton);
+            funcionAtaque(juego, juego.cartaArmaSeleccionada, juego.enemigoMuyFuerte, juego.enemigoActual, juego.carta3Boton);
         } else if (juego.carta3.getNombreCarta().contains("Corazon")) {
             funcionCurar(juego, juego.carta3);
         }
         moverCartas(juego);
+        juego.funcionActualizar.actualizaciones(juego);
     }
 
     private static void moverCartas(Juego juego){
