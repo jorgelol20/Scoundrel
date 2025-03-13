@@ -1,6 +1,7 @@
 package JuegoQuest.Funciones;
 
 import Entidades.Carta;
+import Entidades.Modificador;
 import JuegoQuest.Juego.SonidosJuego;
 import JuegoQuest.Juego;
 
@@ -10,7 +11,7 @@ public class FuncionesJuego {
     public static void funcionAtaque(Juego juego, Carta cartaArmaSeleccionada, boolean enemigoMuyFuerte, Carta cartaEnemigo, JButton cartaBoton){
         int danyoTotal = calcularDanyo(cartaEnemigo, juego);
         if (cartaEnemigo.getNombreCarta().contains("ReyPica")) {
-
+            Modificador.questDracula(juego);
         }
         if (cartaArmaSeleccionada == null || (enemigoMuyFuerte && cartaEnemigo.getValorCarta().valor >= juego.ultimoEnemigoCarta.getValorCarta().valor)) {
             juego.vidas -= danyoTotal;

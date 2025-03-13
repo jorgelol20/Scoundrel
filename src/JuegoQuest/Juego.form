@@ -70,7 +70,7 @@
       </vspacer>
       <component id="c2574" class="javax.swing.JLabel" binding="mazo">
         <constraints>
-          <grid row="1" column="1" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+          <grid row="1" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
             <minimum-size width="210" height="256"/>
             <preferred-size width="210" height="256"/>
             <maximum-size width="210" height="256"/>
@@ -426,6 +426,26 @@
         </constraints>
         <properties>
           <text value=""/>
+        </properties>
+      </component>
+      <component id="adc19" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Arial Black" size="12"/>
+          <foreground color="-1"/>
+          <text value="RONDA: "/>
+        </properties>
+      </component>
+      <component id="8907e" class="javax.swing.JLabel" binding="numRonda">
+        <constraints>
+          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Arial Black" size="14"/>
+          <foreground color="-1"/>
+          <text value="Label"/>
         </properties>
       </component>
     </children>

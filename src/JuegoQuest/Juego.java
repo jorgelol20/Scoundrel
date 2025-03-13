@@ -52,13 +52,14 @@ public class Juego extends JFrame {
     public JLabel mod8;
     public JLabel mod9;
     public JLabel mod10;
+    public JLabel numRonda;
     public Carta ultimoEnemigoAsimilado;
     public String textoLogs = "";
     public boolean victoria = false;
     public boolean juegoNormal = false;
     public boolean questDracula = false;
     public int posicionModDracula = 0;
-
+    public int contadorRonda = 1;
     public int contadorModificador = 1;
     public int multiplicadorDanyoTreboles = 1;
     public int danyoExtraTreboles = 0;
