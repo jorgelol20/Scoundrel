@@ -47,6 +47,11 @@ public class Juego extends JFrame {
     public boolean victoria = false;
     public boolean juegoNormal = false;
 
+    public int multiplicadorDanyoTreboles = 1;
+    public int danyoExtraTreboles = 0;
+    public int multiplicadorDanyoPicas = 1;
+    public int danyoExtraPicas = 0;
+
     public Juego() {
         Main.frame.setContentPane(mainPanel);
         modificadoresMazo.clear();
