@@ -99,6 +99,7 @@
             </constraints>
             <properties>
               <model>
+                <item value="0"/>
                 <item value="10"/>
                 <item value="20"/>
                 <item value="30"/>
@@ -110,7 +111,7 @@
                 <item value="90"/>
                 <item value="100"/>
               </model>
-              <selectedIndex value="4"/>
+              <selectedIndex value="5"/>
             </properties>
           </component>
           <component id="dbce5" class="javax.swing.JComboBox" binding="volumenSonidos">
@@ -119,6 +120,7 @@
             </constraints>
             <properties>
               <model>
+                <item value="0"/>
                 <item value="10"/>
                 <item value="20"/>
                 <item value="30"/>
@@ -130,7 +132,7 @@
                 <item value="90"/>
                 <item value="100"/>
               </model>
-              <selectedIndex value="4"/>
+              <selectedIndex value="5"/>
             </properties>
           </component>
           <component id="bbe6d" class="javax.swing.JLabel">

@@ -132,6 +132,8 @@ public class FuncionActualizar {
         if (juego.numCartasRestantes == 0 && juego.carta1 == null){
             FuncionesInicio.crearBaraja(juego);
             juego.contadorRonda++;
+            juego.obtener4Cartas();
+            actualizaciones(juego);
         }
     }
     public static void setNumCartas(Juego juego) {

@@ -38,8 +38,10 @@ public class Main {
         frame.setIconImage(new ImageIcon("src/resources/sprites/logoTemporal.png").getImage());
     }
     public Main() {
-        valorVolumenMusica = (float) Integer.parseInt((String) volumenMusica.getSelectedItem()) / 100;
-        valorVolumenSonidos = (float) Integer.parseInt((String) volumenSonidos.getSelectedItem()) / 100;
+        volumenSonidos.setSelectedIndex(Integer.parseInt(String.valueOf(valorVolumenSonidos*10f).replace(".0","")));
+        volumenSonidos.repaint();
+        volumenMusica.setSelectedIndex(Integer.parseInt(String.valueOf(valorVolumenSonidos*10f).replace(".0","")));
+        volumenMusica.repaint();
         musicaFondo.ponerMusica();
         empezarPartidaBoton.addActionListener(new ActionListener() {
             @Override
@@ -70,6 +72,7 @@ public class Main {
                 JOptionPane.showMessageDialog(panelMenu,"Los enemigos son las Picas y los Tréboles.\nEstos te harán el daño correspondiente\nal número asignado no teniendo diferencias entre\nellas excepto en el modo QUEST.","Enemigos",JOptionPane.INFORMATION_MESSAGE, new ImageIcon("src/resources/sprites/imagenesTutorial/imagen4.png"));
                 JOptionPane.showMessageDialog(panelMenu,"Durante cada ronda, podrás huir una vez\ndejando las cartas que hay al final\ndel mazo y sacando las 4 siguientes.\nUna vez hayas huido una vez, se \nbloqueará la opción hasta pasar la ronda.", "Huir",JOptionPane.INFORMATION_MESSAGE,new ImageIcon("src/resources/sprites/imagenesTutorial/imagen5.png"));
                 JOptionPane.showMessageDialog(panelMenu,"A la hora de defenderte, solo podrás\ndefenderte si el último enemigo enfrentado\n con tu arma es más debil que el nuevo.\nSi no se cumple esta condición\nrecibirás todo el daño del enemigo.","Defenderte",JOptionPane.INFORMATION_MESSAGE,new ImageIcon("src/resources/sprites/imagenesTutorial/imagen6.png"));
+                JOptionPane.showMessageDialog(panelMenu, "El modo QUEST es una variación del modo\nnormal donde tu objetivo es ganar\n10 partidas seguidas sin ser derrotado.\n¡Pero no te preocupes! Este modo\ncuenta con modificadores y mejoras\nque harán de la experiencia algo más\ndesafiante y divertida para quien busca desafios.","Modo QUEST",JOptionPane.INFORMATION_MESSAGE,new ImageIcon("src/resources/sprites/imagenesTutorial/imagen7.png"));
                 JOptionPane.showMessageDialog(panelMenu,"Gracias por jugar Scoundrel :)\nJorge: Programador\nAdrian: Diseñador gráfico","Fin tutorial",JOptionPane.INFORMATION_MESSAGE,new ImageIcon("src/resources/sprites/logoTemporal.png"));
             }
         });
