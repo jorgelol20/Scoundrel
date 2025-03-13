@@ -25,8 +25,8 @@ public class Main {
     private JButton aprenderAJugarButton;
     public static float valorVolumenMusica = 0.5f;
     public static float valorVolumenSonidos = 0.5f;
-    private JComboBox volumenSonidos;
-    private JComboBox volumenMusica;
+    private JSlider volumenSonidos;
+    private JSlider volumenMusica;
     private static FuncionSonido musicaFondo = new FuncionSonido();
 
     public static void main(String[] args) {
@@ -38,9 +38,13 @@ public class Main {
         frame.setIconImage(new ImageIcon("src/resources/sprites/logoTemporal.png").getImage());
     }
     public Main() {
-        volumenSonidos.setSelectedIndex(Integer.parseInt(String.valueOf(valorVolumenSonidos*10f).replace(".0","")));
+        volumenSonidos.setMaximum(100);
+        volumenSonidos.setMinimum(0);
+        volumenSonidos.setValue(Integer.parseInt(String.valueOf(valorVolumenSonidos*100f).replace(".0","")));
+        volumenMusica.setMaximum(100);
+        volumenMusica.setMinimum(0);
+        volumenMusica.setValue(Integer.parseInt(String.valueOf(valorVolumenSonidos*100f).replace(".0","")));
         volumenSonidos.repaint();
-        volumenMusica.setSelectedIndex(Integer.parseInt(String.valueOf(valorVolumenSonidos*10f).replace(".0","")));
         volumenMusica.repaint();
         musicaFondo.ponerMusica();
         empezarPartidaBoton.addActionListener(new ActionListener() {
@@ -76,10 +80,11 @@ public class Main {
                 JOptionPane.showMessageDialog(panelMenu,"Gracias por jugar Scoundrel :)\nJorge: Programador\nAdrian: Diseñador gráfico","Fin tutorial",JOptionPane.INFORMATION_MESSAGE,new ImageIcon("src/resources/sprites/logoTemporal.png"));
             }
         });
-        volumenMusica.addActionListener(new ActionListener() {
+
+        volumenMusica.addChangeListener(new ChangeListener() {
             @Override
-            public void actionPerformed(ActionEvent e) {
-                valorVolumenMusica = (float) Integer.parseInt((String) volumenMusica.getSelectedItem()) / 100;
+            public void stateChanged(ChangeEvent e) {
+                valorVolumenMusica = (float) volumenMusica.getValue() / 100;
                 float min = musicaFondo.controlVolumen.getMinimum(); // Volumen mínimo en dB
                 float max = 0.0f; // Volumen máximo en dB (normal)
                 float volumenDB;
@@ -87,10 +92,11 @@ public class Main {
                 musicaFondo.controlVolumen.setValue(volumenDB);
             }
         });
-        volumenSonidos.addActionListener(new ActionListener() {
+        volumenSonidos.addChangeListener(new ChangeListener() {
             @Override
-            public void actionPerformed(ActionEvent e) {
-                valorVolumenSonidos = (float) Integer.parseInt((String) volumenSonidos.getSelectedItem()) / 100;
+            public void stateChanged(ChangeEvent e) {
+                valorVolumenSonidos = (float)  volumenSonidos.getValue() / 100;
+
             }
         });
     }
