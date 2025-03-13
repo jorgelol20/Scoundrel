@@ -1,14 +1,10 @@
 package Entidades;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
-import java.util.HashMap;
 
 import JuegoQuest.Funciones.FuncionActualizar;
 import JuegoQuest.Juego;
-import JuegoQuest.Juego.*;
-import Menus.Main;
 
 import javax.swing.*;
 

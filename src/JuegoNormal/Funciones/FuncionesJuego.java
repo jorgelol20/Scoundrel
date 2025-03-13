@@ -22,10 +22,10 @@ public class FuncionesJuego {
                 juego.ultimoEnemigoCarta = cartaEnemigo;
                 juego.ultimoEnemigo.setIcon(cartaBoton.getIcon());
             } else if ((cartaEnemigo.getValorCarta().valor - juego.cartaArmaSeleccionada.getValorCarta().valor) <= 0) {
+                juego.textoLogs += "Te atacó " + cartaEnemigo.getNombreCarta() + " pero te defendiste \ncon "
+                        + cartaArmaSeleccionada.getNombreCarta() + " y no \nrecibiste daño\n";
                 juego.ultimoEnemigoCarta = cartaEnemigo;
                 juego.ultimoEnemigo.setIcon(cartaBoton.getIcon());
-                juego.textoLogs += "Te atacó " + cartaEnemigo.getNombreCarta() + " pero te defendiste \ncon "
-                        + cartaArmaSeleccionada.getNombreCarta() + " y no \nrecibiste daño\n ";
             }
         }
         new FuncionSonido(SonidosJuego.GirarCarta).reproducirSonido();

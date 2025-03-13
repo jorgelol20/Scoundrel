@@ -1,6 +1,7 @@
 package JuegoQuest.Funciones;
 import JuegoQuest.Juego;
 import JuegoQuest.Juego.*;
+import Menus.Main;
 
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
@@ -33,6 +34,12 @@ public class FuncionSonido {
                 public void run(){
                     try {
                         reproductor.open(reproducirAudio);
+                        FloatControl controlVolumen = (FloatControl) reproductor.getControl(FloatControl.Type.MASTER_GAIN);
+                        float min = controlVolumen.getMinimum(); // Volumen mínimo en dB
+                        float max = 0.0f; // Volumen máximo en dB (normal)
+                        float volumenDB;
+                        volumenDB = min + (max - min) * Main.valorVolumenSonidos;
+                        controlVolumen.setValue(volumenDB);
                         reproductor.start();
                         while (reproductor.isRunning()) {
 

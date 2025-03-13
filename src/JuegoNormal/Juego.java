@@ -227,11 +227,9 @@ public class Juego extends JFrame {
         } else {
             if (ultimoEnemigoCarta.getValorCarta().valor <= enemigoActual.getValorCarta().valor) {
                 botonAccion.setRolloverIcon(new ImageIcon(iconosBoton.AtacarSinArma.iconosBoton));
-                ultimoEnemigoAsimilado = enemigoActual;
                 enemigoMuyFuerte = true;
             } else {
                 botonAccion.setRolloverIcon(new ImageIcon(iconosBoton.AtacarConArma.iconosBoton));
-                ultimoEnemigoCarta = enemigoActual;
             }
         }
     }

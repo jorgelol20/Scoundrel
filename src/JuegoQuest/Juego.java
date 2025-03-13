@@ -42,17 +42,6 @@ public class Juego extends JFrame {
     public boolean curacionDisponible = true;
     public JTextArea log;
     public JLabel ultimoEnemigoAsimiladoLabel;
-    public JLabel mod1;
-    public JLabel mod2;
-    public JLabel mod3;
-    public JLabel mod4;
-    public JLabel mod5;
-    public JLabel mod6;
-    public JLabel mod7;
-    public JLabel mod8;
-    public JLabel mod9;
-    public JLabel mod10;
-    public JLabel numRonda;
     public Carta ultimoEnemigoAsimilado;
     public String textoLogs = "";
     public boolean victoria = false;
@@ -66,6 +55,17 @@ public class Juego extends JFrame {
     public int multiplicadorDanyoPicas = 1;
     public int danyoExtraPicas = 0;
     public int efectoExtraCuracion = 0;
+    public JLabel mod1;
+    public JLabel mod2;
+    public JLabel mod3;
+    public JLabel mod4;
+    public JLabel mod5;
+    public JLabel mod6;
+    public JLabel mod7;
+    public JLabel mod8;
+    public JLabel mod9;
+    public JLabel mod10;
+    public JLabel numRonda;
 
     public Juego() {
         Main.frame.setContentPane(mainPanel);
@@ -240,7 +240,7 @@ public class Juego extends JFrame {
             botonHuir.setIcon(new ImageIcon("src/resources/sprites/botones/BotonHuirBloqueado.png"));
             botonHuir.setRolloverEnabled(false);
             obtener4Cartas();
-            funcionActualizar.actualizaciones(Juego.this);
+            funcionActualizar.actualizaciones(this);
         }
     }
     //Función para comprobar el nuevo enemigo
@@ -250,11 +250,9 @@ public class Juego extends JFrame {
         } else {
             if (ultimoEnemigoCarta.getValorCarta().valor <= enemigoActual.getValorCarta().valor) {
                 botonAccion.setRolloverIcon(new ImageIcon(iconosBoton.AtacarSinArma.iconosBoton));
-                ultimoEnemigoAsimilado = enemigoActual;
                 enemigoMuyFuerte = true;
             } else {
                 botonAccion.setRolloverIcon(new ImageIcon(iconosBoton.AtacarConArma.iconosBoton));
-                ultimoEnemigoCarta = enemigoActual;
             }
         }
     }
