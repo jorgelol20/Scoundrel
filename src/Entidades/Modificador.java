@@ -22,6 +22,7 @@ public class Modificador {
         this.nombre = modificadorOriginal.nombre;
         this.descripcion = modificadorOriginal.descripcion;
         this.icono = modificadorOriginal.icono;
+        this.icono16 = modificadorOriginal.icono16;
         this.id = modificadorOriginal.id;
     }
 
@@ -51,13 +52,24 @@ public class Modificador {
         modificadores.add(new Modificador(TipoModificador.DEBUFF,"Que le corten la cabeza II","Pica -2 daño, Trébol +1 daño", null,7));
         modificadores.add(new Modificador(TipoModificador.DEBUFF,"Que le corten la cabeza III","Pica -3 daño, Trébol +1 daño", null,8));
         //Castelvania
-        modificadores.add(new Modificador(TipoModificador.DEBUFF, "¿Castelvania?", "Hasta matar al ReyPica, curaciones -1 (Mejora al matar)",null,9));
+        modificadores.add(new Modificador(TipoModificador.DEBUFF, "¿Castelvania?", "Hasta matar al ReyPica, curaciones -1   ",null,9));
         //Armas
         modificadores.add(new Modificador(TipoModificador.BUFF,"Kit Armamentístico I", "Obtienes un arma entre 2 y 4. Se añaden 3 enemigos débiles",null,10));
         modificadores.add(new Modificador(TipoModificador.BUFF,"Kit Armamentístico II", "Obtienes un arma entre 5 y 7. Se añaden 3 enemigos medios",null,11));
         modificadores.add(new Modificador(TipoModificador.BUFF,"Kit Armamentístico III", "Obtienes un arma entre 8 y 10. Se añaden 3 enemigos fuertes",null,12));
-        //
-
+        //Matadragones
+        modificadores.add(new Modificador(TipoModificador.QUEST,"A por el dragón","¿Lograrás matarlo?",null,13));
+        //Berserk
+        modificadores.add(new Modificador(TipoModificador.BUFF,"Berserk","Armas +3, Curaciones -4",null,14));
+        //Metabolistmo Rápido
+        modificadores.add(new Modificador(TipoModificador.BUFF,"Metabolismo Rápido","Puedes curarte tantas veces como quieras por ronda",null,15));
+        //Pies veloces
+        modificadores.add(new Modificador(TipoModificador.BUFF, "Pies veloces","Pudes huir hasta dos veces por turno",null,16));
+        //Clérigo
+        modificadores.add(new Modificador(TipoModificador.BUFF, "Clérigo","Curaciones +4, Armas -3",null,17));
+        //Maldición del perdido
+        modificadores.add(new Modificador(TipoModificador.DEBUFF,"Maldición del perdido", "No puedes huir durante el resto de la partida",null,18));
+        //¿Sans?
     }
     public static void aplicarModificador(Modificador modificador,Juego juego) {
         switch (modificador.id){
@@ -113,6 +125,27 @@ public class Modificador {
             case 12:
                 modArmas(juego, 10,8);
                 break;
+            case 13:
+                juego.questDragon = true;
+                break;
+            case 14:
+                juego.danyoExtraArmas += 3;
+                juego.efectoExtraCuracion -= 4;
+                break;
+            case 15:
+                juego.metabolismoRapido = true;
+                break;
+            case 16:
+                juego.huir = 2;
+                juego.contadorHuir += 1;
+                break;
+            case 17:
+                juego.efectoExtraCuracion += 4;
+                juego.danyoExtraArmas -= 3;
+                break;
+            case 18:
+                juego.maldicionDelPerdido = true;
+                break;
             default:
                 break;
         }
@@ -130,21 +163,24 @@ public class Modificador {
         if(modificador.nombre.contains("Castelvania")){
             juego.posicionModDracula = juego.contadorModificador;
         }
+        if(modificador.nombre.contains("A por el dragón")){
+            juego.posicionModDracula = juego.contadorModificador;
+        }
         switch (juego.contadorModificador){
             case 1:
-                juego.mod1.setIcon(new ImageIcon("src/resources/sprites/modificadores/MasVida1Pequeno.png"));
+                juego.mod1.setIcon(new ImageIcon(modificador.icono16));
                 juego.mod1.setToolTipText("<html><b>"+modificador.nombre+"</b><br>"+modificador.descripcion+"</html>");
                 break;
             case 2:
-                juego.mod2.setIcon(new ImageIcon("src/resources/sprites/modificadores/MasVida2Pequeno.png"));
+                juego.mod2.setIcon(new ImageIcon(modificador.icono16));
                 juego.mod2.setToolTipText("<html><b>"+modificador.nombre+"</b><br>"+modificador.descripcion+"</html>");
                 break;
             case 3:
-                juego.mod3.setIcon(new ImageIcon("src/resources/sprites/modificadores/MasVida3Pequeno.png"));
+                juego.mod3.setIcon(new ImageIcon(modificador.icono16));
                 juego.mod3.setToolTipText("<html><b>"+modificador.nombre+"</b><br>"+modificador.descripcion+"</html>");
                 break;
             case 4:
-                juego.mod4.setIcon(new ImageIcon(modificador.icono));
+                juego.mod4.setIcon(new ImageIcon(modificador.icono16));
                 juego.mod4.setToolTipText("<html><b>"+modificador.nombre+"</b><br>"+modificador.descripcion+"</html>");
                 break;
             case 5:
@@ -243,6 +279,53 @@ public class Modificador {
                 }
             }
         FuncionActualizar.setNumCartas(juego);
+        }
+    }
+    public static void questDragon(Juego juego){
+        juego.danyoExtraArmas += 2;
+        switch (juego.posicionModDragon){
+            case 1:
+                juego.mod1.setIcon(new ImageIcon("src/resources/sprites/modificadores/MasVida1Pequeno.png"));
+                juego.mod1.setToolTipText("<html><b>Dovahkiin</b><br>Tus armas ahora están potenciadas (+2 daño)</html>");
+                break;
+            case 2:
+                juego.mod2.setIcon(new ImageIcon("src/resources/sprites/modificadores/MasVida2Pequeno.png"));
+                juego.mod2.setToolTipText("<html><b>Dovahkiin</b><br>Tus armas ahora están potenciadas (+2 daño)</html>");
+                break;
+            case 3:
+                juego.mod3.setIcon(new ImageIcon("src/resources/sprites/modificadores/MasVida3Pequeno.png"));
+                juego.mod3.setToolTipText("<html><b>Dovahkiin</b><br>Tus armas ahora están potenciadas (+2 daño)</html>");
+                break;
+            case 4:
+                juego.mod4.setIcon(new ImageIcon());
+                juego.mod4.setToolTipText("<html><b>Dovahkiin</b><br>Tus armas ahora están potenciadas (+2 daño)</html>");
+                break;
+            case 5:
+                juego.mod5.setIcon(new ImageIcon());
+                juego.mod5.setToolTipText("<html><b>Dovahkiin</b><br>Tus armas ahora están potenciadas (+2 daño)</html>");
+                break;
+            case 6:
+                juego.mod6.setIcon(new ImageIcon());
+                juego.mod6.setToolTipText("<html><b>Dovahkiin</b><br>Tus armas ahora están potenciadas (+2 daño)</html>");
+                break;
+            case 7:
+                juego.mod7.setIcon(new ImageIcon());
+                juego.mod7.setToolTipText("<html><b>Dovahkiin</b><br>Tus armas ahora están potenciadas (+2 daño)</html>");
+                break;
+            case 8:
+                juego.mod8.setIcon(new ImageIcon());
+                juego.mod8.setToolTipText("<html><b>Dovahkiin</b><br>Tus armas ahora están potenciadas (+2 daño)</html>");
+                break;
+            case 9:
+                juego.mod9.setIcon(new ImageIcon());
+                juego.mod9.setToolTipText("<html><b>Dovahkiin</b><br>Tus armas ahora están potenciadas (+2 daño)</html>");
+                break;
+            case 10:
+                juego.mod10.setIcon(new ImageIcon());
+                juego.mod10.setToolTipText("<html><b>Dovahkiin</b><br>Tus armas ahora están potenciadas (+2 daño)</html>");
+                break;
+            default:
+                break;
         }
     }
 }

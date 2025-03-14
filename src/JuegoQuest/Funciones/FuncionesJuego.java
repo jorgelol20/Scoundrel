@@ -9,24 +9,30 @@ import javax.swing.*;
 
 public class FuncionesJuego {
     public static void funcionAtaque(Juego juego, Carta cartaArmaSeleccionada, boolean enemigoMuyFuerte, Carta cartaEnemigo, JButton cartaBoton){
-        int danyoTotal = calcularDanyo(cartaEnemigo, juego);
+        int danyoEnemigo = calcularDanyo(cartaEnemigo, juego);
+        int danyoArma = 0;
+        if (cartaArmaSeleccionada != null){
+            danyoArma = calcularDanyo(cartaArmaSeleccionada, juego);
+        }
         if (cartaEnemigo.getNombreCarta().contains("ReyPica")) {
             Modificador.questDracula(juego);
+        }else if (cartaEnemigo.getNombreCarta().contains("AsTrebol")) {
+            Modificador.questDragon(juego);
         }
         if (cartaArmaSeleccionada == null || (enemigoMuyFuerte && cartaEnemigo.getValorCarta().valor >= juego.ultimoEnemigoCarta.getValorCarta().valor)) {
-            juego.vidas -= danyoTotal;
-            juego.textoLogs += "Recibiste " + danyoTotal + " de puro pecho\n";
+            juego.vidas -= danyoEnemigo;
+            juego.textoLogs += "Recibiste " + danyoEnemigo + " de puro pecho\n";
             juego.ultimoEnemigoAsimiladoLabel.setIcon(cartaBoton.getIcon());
             juego.ultimoEnemigoAsimilado = cartaEnemigo;
         } else {
-            if ((danyoTotal - cartaArmaSeleccionada.getValorCarta().valor) > 0) {
-                juego.vidas -= danyoTotal - cartaArmaSeleccionada.getValorCarta().valor;
+            if ((danyoEnemigo - danyoArma) > 0) {
+                juego.vidas -= danyoEnemigo - danyoArma;
                 juego.textoLogs += "Te atacó " + cartaEnemigo.getNombreCarta() + " pero \nte defendiste con "
                         + cartaArmaSeleccionada.getNombreCarta() + "\ny solo recibiste " +
-                        (danyoTotal - cartaArmaSeleccionada.getValorCarta().valor)+" de daño\n";
+                        (danyoEnemigo - danyoArma)+" de daño\n";
                 juego.ultimoEnemigoCarta = cartaEnemigo;
                 juego.ultimoEnemigo.setIcon(cartaBoton.getIcon());
-            } else if ((danyoTotal - juego.cartaArmaSeleccionada.getValorCarta().valor) <= 0) {
+            } else if ((danyoEnemigo - danyoArma) <= 0) {
                 juego.ultimoEnemigoCarta = cartaEnemigo;
                 juego.ultimoEnemigo.setIcon(cartaBoton.getIcon());
                 juego.textoLogs += "Te atacó " + cartaEnemigo.getNombreCarta() + " pero te defendiste \ncon "
@@ -36,7 +42,7 @@ public class FuncionesJuego {
         new FuncionSonido(Juego.SonidosJuego.GirarCarta).reproducirSonido();
     }
     public static void funcionCurar(Juego juego, Carta cartaCuracion){
-        if (juego.curacionDisponible && juego.vidaMaxima != juego.vidas) {
+        if (juego.metabolismoRapido || (juego.curacionDisponible && juego.vidaMaxima != juego.vidas)) {
             juego.vidas += cartaCuracion.getValorCarta().valor + juego.efectoExtraCuracion;
             juego.textoLogs += "Te curaste "+ (cartaCuracion.getValorCarta().valor+juego.efectoExtraCuracion)+"\n";
         }else{
@@ -57,11 +63,13 @@ public class FuncionesJuego {
         juego.enemigoMuyFuerte = false;
         new FuncionSonido(Juego.SonidosJuego.GirarCarta).reproducirSonido();
     }
-    private static int calcularDanyo(Carta enemigo, Juego juego){
-        if (enemigo.getPaloCarta() == Carta.Palo.Pica){
-            return  (enemigo.getValorCarta().valor + juego.danyoExtraPicas)*juego.multiplicadorDanyoPicas;
+    private static int calcularDanyo(Carta carta, Juego juego){
+        if (carta.getPaloCarta() == Carta.Palo.Diamante){
+            return (carta.getValorCarta().valor + juego.danyoExtraArmas);
+        }else if (carta.getPaloCarta() == Carta.Palo.Pica){
+            return  (carta.getValorCarta().valor + juego.danyoExtraPicas)*juego.multiplicadorDanyoPicas;
         }else{
-            return (enemigo.getValorCarta().valor + juego.danyoExtraTreboles)*juego.multiplicadorDanyoTreboles;
+            return (carta.getValorCarta().valor + juego.danyoExtraTreboles)*juego.multiplicadorDanyoTreboles;
         }
     }
 }

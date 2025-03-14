@@ -47,7 +47,9 @@ public class Juego extends JFrame {
     public boolean victoria = false;
     public boolean juegoNormal = false;
     public boolean questDracula = false;
+    public boolean questDragon = false;
     public int posicionModDracula = 0;
+    public int posicionModDragon = 0;
     public int contadorRonda = 1;
     public int contadorModificador = 1;
     public int multiplicadorDanyoTreboles = 1;
@@ -55,6 +57,11 @@ public class Juego extends JFrame {
     public int multiplicadorDanyoPicas = 1;
     public int danyoExtraPicas = 0;
     public int efectoExtraCuracion = 0;
+    public int danyoExtraArmas = 0;
+    public boolean metabolismoRapido = false;
+    public int contadorHuir = 1;
+    public int huir = 1;
+    public boolean maldicionDelPerdido = false;
     public JLabel mod1;
     public JLabel mod2;
     public JLabel mod3;
@@ -233,13 +240,16 @@ public class Juego extends JFrame {
     }
 
     public void cartasTrasHuir() {
-        if (carta4 != null) {
+        if (carta4 != null && contadorHuir > 0 && !maldicionDelPerdido) {
             cartasMazo.addLast(new Carta(carta1));
             cartasMazo.addLast(new Carta(carta2));
             cartasMazo.addLast(new Carta(carta3));
             cartasMazo.addLast(new Carta(carta4));
-            botonHuir.setIcon(new ImageIcon("src/resources/sprites/botones/BotonHuirBloqueado.png"));
-            botonHuir.setRolloverEnabled(false);
+            contadorHuir--;
+            if (contadorHuir == 0) {
+                botonHuir.setIcon(new ImageIcon("src/resources/sprites/botones/BotonHuirBloqueado.png"));
+                botonHuir.setRolloverEnabled(false);
+            }
             obtener4Cartas();
             funcionActualizar.actualizaciones(this);
         }
