@@ -29,4 +29,5 @@ bin/
 .DS_Store
 
 ### JDK ###
-/jrd/
+/jdk/
+/jdk/jdk-23.0.2/
