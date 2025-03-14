@@ -47,10 +47,6 @@ public class FuncionActualizar {
     }
     //Función que desactiva los botones si no hay carta en él.
     private void desactivarBotones(Juego juego) {
-        if (juego.maldicionDelPerdido){
-            juego.botonHuir.setIcon(new ImageIcon("src/resources/sprites/botones/BotonHuirBloqueado.png"));
-            juego.botonHuir.setRolloverEnabled(false);
-        }
         if (juego.carta3 == null){
             juego.carta3Boton.setEnabled(false);
         }
@@ -90,8 +86,8 @@ public class FuncionActualizar {
             juego.carta4Boton.setEnabled(true);
             juego.carta4 = Juego.cartasMazo.getFirst();
             Juego.cartasMazo.removeFirst();
-            if (juego.numCartasRestantes > 4) {
-                juego.contadorHuir += juego.huir;
+            if (juego.numCartasRestantes > 4 && !juego.maldicionDelPerdido) {
+                juego.contadorHuir = juego.huir;
                 juego.botonHuir.setIcon(new ImageIcon("src/resources/sprites/botones/BotonHuir.png"));
                 juego.botonHuir.setRolloverEnabled(true);
             }

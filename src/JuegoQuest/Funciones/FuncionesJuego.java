@@ -18,6 +18,8 @@ public class FuncionesJuego {
             Modificador.questDracula(juego);
         }else if (cartaEnemigo.getNombreCarta().contains("AsTrebol")) {
             Modificador.questDragon(juego);
+        }else if (cartaEnemigo.getNombreCarta().contains("CuatroPica")) {
+            Modificador.questSans(juego);
         }
         if (cartaArmaSeleccionada == null || (enemigoMuyFuerte && cartaEnemigo.getValorCarta().valor >= juego.ultimoEnemigoCarta.getValorCarta().valor)) {
             juego.vidas -= danyoEnemigo;
@@ -36,13 +38,13 @@ public class FuncionesJuego {
                 juego.ultimoEnemigoCarta = cartaEnemigo;
                 juego.ultimoEnemigo.setIcon(cartaBoton.getIcon());
                 juego.textoLogs += "Te atacó " + cartaEnemigo.getNombreCarta() + " pero te defendiste \ncon "
-                        + cartaArmaSeleccionada.getNombreCarta() + " y no \nrecibiste daño\n ";
+                        + cartaArmaSeleccionada.getNombreCarta() + " y no \nrecibiste daño\n";
             }
         }
         new FuncionSonido(Juego.SonidosJuego.GirarCarta).reproducirSonido();
     }
     public static void funcionCurar(Juego juego, Carta cartaCuracion){
-        if (juego.metabolismoRapido || (juego.curacionDisponible && juego.vidaMaxima != juego.vidas)) {
+        if (juego.metabolismoRapido || (juego.curacionDisponible && juego.vidaMaxima != juego.vidas && cartaCuracion.getValorCarta().valor + juego.efectoExtraCuracion > 0)) {
             juego.vidas += cartaCuracion.getValorCarta().valor + juego.efectoExtraCuracion;
             juego.textoLogs += "Te curaste "+ (cartaCuracion.getValorCarta().valor+juego.efectoExtraCuracion)+"\n";
         }else{

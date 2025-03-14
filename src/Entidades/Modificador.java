@@ -17,6 +17,7 @@ public class Modificador {
     public int id;
     public JLabel labelModificador;
     public static ArrayList<Modificador> modificadores = new ArrayList<Modificador>();
+
     public Modificador(Modificador modificadorOriginal) {
         this.tipoModificador = modificadorOriginal.tipoModificador;
         this.nombre = modificadorOriginal.nombre;
@@ -38,41 +39,44 @@ public class Modificador {
         this.id = id;
 
     }
-    public static void cargarModificadores(){
+
+    public static void cargarModificadores() {
         //Más vida máxima
-        modificadores.add(new Modificador(TipoModificador.BUFF,"Más Vida I","Te da vida (5) extra durante el resto de la partida.","src/resources/sprites/modificadores/MasVida1.png",0));
-        modificadores.add(new Modificador(TipoModificador.BUFF,"Más Vida II","Te da vida (10) extra durante el resto de la partida.","src/resources/sprites/modificadores/MasVida2.png",1));
-        modificadores.add(new Modificador(TipoModificador.BUFF,"Más Vida III","Te da vida (15) extra durante el resto de la partida.","src/resources/sprites/modificadores/MasVida3.png",2));
+        modificadores.add(new Modificador(TipoModificador.BUFF, "Más Vida I", "<html><div style='width: 200px; text-align: justify;'>Te da vida (5) extra durante el resto de la partida.</div></html>", "src/resources/sprites/modificadores/MasVida1.png", 0));
+        modificadores.add(new Modificador(TipoModificador.BUFF, "Más Vida II", "<html><div style='width: 200px; text-align: justify;'>Te da vida (10) extra durante el resto de la partida.</div></html>", "src/resources/sprites/modificadores/MasVida2.png", 1));
+        modificadores.add(new Modificador(TipoModificador.BUFF, "Más Vida III", "<html><div style='width: 200px; text-align: justify;'>Te da vida (15) extra durante el resto de la partida.</div></html>", "src/resources/sprites/modificadores/MasVida3.png", 2));
         //Debuff tréboles
-        modificadores.add(new Modificador(TipoModificador.DEBUFF, "Corten las flores I", "Trébol -1 daño, Picas +1 daño", null,3));
-        modificadores.add(new Modificador(TipoModificador.DEBUFF, "Corten las flores II", "Trébol -2 daño, Picas +1 daño", null,4));
-        modificadores.add(new Modificador(TipoModificador.DEBUFF, "Corten las flores III", "Trébol -3 daño, Picas +1 daño",null,5));
+        modificadores.add(new Modificador(TipoModificador.DEBUFF, "Corten las flores I", "Trébol -1 daño, Picas +1 daño", null, 3));
+        modificadores.add(new Modificador(TipoModificador.DEBUFF, "Corten las flores II", "Trébol -2 daño, Picas +1 daño", null, 4));
+        modificadores.add(new Modificador(TipoModificador.DEBUFF, "Corten las flores III", "Trébol -3 daño, Picas +1 daño", null, 5));
         //Debuff picas
-        modificadores.add(new Modificador(TipoModificador.DEBUFF,"Que le corten la cabeza I","Pica -1 daño, Trébol +1 daño", null,6));
-        modificadores.add(new Modificador(TipoModificador.DEBUFF,"Que le corten la cabeza II","Pica -2 daño, Trébol +1 daño", null,7));
-        modificadores.add(new Modificador(TipoModificador.DEBUFF,"Que le corten la cabeza III","Pica -3 daño, Trébol +1 daño", null,8));
+        modificadores.add(new Modificador(TipoModificador.DEBUFF, "Que le corten la cabeza I", "Pica -1 daño, Trébol +1 daño", null, 6));
+        modificadores.add(new Modificador(TipoModificador.DEBUFF, "Que le corten la cabeza II", "Pica -2 daño, Trébol +1 daño", null, 7));
+        modificadores.add(new Modificador(TipoModificador.DEBUFF, "Que le corten la cabeza III", "Pica -3 daño, Trébol +1 daño", null, 8));
         //Castelvania
-        modificadores.add(new Modificador(TipoModificador.DEBUFF, "¿Castelvania?", "Hasta matar al ReyPica, curaciones -1   ",null,9));
+        modificadores.add(new Modificador(TipoModificador.DEBUFF, "¿Castelvania?", "<html><div style='width: 200px; text-align: justify;'>Hasta matar al ReyPica, las curaciones restaurarán 1 menos de vida.</div></html>", null, 9));
         //Armas
-        modificadores.add(new Modificador(TipoModificador.BUFF,"Kit Armamentístico I", "Obtienes un arma entre 2 y 4. Se añaden 3 enemigos débiles",null,10));
-        modificadores.add(new Modificador(TipoModificador.BUFF,"Kit Armamentístico II", "Obtienes un arma entre 5 y 7. Se añaden 3 enemigos medios",null,11));
-        modificadores.add(new Modificador(TipoModificador.BUFF,"Kit Armamentístico III", "Obtienes un arma entre 8 y 10. Se añaden 3 enemigos fuertes",null,12));
+        modificadores.add(new Modificador(TipoModificador.BUFF, "Kit Armamentístico I", "<html><div style='width: 200px; text-align: justify;'>Obtienes un arma entre 2 y 4. Se añaden 3 enemigos débiles.</div></html>", null, 10));
+        modificadores.add(new Modificador(TipoModificador.BUFF, "Kit Armamentístico II", "<html><div style='width: 200px; text-align: justify;'>Obtienes un arma entre 5 y 7. Se añaden 3 enemigos medianamente fuertes.</div></html>", null, 11));
+        modificadores.add(new Modificador(TipoModificador.BUFF, "Kit Armamentístico III", "<html><div style='width: 200px; text-align: justify;'>Obtienes un arma entre 8 y 10. Se añaden 3 enemigos fuertes.</div></html>", null, 12));
         //Matadragones
-        modificadores.add(new Modificador(TipoModificador.QUEST,"A por el dragón","¿Lograrás matarlo?",null,13));
+        modificadores.add(new Modificador(TipoModificador.QUEST, "A por el dragón", "¿Lograrás matarlo?", null, 13));
         //Berserk
-        modificadores.add(new Modificador(TipoModificador.BUFF,"Berserk","Armas +3, Curaciones -4",null,14));
+        modificadores.add(new Modificador(TipoModificador.BUFF, "Berserk", "<html><div style='width: 200px; text-align: justify;'>Las armas hacen 3 más de daño, pero las curaciones restauran 4 menos de vida.</div></html>", null, 14));
         //Metabolistmo Rápido
-        modificadores.add(new Modificador(TipoModificador.BUFF,"Metabolismo Rápido","Puedes curarte tantas veces como quieras por ronda",null,15));
+        modificadores.add(new Modificador(TipoModificador.BUFF, "Metabolismo Rápido", "Puedes curarte tantas veces como quieras por ronda.", null, 15));
         //Pies veloces
-        modificadores.add(new Modificador(TipoModificador.BUFF, "Pies veloces","Pudes huir hasta dos veces por turno",null,16));
+        modificadores.add(new Modificador(TipoModificador.BUFF, "Pies veloces", "Pudes huir hasta dos veces por turno.", null, 16));
         //Clérigo
-        modificadores.add(new Modificador(TipoModificador.BUFF, "Clérigo","Curaciones +4, Armas -3",null,17));
+        modificadores.add(new Modificador(TipoModificador.BUFF, "Clérigo", "<html><div style='width: 200px; text-align: justify;'>Las curaciones restauran 4 más de vida pero las armas hacen 3 menos de daño.</div><html>", null, 17));
         //Maldición del perdido
-        modificadores.add(new Modificador(TipoModificador.DEBUFF,"Maldición del perdido", "No puedes huir durante el resto de la partida",null,18));
+        modificadores.add(new Modificador(TipoModificador.DEBUFF, "Maldición del perdido", "<html><div style='width: 200px; text-align: justify;'>No puedes huir durante el resto de la partida.</div><html>", null, 18));
         //¿Sans?
+        modificadores.add(new Modificador(TipoModificador.QUEST, "¿Sans?", "<html><div style='width: 200px; text-align: justify;'>Mientras siga vivo CuatroPica, todos los enemigos hacen 1 más de daño.</div></html>", null, 19));
     }
-    public static void aplicarModificador(Modificador modificador,Juego juego) {
-        switch (modificador.id){
+
+    public static void aplicarModificador(Modificador modificador, Juego juego) {
+        switch (modificador.id) {
             case 0:
                 juego.vidaMaxima += 5;
                 juego.vidas += 5;
@@ -117,13 +121,13 @@ public class Modificador {
                 juego.questDracula = true;
                 break;
             case 10:
-                modArmas(juego, 4,2);
+                modArmas(juego, 4, 2);
                 break;
             case 11:
-                modArmas(juego, 7,5);
+                modArmas(juego, 7, 5);
                 break;
             case 12:
-                modArmas(juego, 10,8);
+                modArmas(juego, 10, 8);
                 break;
             case 13:
                 juego.questDragon = true;
@@ -145,13 +149,18 @@ public class Modificador {
                 break;
             case 18:
                 juego.maldicionDelPerdido = true;
+                juego.botonHuir.setIcon(new ImageIcon("src/resources/sprites/botones/BotonHuirBloqueado.png"));
+                juego.botonHuir.setRolloverEnabled(false);
+                break;
+            case 19:
                 break;
             default:
                 break;
         }
-        setIconoModificador(modificador,juego);
+        setIconoModificador(modificador, juego);
         FuncionActualizar.comprobarVidas(juego);
     }
+
     public static Modificador obtenerModificador() {
         ArrayList<Modificador> modificadorAleatorio = modificadores;
         Collections.shuffle(modificadorAleatorio);
@@ -159,62 +168,64 @@ public class Modificador {
         modificadores.remove(modificador);
         return modificador;
     }
+
     public static void setIconoModificador(Modificador modificador, Juego juego) {
-        if(modificador.nombre.contains("Castelvania")){
+        if (modificador.nombre.contains("Castelvania")) {
             juego.posicionModDracula = juego.contadorModificador;
         }
-        if(modificador.nombre.contains("A por el dragón")){
+        if (modificador.nombre.contains("A por el dragón")) {
             juego.posicionModDracula = juego.contadorModificador;
         }
-        switch (juego.contadorModificador){
+        switch (juego.contadorModificador) {
             case 1:
                 juego.mod1.setIcon(new ImageIcon(modificador.icono16));
-                juego.mod1.setToolTipText("<html><b>"+modificador.nombre+"</b><br>"+modificador.descripcion+"</html>");
+                juego.mod1.setToolTipText("<html><b>" + modificador.nombre + "</b><br>" + modificador.descripcion + "</html>");
                 break;
             case 2:
                 juego.mod2.setIcon(new ImageIcon(modificador.icono16));
-                juego.mod2.setToolTipText("<html><b>"+modificador.nombre+"</b><br>"+modificador.descripcion+"</html>");
+                juego.mod2.setToolTipText("<html><b>" + modificador.nombre + "</b><br>" + modificador.descripcion + "</html>");
                 break;
             case 3:
                 juego.mod3.setIcon(new ImageIcon(modificador.icono16));
-                juego.mod3.setToolTipText("<html><b>"+modificador.nombre+"</b><br>"+modificador.descripcion+"</html>");
+                juego.mod3.setToolTipText("<html><b>" + modificador.nombre + "</b><br>" + modificador.descripcion + "</html>");
                 break;
             case 4:
                 juego.mod4.setIcon(new ImageIcon(modificador.icono16));
-                juego.mod4.setToolTipText("<html><b>"+modificador.nombre+"</b><br>"+modificador.descripcion+"</html>");
+                juego.mod4.setToolTipText("<html><b>" + modificador.nombre + "</b><br>" + modificador.descripcion + "</html>");
                 break;
             case 5:
                 juego.mod5.setIcon(new ImageIcon(modificador.icono));
-                juego.mod5.setToolTipText("<html><b>"+modificador.nombre+"</b><br>"+modificador.descripcion+"</html>");
+                juego.mod5.setToolTipText("<html><b>" + modificador.nombre + "</b><br>" + modificador.descripcion + "</html>");
                 break;
             case 6:
                 juego.mod6.setIcon(new ImageIcon(modificador.icono));
-                juego.mod6.setToolTipText("<html><b>"+modificador.nombre+"</b><br>"+modificador.descripcion+"</html>");
+                juego.mod6.setToolTipText("<html><b>" + modificador.nombre + "</b><br>" + modificador.descripcion + "</html>");
                 break;
             case 7:
                 juego.mod7.setIcon(new ImageIcon(modificador.icono));
-                juego.mod7.setToolTipText("<html><b>"+modificador.nombre+"</b><br>"+modificador.descripcion+"</html>");
+                juego.mod7.setToolTipText("<html><b>" + modificador.nombre + "</b><br>" + modificador.descripcion + "</html>");
                 break;
             case 8:
                 juego.mod8.setIcon(new ImageIcon(modificador.icono));
-                juego.mod8.setToolTipText("<html><b>"+modificador.nombre+"</b><br>"+modificador.descripcion+"</html>");
+                juego.mod8.setToolTipText("<html><b>" + modificador.nombre + "</b><br>" + modificador.descripcion + "</html>");
                 break;
             case 9:
                 juego.mod9.setIcon(new ImageIcon(modificador.icono));
-                juego.mod9.setToolTipText("<html><b>"+modificador.nombre+"</b><br>"+modificador.descripcion+"</html>");
+                juego.mod9.setToolTipText("<html><b>" + modificador.nombre + "</b><br>" + modificador.descripcion + "</html>");
                 break;
             case 10:
                 juego.mod10.setIcon(new ImageIcon(modificador.icono));
-                juego.mod10.setToolTipText("<html><b>"+modificador.nombre+"</b><br>"+modificador.descripcion+"</html>");
+                juego.mod10.setToolTipText("<html><b>" + modificador.nombre + "</b><br>" + modificador.descripcion + "</html>");
                 break;
             default:
                 break;
         }
         juego.contadorModificador++;
     }
-    public static void questDracula(Juego juego){
+
+    public static void questDracula(Juego juego) {
         juego.efectoExtraCuracion += 4;
-        switch (juego.posicionModDracula){
+        switch (juego.posicionModDracula) {
             case 1:
                 juego.mod1.setIcon(new ImageIcon("src/resources/sprites/modificadores/MasVida1Pequeno.png"));
                 juego.mod1.setToolTipText("<html><b>Fin del terror</b><br>Las curaciones te curan 3 más</html>");
@@ -259,31 +270,33 @@ public class Modificador {
                 break;
         }
     }
-    private static void modArmas(Juego juego, int max, int min){
-        int armaAleatoria = (int)(Math.random() * (max - min) + min);
-        for (Carta.Valor valor : Carta.Valor.values()){
-            if (valor.valor == armaAleatoria){
+
+    private static void modArmas(Juego juego, int max, int min) {
+        int armaAleatoria = (int) (Math.random() * (max - min) + min);
+        for (Carta.Valor valor : Carta.Valor.values()) {
+            if (valor.valor == armaAleatoria) {
                 juego.cartaArmaSeleccionada = new Carta(Carta.Palo.Diamante, valor);
                 juego.cartaArmaSeleccionadaLabel.setIcon(new ImageIcon(juego.cartaArmaSeleccionada.imagenCarta));
             }
         }
-        for (int i = 0; i < 3; i++){
+        for (int i = 0; i < 3; i++) {
             int numeroEnemigo = (int) Math.floor(Math.random() * (max - min) + min);
-            for (Carta.Valor valor : Carta.Valor.values()){
-                if (valor.valor == numeroEnemigo){
-                    if(i % 2 == 0){
+            for (Carta.Valor valor : Carta.Valor.values()) {
+                if (valor.valor == numeroEnemigo) {
+                    if (i % 2 == 0) {
                         Juego.cartasMazo.add(new Carta(Carta.Palo.Pica, valor));
-                    }else{
+                    } else {
                         Juego.cartasMazo.add(new Carta(Carta.Palo.Trebol, valor));
                     }
                 }
             }
-        FuncionActualizar.setNumCartas(juego);
+            FuncionActualizar.setNumCartas(juego);
         }
     }
-    public static void questDragon(Juego juego){
+
+    public static void questDragon(Juego juego) {
         juego.danyoExtraArmas += 2;
-        switch (juego.posicionModDragon){
+        switch (juego.posicionModDragon) {
             case 1:
                 juego.mod1.setIcon(new ImageIcon("src/resources/sprites/modificadores/MasVida1Pequeno.png"));
                 juego.mod1.setToolTipText("<html><b>Dovahkiin</b><br>Tus armas ahora están potenciadas (+2 daño)</html>");
@@ -328,4 +341,52 @@ public class Modificador {
                 break;
         }
     }
+    public static void questSans(Juego juego) {
+        juego.danyoExtraArmas += 2;
+        switch (juego.posicionModDragon) {
+            case 1:
+                juego.mod1.setIcon(new ImageIcon("src/resources/sprites/modificadores/MasVida1Pequeno.png"));
+                juego.mod1.setToolTipText("<html><b>Pasaste un mal rato</b><br>Los genocidas obtienen +2 daño</html>");
+                break;
+            case 2:
+                juego.mod2.setIcon(new ImageIcon("src/resources/sprites/modificadores/MasVida2Pequeno.png"));
+                juego.mod2.setToolTipText("<html><b>Pasaste un mal rato</b><br>Los genocidas obtienen +2 daño</html>");
+                break;
+            case 3:
+                juego.mod3.setIcon(new ImageIcon("src/resources/sprites/modificadores/MasVida3Pequeno.png"));
+                juego.mod3.setToolTipText("<html><b>Pasaste un mal rato</b><br>Los genocidas obtienen +2 daño</html>");
+                break;
+            case 4:
+                juego.mod4.setIcon(new ImageIcon());
+                juego.mod4.setToolTipText("<html><b>Pasaste un mal rato</b><br>Los genocidas obtienen +2 daño</html>");
+                break;
+            case 5:
+                juego.mod5.setIcon(new ImageIcon());
+                juego.mod5.setToolTipText("<html><b>Pasaste un mal rato</b><br>Tus armas ahora están potenciadas (+2 daño)</html>");
+                break;
+            case 6:
+                juego.mod6.setIcon(new ImageIcon());
+                juego.mod6.setToolTipText("<html><b>Pasaste un mal rato</b><br>Tus armas ahora están potenciadas (+2 daño)</html>");
+                break;
+            case 7:
+                juego.mod7.setIcon(new ImageIcon());
+                juego.mod7.setToolTipText("<html><b>Pasaste un mal rato</b><br>Tus armas ahora están potenciadas (+2 daño)</html>");
+                break;
+            case 8:
+                juego.mod8.setIcon(new ImageIcon());
+                juego.mod8.setToolTipText("<html><b>Pasaste un mal rato</b><br>Tus armas ahora están potenciadas (+2 daño)</html>");
+                break;
+            case 9:
+                juego.mod9.setIcon(new ImageIcon());
+                juego.mod9.setToolTipText("<html><b>Pasaste un mal rato</b><br>Tus armas ahora están potenciadas (+2 daño)</html>");
+                break;
+            case 10:
+                juego.mod10.setIcon(new ImageIcon());
+                juego.mod10.setToolTipText("<html><b>Pasaste un mal rato</b><br>Tus armas ahora están potenciadas (+2 daño)</html>");
+                break;
+            default:
+                break;
+        }
+    }
 }
+
