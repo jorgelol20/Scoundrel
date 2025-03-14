@@ -254,7 +254,7 @@ public class Juego extends JFrame {
     }
 
     public enum SonidosJuego {
-        GirarCarta("src/resources/sounds/girarCarta.wav"), PonerCarta("src/resources/sounds/ponerCartas.wav");
+        GirarCarta("src/resources/sounds/girarCarta.wav"), PonerCarta("src/resources/sounds/ponerCartas.wav"), SonidoBotones("src/resources/sounds/ui_hover.wav");
         public final String sonidoJuego;
         SonidosJuego(String sonidosJuego) {
             this.sonidoJuego = sonidosJuego;

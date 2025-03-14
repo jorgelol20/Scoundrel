@@ -20,6 +20,8 @@ public class FuncionSonido {
                 reproducirAudio = AudioSystem.getAudioInputStream(new File(SonidosJuego.GirarCarta.getSonido()));
             } else if (sonido == SonidosJuego.PonerCarta) {
                 reproducirAudio = AudioSystem.getAudioInputStream(new File(SonidosJuego.PonerCarta.getSonido()));
+            } else if (sonido == SonidosJuego.SonidoBotones) {
+                reproducirAudio = AudioSystem.getAudioInputStream(new File(SonidosJuego.SonidoBotones.getSonido()));
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());

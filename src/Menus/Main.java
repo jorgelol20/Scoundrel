@@ -1,19 +1,11 @@
 package Menus;
 
 import JuegoNormal.Funciones.FuncionSonido;
-
-import javax.sound.sampled.AudioInputStream;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.UnsupportedAudioFileException;
+import JuegoNormal.Juego;
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.beans.PropertyChangeEvent;
-import java.beans.PropertyChangeListener;
-import java.io.File;
-import java.io.IOException;
+import java.awt.event.*;
 
 public class Main {
     public static JFrame frame = new JFrame("Menu");
@@ -43,33 +35,35 @@ public class Main {
         volumenSonidos.setValue(Integer.parseInt(String.valueOf(valorVolumenSonidos*100f).replace(".0","")));
         volumenMusica.setMaximum(100);
         volumenMusica.setMinimum(0);
-        volumenMusica.setValue(Integer.parseInt(String.valueOf(valorVolumenSonidos*100f).replace(".0","")));
-        volumenSonidos.repaint();
-        volumenMusica.repaint();
+        volumenMusica.setValue(Integer.parseInt(String.valueOf(valorVolumenMusica*100f).replace(".0","")));
         musicaFondo.ponerMusica();
         empezarPartidaBoton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                new FuncionSonido(Juego.SonidosJuego.SonidoBotones).reproducirSonido();
                 new JuegoNormal.Juego();
             }
         });
         empezarQuestBoton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                new FuncionSonido(Juego.SonidosJuego.SonidoBotones).reproducirSonido();
                 empezarQuest();
             }
         });
         salirBoton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                new FuncionSonido(Juego.SonidosJuego.SonidoBotones).reproducirSonido();
                 System.exit(0);
             }
         });
         aprenderAJugarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                new FuncionSonido(Juego.SonidosJuego.SonidoBotones).reproducirSonido();
                 JOptionPane.showMessageDialog(panelMenu,"¡Bienvenido a Scoundrel! \nUn MiniRPG de cartas \ndesarrollado por dos frikis (Jorge y Adri)","Bienvenido",JOptionPane.INFORMATION_MESSAGE,new ImageIcon("src/resources/sprites/logoTemporal.png"));
-                JOptionPane.showMessageDialog(panelMenu, "En Scroundle hay 4 tipos de cartas: \nlas picas, los diamantes, las picas y los tréboles.\n" +
+                JOptionPane.showMessageDialog(panelMenu, "En Scroundle hay 4 tipos de cartas: \nlos corazones, los diamantes, las picas y los tréboles.\n" +
                                                                     "Cada una de las cartas tiene sus propias acciones \ny funciones dentro del juego.", "Tipos de carta", JOptionPane.INFORMATION_MESSAGE, new ImageIcon("src/resources/sprites/imagenesTutorial/imagen1.png"));
                 JOptionPane.showMessageDialog(panelMenu, "Los corazones son las \"curaciones\" en este juego y \ncada una de estas te cura una cantidad \nde daño distinta correspondiente a su número.\nTen en cuenta que solo podrás curarte una vez\npor ronda, descartando la segunda curación\nque fueras a usar en ese turno","Curaciones",JOptionPane.INFORMATION_MESSAGE,new ImageIcon("src/resources/sprites/imagenesTutorial/imagen2.png"));
                 JOptionPane.showMessageDialog(panelMenu,"Los diamantes son las \"armas\" que usarás\npara defenderte de los enemigos.\nCada carta te defenderá del enemigo\nrestando al daño del enemigo el del arma.\nLas armas tienen condiciones que se explicarán más adelante.","Armas",JOptionPane.INFORMATION_MESSAGE, new ImageIcon("src/resources/sprites/imagenesTutorial/imagen3.png"));

@@ -56,7 +56,7 @@ public class Modificador {
         modificadores.add(new Modificador(TipoModificador.BUFF,"Kit Armamentístico I", "Obtienes un arma entre 2 y 4. Se añaden 3 enemigos débiles",null,10));
         modificadores.add(new Modificador(TipoModificador.BUFF,"Kit Armamentístico II", "Obtienes un arma entre 5 y 7. Se añaden 3 enemigos medios",null,11));
         modificadores.add(new Modificador(TipoModificador.BUFF,"Kit Armamentístico III", "Obtienes un arma entre 8 y 10. Se añaden 3 enemigos fuertes",null,12));
-
+        //
 
     }
     public static void aplicarModificador(Modificador modificador,Juego juego) {
@@ -103,6 +103,7 @@ public class Modificador {
             case 9:
                 juego.efectoExtraCuracion -= 1;
                 juego.questDracula = true;
+                break;
             case 10:
                 modArmas(juego, 4,2);
                 break;
@@ -132,43 +133,43 @@ public class Modificador {
         switch (juego.contadorModificador){
             case 1:
                 juego.mod1.setIcon(new ImageIcon("src/resources/sprites/modificadores/MasVida1Pequeno.png"));
-                juego.mod1.setToolTipText(modificador.nombre);
+                juego.mod1.setToolTipText("<html><b>"+modificador.nombre+"</b><br>"+modificador.descripcion+"</html>");
                 break;
             case 2:
                 juego.mod2.setIcon(new ImageIcon("src/resources/sprites/modificadores/MasVida2Pequeno.png"));
-                juego.mod2.setToolTipText(modificador.nombre);
+                juego.mod2.setToolTipText("<html><b>"+modificador.nombre+"</b><br>"+modificador.descripcion+"</html>");
                 break;
             case 3:
                 juego.mod3.setIcon(new ImageIcon("src/resources/sprites/modificadores/MasVida3Pequeno.png"));
-                juego.mod3.setToolTipText(modificador.nombre);
+                juego.mod3.setToolTipText("<html><b>"+modificador.nombre+"</b><br>"+modificador.descripcion+"</html>");
                 break;
             case 4:
                 juego.mod4.setIcon(new ImageIcon(modificador.icono));
-                juego.mod4.setToolTipText(modificador.nombre);
+                juego.mod4.setToolTipText("<html><b>"+modificador.nombre+"</b><br>"+modificador.descripcion+"</html>");
                 break;
             case 5:
                 juego.mod5.setIcon(new ImageIcon(modificador.icono));
-                juego.mod5.setToolTipText(modificador.nombre);
+                juego.mod5.setToolTipText("<html><b>"+modificador.nombre+"</b><br>"+modificador.descripcion+"</html>");
                 break;
             case 6:
                 juego.mod6.setIcon(new ImageIcon(modificador.icono));
-                juego.mod6.setToolTipText(modificador.nombre);
+                juego.mod6.setToolTipText("<html><b>"+modificador.nombre+"</b><br>"+modificador.descripcion+"</html>");
                 break;
             case 7:
                 juego.mod7.setIcon(new ImageIcon(modificador.icono));
-                juego.mod7.setToolTipText(modificador.nombre);
+                juego.mod7.setToolTipText("<html><b>"+modificador.nombre+"</b><br>"+modificador.descripcion+"</html>");
                 break;
             case 8:
                 juego.mod8.setIcon(new ImageIcon(modificador.icono));
-                juego.mod8.setToolTipText(modificador.nombre);
+                juego.mod8.setToolTipText("<html><b>"+modificador.nombre+"</b><br>"+modificador.descripcion+"</html>");
                 break;
             case 9:
                 juego.mod9.setIcon(new ImageIcon(modificador.icono));
-                juego.mod9.setToolTipText(modificador.nombre);
+                juego.mod9.setToolTipText("<html><b>"+modificador.nombre+"</b><br>"+modificador.descripcion+"</html>");
                 break;
             case 10:
                 juego.mod10.setIcon(new ImageIcon(modificador.icono));
-                juego.mod10.setToolTipText(modificador.nombre);
+                juego.mod10.setToolTipText("<html><b>"+modificador.nombre+"</b><br>"+modificador.descripcion+"</html>");
                 break;
             default:
                 break;
@@ -180,43 +181,43 @@ public class Modificador {
         switch (juego.posicionModDracula){
             case 1:
                 juego.mod1.setIcon(new ImageIcon("src/resources/sprites/modificadores/MasVida1Pequeno.png"));
-                juego.mod1.setToolTipText("Fin del terror");
+                juego.mod1.setToolTipText("<html><b>Fin del terror</b><br>Las curaciones te curan 3 más</html>");
                 break;
             case 2:
                 juego.mod2.setIcon(new ImageIcon("src/resources/sprites/modificadores/MasVida2Pequeno.png"));
-                juego.mod2.setToolTipText("Fin del terror");
+                juego.mod2.setToolTipText("<html><b>Fin del terror</b><br>Las curaciones te curan 3 más</html>");
                 break;
             case 3:
                 juego.mod3.setIcon(new ImageIcon("src/resources/sprites/modificadores/MasVida3Pequeno.png"));
-                juego.mod3.setToolTipText("Fin del terror");
+                juego.mod3.setToolTipText("<html><b>Fin del terror</b><br>Las curaciones te curan 3 más</html>");
                 break;
             case 4:
                 juego.mod4.setIcon(new ImageIcon());
-                juego.mod4.setToolTipText("Fin del terror");
+                juego.mod4.setToolTipText("<html><b>Fin del terror</b><br>Las curaciones te curan 3 más</html>");
                 break;
             case 5:
                 juego.mod5.setIcon(new ImageIcon());
-                juego.mod5.setToolTipText("Fin del terror");
+                juego.mod5.setToolTipText("<html><b>Fin del terror</b><br>Las curaciones te curan 3 más</html>");
                 break;
             case 6:
                 juego.mod6.setIcon(new ImageIcon());
-                juego.mod6.setToolTipText("Fin del terror");
+                juego.mod6.setToolTipText("<html><b>Fin del terror</b><br>Las curaciones te curan 3 más</html>");
                 break;
             case 7:
                 juego.mod7.setIcon(new ImageIcon());
-                juego.mod7.setToolTipText("Fin del terror");
+                juego.mod7.setToolTipText("<html><b>Fin del terror</b><br>Las curaciones te curan 3 más</html>");
                 break;
             case 8:
                 juego.mod8.setIcon(new ImageIcon());
-                juego.mod8.setToolTipText("Fin del terror");
+                juego.mod8.setToolTipText("<html><b>Fin del terror</b><br>Las curaciones te curan 3 más</html>");
                 break;
             case 9:
                 juego.mod9.setIcon(new ImageIcon());
-                juego.mod9.setToolTipText("Fin del terror");
+                juego.mod9.setToolTipText("<html><b>Fin del terror</b><br>Las curaciones te curan 3 más</html>");
                 break;
             case 10:
                 juego.mod10.setIcon(new ImageIcon());
-                juego.mod10.setToolTipText("Fin del terror");
+                juego.mod10.setToolTipText("<html><b>Fin del terror</b><br>Las curaciones te curan 3 más</html>");
                 break;
             default:
                 break;
