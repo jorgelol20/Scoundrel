@@ -69,6 +69,7 @@ public class Juego extends JFrame {
 
     public Juego() {
         Main.frame.setContentPane(mainPanel);
+        cartasMazo.clear();
         modificadoresMazo.clear();
         Modificador.cargarModificadores();
         FuncionesInicio.crearBaraja(this);

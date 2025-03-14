@@ -48,6 +48,7 @@ public class Juego extends JFrame {
 
     public Juego() {
         Main.frame.setContentPane(mainPanel);
+        cartasMazo.clear();
         FuncionesInicio.crearBaraja();
         obtener4Cartas();
         funcionActualizar.actualizaciones(this);

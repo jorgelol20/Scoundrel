@@ -52,6 +52,12 @@ public class Modificador {
         modificadores.add(new Modificador(TipoModificador.DEBUFF,"Que le corten la cabeza III","Pica -3 daño, Trébol +1 daño", null,8));
         //Castelvania
         modificadores.add(new Modificador(TipoModificador.DEBUFF, "¿Castelvania?", "Hasta matar al ReyPica, curaciones -1 (Mejora al matar)",null,9));
+        //Armas
+        modificadores.add(new Modificador(TipoModificador.BUFF,"Kit Armamentístico I", "Obtienes un arma entre 2 y 4. Se añaden 3 enemigos débiles",null,10));
+        modificadores.add(new Modificador(TipoModificador.BUFF,"Kit Armamentístico II", "Obtienes un arma entre 5 y 7. Se añaden 3 enemigos medios",null,11));
+        modificadores.add(new Modificador(TipoModificador.BUFF,"Kit Armamentístico III", "Obtienes un arma entre 8 y 10. Se añaden 3 enemigos fuertes",null,12));
+
+
     }
     public static void aplicarModificador(Modificador modificador,Juego juego) {
         switch (modificador.id){
@@ -97,6 +103,15 @@ public class Modificador {
             case 9:
                 juego.efectoExtraCuracion -= 1;
                 juego.questDracula = true;
+            case 10:
+                modArmas(juego, 4,2);
+                break;
+            case 11:
+                modArmas(juego, 7,5);
+                break;
+            case 12:
+                modArmas(juego, 10,8);
+                break;
             default:
                 break;
         }
@@ -205,6 +220,28 @@ public class Modificador {
                 break;
             default:
                 break;
+        }
+    }
+    private static void modArmas(Juego juego, int max, int min){
+        int armaAleatoria = (int)(Math.random() * (max - min) + min);
+        for (Carta.Valor valor : Carta.Valor.values()){
+            if (valor.valor == armaAleatoria){
+                juego.cartaArmaSeleccionada = new Carta(Carta.Palo.Diamante, valor);
+                juego.cartaArmaSeleccionadaLabel.setIcon(new ImageIcon(juego.cartaArmaSeleccionada.imagenCarta));
+            }
+        }
+        for (int i = 0; i < 3; i++){
+            int numeroEnemigo = (int) Math.floor(Math.random() * (max - min) + min);
+            for (Carta.Valor valor : Carta.Valor.values()){
+                if (valor.valor == numeroEnemigo){
+                    if(i % 2 == 0){
+                        Juego.cartasMazo.add(new Carta(Carta.Palo.Pica, valor));
+                    }else{
+                        Juego.cartasMazo.add(new Carta(Carta.Palo.Trebol, valor));
+                    }
+                }
+            }
+        FuncionActualizar.setNumCartas(juego);
         }
     }
 }
