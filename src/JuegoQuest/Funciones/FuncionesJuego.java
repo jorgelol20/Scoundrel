@@ -14,11 +14,11 @@ public class FuncionesJuego {
         if (cartaArmaSeleccionada != null){
             danyoArma = calcularDanyo(cartaArmaSeleccionada, juego);
         }
-        if (cartaEnemigo.getNombreCarta().contains("ReyPica")) {
+        if (cartaEnemigo.getNombreCarta().contains("ReyPica") && juego.questDracula) {
             Modificador.questDracula(juego);
-        }else if (cartaEnemigo.getNombreCarta().contains("AsTrebol")) {
+        }else if (cartaEnemigo.getNombreCarta().contains("AsPica") && juego.questDragon) {
             Modificador.questDragon(juego);
-        }else if (cartaEnemigo.getNombreCarta().contains("CuatroPica")) {
+        }else if (cartaEnemigo.getNombreCarta().contains("CuatroPica") && juego.questSans) {
             Modificador.questSans(juego);
         }
         if (cartaArmaSeleccionada == null || (enemigoMuyFuerte && cartaEnemigo.getValorCarta().valor >= juego.ultimoEnemigoCarta.getValorCarta().valor)) {
@@ -69,9 +69,9 @@ public class FuncionesJuego {
         if (carta.getPaloCarta() == Carta.Palo.Diamante){
             return (carta.getValorCarta().valor + juego.danyoExtraArmas);
         }else if (carta.getPaloCarta() == Carta.Palo.Pica){
-            return  (carta.getValorCarta().valor + juego.danyoExtraPicas)*juego.multiplicadorDanyoPicas;
+            return  (carta.getValorCarta().valor + juego.danyoExtraPicas);
         }else{
-            return (carta.getValorCarta().valor + juego.danyoExtraTreboles)*juego.multiplicadorDanyoTreboles;
+            return (carta.getValorCarta().valor + juego.danyoExtraTreboles);
         }
     }
 }

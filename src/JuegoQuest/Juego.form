@@ -315,10 +315,10 @@
         <properties>
           <font name="Arial Black" size="12"/>
           <foreground color="-1"/>
-          <text value="RONDA: "/>
+          <text value="QUEST: "/>
         </properties>
       </component>
-      <component id="8907e" class="javax.swing.JLabel" binding="numRonda">
+      <component id="8907e" class="javax.swing.JLabel" binding="numQuest">
         <constraints>
           <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>

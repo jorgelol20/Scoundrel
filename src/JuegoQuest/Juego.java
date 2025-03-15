@@ -11,11 +11,14 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 public class Juego extends JFrame {
+    //Variables base (mazo y actualizar)
     public FuncionActualizar funcionActualizar = new FuncionActualizar();
-    public JPanel mainPanel;
     public static ArrayList<Carta> cartasMazo = new ArrayList<Carta>();
-    public static ArrayList<Modificador> modificadoresMazo = new ArrayList<Modificador>();
+
+    //Componentes menú y sus variables
+    public JPanel mainPanel;
     public JLabel mazo;
+    public JLabel numQuest;
     private Carta cartaSeleccionada;
     public JLabel cartaArmaSeleccionadaLabel;
     public Carta cartaArmaSeleccionada;
@@ -36,25 +39,26 @@ public class Juego extends JFrame {
     public JLabel ultimoEnemigo;
     public Carta ultimoEnemigoCarta;
     public Carta enemigoActual;
-    public boolean enemigoMuyFuerte = false;
-    public int vidas = 20;
-    public int vidaMaxima = 20;
-    public boolean curacionDisponible = true;
     public JTextArea log;
     public JLabel ultimoEnemigoAsimiladoLabel;
     public Carta ultimoEnemigoAsimilado;
     public String textoLogs = "";
     public boolean victoria = false;
     public boolean juegoNormal = false;
-    public boolean questDracula = false;
-    public boolean questDragon = false;
-    public int posicionModDracula = 0;
-    public int posicionModDragon = 0;
-    public int contadorRonda = 1;
+
+    //Variables juego base
+    public boolean enemigoMuyFuerte = false;
+    public int vidas = 20;
+    public int vidaMaxima = 20;
+    public boolean curacionDisponible = true;
+
+    //Variables modificadores
+    public boolean herido = false;
+    public boolean heridoGrave = false;
+    public int numRonda = 1; //Ronda dentro de la quest
+    public int contadorRondaQuest = 1; //Ronda general (1-10)
     public int contadorModificador = 1;
-    public int multiplicadorDanyoTreboles = 1;
     public int danyoExtraTreboles = 0;
-    public int multiplicadorDanyoPicas = 1;
     public int danyoExtraPicas = 0;
     public int efectoExtraCuracion = 0;
     public int danyoExtraArmas = 0;
@@ -62,6 +66,8 @@ public class Juego extends JFrame {
     public int contadorHuir = 1;
     public int huir = 1;
     public boolean maldicionDelPerdido = false;
+
+    //Variables modificadores
     public JLabel mod1;
     public JLabel mod2;
     public JLabel mod3;
@@ -72,12 +78,18 @@ public class Juego extends JFrame {
     public JLabel mod8;
     public JLabel mod9;
     public JLabel mod10;
-    public JLabel numRonda;
+
+    //Variables quest
+    public int posicionModDracula = 0;
+    public int posicionModDragon = 0;
+    public int posicionModSans = 0;
+    public boolean questDracula = false;
+    public boolean questDragon = false;
+    public boolean questSans = false;
 
     public Juego() {
         Main.frame.setContentPane(mainPanel);
         cartasMazo.clear();
-        modificadoresMazo.clear();
         Modificador.cargarModificadores();
         FuncionesInicio.crearBaraja(this);
         new FuncionSeleccionarModificadores(this);

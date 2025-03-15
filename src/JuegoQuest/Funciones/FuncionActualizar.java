@@ -1,7 +1,6 @@
 package JuegoQuest.Funciones;
 
 import JuegoQuest.Juego;
-import Menus.Main;
 import Menus.MenuFin;
 
 import javax.swing.*;
@@ -10,7 +9,7 @@ public class FuncionActualizar {
     public void actualizaciones(Juego juego) {
         juego.botonAccion.setIcon(new ImageIcon(Juego.iconosBoton.Seleccionar.iconosBoton));
         juego.botonAccion.setRolloverIcon(new ImageIcon(Juego.iconosBoton.Seleccionar.iconosBoton));
-        juego.numRonda.setText(String.valueOf(juego.contadorRonda));
+        juego.numQuest.setText(String.valueOf(juego.contadorRondaQuest));
         comprobarVidas(juego);
         desactivarBotones(juego);
         comprobacionesCartas(juego);
@@ -23,6 +22,11 @@ public class FuncionActualizar {
     }
     //Función para comprobar el número de vidas restantes.
     public static void comprobarVidas(Juego juego){
+        if (juego.herido && juego.numRonda % 2 == 0){
+            juego.vidas -= 1;
+        }else if (juego.heridoGrave && juego.numRonda % 2 == 0){
+            juego.vidas -= 3;
+        }
         //Si al vida supera las vidas máximas, se pondrá a estas automáticamente.
         if (juego.vidas > juego.vidaMaxima){
             juego.vidas = juego.vidaMaxima;
@@ -86,7 +90,7 @@ public class FuncionActualizar {
             juego.carta4Boton.setEnabled(true);
             juego.carta4 = Juego.cartasMazo.getFirst();
             Juego.cartasMazo.removeFirst();
-            if (juego.numCartasRestantes > 4 && !juego.maldicionDelPerdido) {
+            if (juego.numCartasRestantes > 4 && !(juego.maldicionDelPerdido)) {
                 juego.contadorHuir = juego.huir;
                 juego.botonHuir.setIcon(new ImageIcon("src/resources/sprites/botones/BotonHuir.png"));
                 juego.botonHuir.setRolloverEnabled(true);
@@ -101,7 +105,7 @@ public class FuncionActualizar {
             juego.carta2Boton.setPressedIcon(new ImageIcon(Juego.cartasMazo.getFirst().imagenCartaSeleccionada));
             juego.carta2Boton.setPressedIcon(new ImageIcon(Juego.cartasMazo.getFirst().imagenCartaSeleccionada));
             juego.carta2Boton.setRolloverIcon(new ImageIcon(Juego.cartasMazo.getFirst().imagenCartaSeleccionada));
-            juego.carta2 = juego.cartasMazo.getFirst();
+            juego.carta2 = Juego.cartasMazo.getFirst();
             Juego.cartasMazo.removeFirst();
             juego.carta3Boton.setIcon(new ImageIcon(Juego.cartasMazo.getFirst().imagenCarta));
             juego.carta3Boton.setPressedIcon(new ImageIcon(Juego.cartasMazo.getFirst().imagenCartaSeleccionada));
@@ -127,12 +131,12 @@ public class FuncionActualizar {
     Función para comprobar si has ganado
      */
     private void comprobarVictoria(Juego juego) {
-        if (juego.contadorRonda == 11){
+        if (juego.contadorRondaQuest == 11){
             new MenuFin().pantallaFinal(true);
         }
         if (juego.numCartasRestantes == 0 && juego.carta1 == null){
             FuncionesInicio.crearBaraja(juego);
-            juego.contadorRonda++;
+            juego.contadorRondaQuest++;
             juego.obtener4Cartas();
             actualizaciones(juego);
         }
