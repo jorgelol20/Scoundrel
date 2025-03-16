@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch4jConfig>
+  <dontWrapJar>false</dontWrapJar>
+  <headerType>gui</headerType>
+  <jar>C:\Users\jorge\Documents\Scoundrel\out\artifacts\Scoundrel_jar\Scoundrel.jar</jar>
+  <outfile>C:\Users\jorge\Documents\Scoundrel\Scoundrel.exe</outfile>
+  <errTitle></errTitle>
+  <cmdLine></cmdLine>
+  <chdir>.</chdir>
+  <priority>normal</priority>
+  <downloadUrl></downloadUrl>
+  <supportUrl></supportUrl>
+  <stayAlive>false</stayAlive>
+  <restartOnCrash>false</restartOnCrash>
+  <manifest></manifest>
+  <icon>C:\Users\jorge\Documents\Scoundrel\logoTemporal.ico</icon>
+  <var>set JAVA_HOME=%CD%\jdk\jdk-23.0.2</var>
+  <var>set PATH=%JAVA_HOME%\bin;%PATH%</var>
+  <jre>
+    <path>%JAVA_HOME%;%PATH%</path>
+    <requiresJdk>false</requiresJdk>
+    <requires64Bit>false</requires64Bit>
+    <minVersion>23</minVersion>
+    <maxVersion></maxVersion>
+  </jre>
+</launch4jConfig>

@@ -1,0 +1,84 @@
+
+
+Version:	3.50
+CmdLine:	C:\Users\jorge\Documents\Scoundrel\Scoundrel.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	C:\Users\jorge\Documents\Scoundrel\.
+Requires JDK:	Yes
+Requires 64-Bit: Yes
+Java min ver:	1.021.000
+Java max ver:	1.023.000
+JRE paths:	C:\Users\jorge\Documents\Scoundrel\jdk\jdk-23.0.2
+Check launcher:	C:\Users\jorge\Documents\Scoundrel\jdk\jdk-23.0.2\bin\javaw.exe (OK)
+Check javac:	C:\Users\jorge\Documents\Scoundrel\jdk\jdk-23.0.2\bin\javac.exe (OK)
+Version string: 1.023.000_002 / 64-Bit (Ignore)
+64-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+64-bit search:	SOFTWARE\JavaSoft\JDK...
+Check:		SOFTWARE\JavaSoft\JDK\22.0.2
+Version string: 1.022.000_002 / 64-Bit (OK)
+Check launcher:	C:\Program Files\Java\jdk-22\bin\javaw.exe (OK)
+Check javac:	C:\Program Files\Java\jdk-22\bin\javac.exe (OK)
+Match:		1.022.000_002
+Runtime used:	1.022.000_002 (64-bit)
+Launcher:	C:\Program Files\Java\jdk-22\bin\javaw.exe
+Launcher args:	-jar "C:\Users\jorge\Documents\Scoundrel\Scoundrel.exe"
+Args length:	55/32768 chars
+Exit code:	0
+
+
+Version:	3.50
+CmdLine:	C:\Users\jorge\Documents\Scoundrel\Scoundrel.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	C:\Users\jorge\Documents\Scoundrel\.
+Requires JDK:	Yes
+Requires 64-Bit: Yes
+Java min ver:	1.023.000
+Java max ver:	
+JRE paths:	C:\Users\jorge\Documents\Scoundrel\jdk\jdk-23.0.2
+Check launcher:	C:\Users\jorge\Documents\Scoundrel\jdk\jdk-23.0.2\bin\javaw.exe (OK)
+Check javac:	C:\Users\jorge\Documents\Scoundrel\jdk\jdk-23.0.2\bin\javac.exe (OK)
+Version string: 1.023.000_002 / 64-Bit (OK)
+Launcher:	C:\Users\jorge\Documents\Scoundrel\jdk\jdk-23.0.2\bin\javaw.exe
+Launcher args:	-jar "C:\Users\jorge\Documents\Scoundrel\Scoundrel.exe"
+Args length:	55/32768 chars
+Exit code:	0
+
+
+Version:	3.50
+CmdLine:	C:\Users\jorge\Documents\Scoundrel\Scoundrel.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	C:\Users\jorge\Documents\Scoundrel\.
+Requires JDK:	No
+Requires 64-Bit: No
+Java min ver:	1.023.000
+Java max ver:	
+JRE paths:	jdk
+Check launcher:	C:\Users\jorge\Documents\Scoundrel\jdk\bin\javaw.exe (not found)
+64-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8
+Version string: 1.008.000 / 64-Bit (Ignore)
+Ignore:		1.008.000
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8.0_441
+Version string: 1.008.000_441 / 64-Bit (Ignore)
+Ignore:		1.008.000_441
+32-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+64-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+32-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+64-bit search:	SOFTWARE\JavaSoft\JRE...
+32-bit search:	SOFTWARE\JavaSoft\JRE...
+64-bit search:	SOFTWARE\JavaSoft\JDK...
+Check:		SOFTWARE\JavaSoft\JDK\22.0.2
+Version string: 1.022.000_002 / 64-Bit (Ignore)
+Ignore:		1.022.000_002
+Check:		SOFTWARE\JavaSoft\JDK\23
+Version string: 1.023.000 / 64-Bit (OK)
+Check launcher:	C:\Program Files\Java\jdk-23\bin\javaw.exe (OK)
+Match:		1.023.000
+Runtime used:	1.023.000 (64-bit)
+Launcher:	C:\Program Files\Java\jdk-23\bin\javaw.exe
+Launcher args:	-jar "C:\Users\jorge\Documents\Scoundrel\Scoundrel.exe"
+Args length:	55/32768 chars
+Exit code:	0
