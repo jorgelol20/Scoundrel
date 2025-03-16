@@ -125,7 +125,7 @@ public class FuncionActualizar {
     Función para comprobar si has ganado
      */
     private void comprobarVictoria(Juego juego) {
-        if (juego.numCartasRestantes == 0 && juego.carta1 == null){
+        if (juego.numCartasRestantes == 0 && juego.carta1 == null && juego.vidas > 0){
             JPanel victoria = new JPanel();
             victoria.add(new JLabel(new ImageIcon("src/resources/sprites/victoria.png")));
             Main.frame.setContentPane(victoria);

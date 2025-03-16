@@ -66,7 +66,8 @@ public class Juego extends JFrame {
     public int contadorHuir = 1;
     public int huir = 1;
     public boolean maldicionDelPerdido = false;
-
+    public boolean gastroenteritis = false;
+    public boolean paranoia = false;
     //Variables modificadores
     public JLabel mod1;
     public JLabel mod2;

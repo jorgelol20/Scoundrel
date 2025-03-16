@@ -3,7 +3,19 @@ import JuegoNormal.Funciones.FuncionesInicio;
 
 public class Carta {
     public enum Palo{
-        Corazon, Diamante, Trebol, Pica
+        Corazon("src/resources/sprites/cartasDefault/CartaCorazon.png"), Diamante("src/resources/sprites/cartasDefault/CartaDiamante.png"), Trebol("src/resources/sprites/cartasDefault/CartaTrebol.png"), Pica("src/resources/sprites/cartasDefault/CartaPica.png");
+        public final String imagenDefault;
+        public final String imagenDefaultSeleccionada;
+        Palo(String imagen){
+            imagenDefault = imagen;
+            imagenDefaultSeleccionada = imagen;
+        }
+        public String getImagen(){
+            return imagenDefault;
+        }
+        public String getImagenSeleccionada(){
+            return imagenDefaultSeleccionada;
+        }
     }
     public enum Valor{
         As(14), Rey(13), Reina(12), Sota(11), Diez(10), Nueve(9), Ocho(8), Siete(7), Seis(6), Cinco(5), Cuatro(4), Tres(3), Dos(2);

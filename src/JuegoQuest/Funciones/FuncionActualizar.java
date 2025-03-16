@@ -95,7 +95,22 @@ public class FuncionActualizar {
                 juego.botonHuir.setIcon(new ImageIcon("src/resources/sprites/botones/BotonHuir.png"));
                 juego.botonHuir.setRolloverEnabled(true);
             }
+            if (juego.paranoia && juego.numRonda % 5 == 0){
+                juego.carta2Boton.setIcon(new ImageIcon(juego.carta2.getPaloCarta().imagenDefault));
+                juego.carta2Boton.setPressedIcon(new ImageIcon(juego.carta2.getPaloCarta().imagenDefault.replace(".png","Seleccionado.png")));
+                juego.carta2Boton.setPressedIcon(new ImageIcon(juego.carta2.getPaloCarta().imagenDefault.replace(".png","Seleccionado.png")));
+                juego.carta2Boton.setRolloverIcon(new ImageIcon(juego.carta2.getPaloCarta().imagenDefault.replace(".png","Seleccionado.png")));
+                juego.carta3Boton.setIcon(new ImageIcon(juego.carta3.getPaloCarta().imagenDefault));
+                juego.carta3Boton.setPressedIcon(new ImageIcon(juego.carta3.getPaloCarta().imagenDefault.replace(".png","Seleccionado.png")));
+                juego.carta3Boton.setPressedIcon(new ImageIcon(juego.carta3.getPaloCarta().imagenDefault.replace(".png","Seleccionado.png")));
+                juego.carta3Boton.setRolloverIcon(new ImageIcon(juego.carta3.getPaloCarta().imagenDefault.replace(".png","Seleccionado.png")));
+                juego.carta4Boton.setIcon(new ImageIcon(juego.carta4.getPaloCarta().imagenDefault));
+                juego.carta4Boton.setPressedIcon(new ImageIcon(juego.carta4.getPaloCarta().imagenDefault.replace(".png","Seleccionado.png")));
+                juego.carta4Boton.setPressedIcon(new ImageIcon(juego.carta4.getPaloCarta().imagenDefault.replace(".png","Seleccionado.png")));
+                juego.carta4Boton.setRolloverIcon(new ImageIcon(juego.carta4.getPaloCarta().imagenDefault.replace(".png","Seleccionado.png")));
+            }
             juego.curacionDisponible = true;
+            juego.numRonda++;
         }
         /*
         Si la carta dos es nula y solo quedan 2 cartas en el deck, se rellenarán la carta 2 y 3.
@@ -131,17 +146,23 @@ public class FuncionActualizar {
     Función para comprobar si has ganado
      */
     private void comprobarVictoria(Juego juego) {
-        if (juego.contadorRondaQuest == 11){
+        if (juego.contadorRondaQuest == 11 && juego.vidas > 0){
             new MenuFin().pantallaFinal(true);
         }
         if (juego.numCartasRestantes == 0 && juego.carta1 == null){
             FuncionesInicio.crearBaraja(juego);
             juego.contadorRondaQuest++;
             juego.obtener4Cartas();
+            activarBotones(juego);
             actualizaciones(juego);
         }
     }
     public static void setNumCartas(Juego juego) {
         juego.cartasRestantes.setText(String.valueOf(Juego.cartasMazo.size()));
+    }
+    public static void activarBotones(Juego juego) {
+        juego.carta2Boton.setEnabled(true);
+        juego.carta3Boton.setEnabled(true);
+        juego.carta4Boton.setEnabled(true);
     }
 }

@@ -6,9 +6,9 @@ import static JuegoQuest.Funciones.FuncionesJuego.*;
 public class FuncionBoton4 {
     public static void funcionBoton(Juego juego){
         if (juego.carta4.getNombreCarta().contains("Diamante")) {
-            funcionArma(juego, juego.carta4Boton,juego.carta4);
+            funcionArma(juego,juego.carta4);
         } else if (juego.carta4.getNombreCarta().contains("Pica") || juego.carta4.getNombreCarta().contains("Trebol")) {
-            funcionAtaque(juego, juego.cartaArmaSeleccionada, juego.enemigoMuyFuerte, juego.carta4, juego.carta4Boton);
+            funcionAtaque(juego, juego.cartaArmaSeleccionada, juego.enemigoMuyFuerte, juego.carta4);
         } else if (juego.carta4.getNombreCarta().contains("Corazon")) {
             funcionCurar(juego, juego.carta4);
         }

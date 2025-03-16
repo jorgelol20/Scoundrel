@@ -1,5 +1,6 @@
 package Entidades;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -7,6 +8,7 @@ import JuegoQuest.Funciones.FuncionActualizar;
 import JuegoQuest.Funciones.FuncionesInicio;
 import JuegoQuest.Funciones.FuncionesJuego;
 import JuegoQuest.Juego;
+import Menus.Main;
 
 import javax.swing.*;
 
@@ -74,123 +76,147 @@ public class Modificador {
         //Maldición del perdido #18
         modificadores.add(new Modificador(TipoModificador.DEBUFF, "Maldición del perdido", "<html><div style='width: 200px; text-align: justify;'>No puedes huir durante el resto de la partida.</div><html>", "src/resources/sprites/modificadores/MaldicionPerdido.png", 18));
         //¿Sans? #19
-        modificadores.add(new Modificador(TipoModificador.QUEST, "¿Sans?", "<html><div style='width: 200px; text-align: justify;'>Mientras siga vivo CuatroPica, todos los enemigos hacen 1 más de daño.</div></html>", "src/resources/sprites/modificadores/Sans.png", 19));
+        modificadores.add(new Modificador(TipoModificador.QUEST, "¿Sans?", "<html><div style='width: 200px; text-align: justify;'>Mientras siga vivo CincoPica, todos los enemigos hacen 1 más de daño.</div></html>", "src/resources/sprites/modificadores/Sans.png", 19));
         //Sutnami biscosa #20
-        modificadores.add(new Modificador(TipoModificador.DEBUFF,"Sutnami Biscoso","<html><div style='width: 200px; text-align: justify;'>Se agregan 6 doses a la baraja</div></html>", "src/resources/sprites/modificadores/Sutnami.png", 20));
+        modificadores.add(new Modificador(TipoModificador.DEBUFF,"Sutnami Viscoso","<html><div style='width: 200px; text-align: justify;'>Se agregan 6 doses a la baraja</div></html>", "src/resources/sprites/modificadores/TsunamiSlimes.png", 20));
         //Herido #21
         modificadores.add(new Modificador(TipoModificador.DEBUFF, "Herido", "<html><div style='width: 200px; text-align: justify;'>Cada dos rondas, pierdes 1 de vida</div></html>", "src/resources/sprites/modificadores/Herido.png", 21));
         //Herido de gravedad #22
-        modificadores.add(new Modificador(TipoModificador.DEBUFF,"Herido de gravedad", "<html><div style='width: 200px; text-align: justify;'>Cada dos rondas, pierdes 3 de vida</div></html>","src/resources/sprites/modificadores/HeridoGrave.png", 22));
+        modificadores.add(new Modificador(TipoModificador.DEBUFF,"Herido de gravedad", "<html><div style='width: 200px; text-align: justify;'>Cada dos rondas, pierdes 3 de vida</div></html>","src/resources/sprites/modificadores/GraveHerido.png", 22));
+        //Paranoia #23
+        modificadores.add(new Modificador(TipoModificador.DEBUFF,"Paranoia","<html><div style='width: 200px; text-align: justify;'>Cada 5 rondas, no conoces el valor de las cartas añadidas</div></html>", "src/resources/sprites/modificadores/Paranoia.png", 23));
+        //Gastroenteritis (hay un 25% de no curarte puedes no curarte) #24
+        modificadores.add(new Modificador(TipoModificador.DEBUFF,"Gastroenteritis","<html><div style='width: 200px; text-align: justify;'>Hay un 25% de probabilidades de no curarte</div></html>","src/resources/sprites/modificadores/Gatronteritis.png", 24));
+        //Persecución #25
+
+        //Impacto crítico (25% enemigos 50%armas) #26
+
+        //Pentakill #27
+
+        //Fatiga (probabilidad del 10% de fallar el ataque con arma) #28
+
+        //Último suspiro #29
+
     }
     public static void aplicarModificador(Modificador modificador, Juego juego) {
+        String iconoPequeno = modificador.icono.replace(".png","Pequeno.png");
         switch (modificador.id) {
             case 0:
                 juego.vidaMaxima += 5;
                 juego.vidas += 5;
-                modificador.icono16 = "src/resources/sprites/modificadores/MasVida1Pequeno.png";
+                modificador.icono16 = iconoPequeno;
                 break;
             case 1:
                 juego.vidaMaxima += 10;
                 juego.vidas += 10;
-                modificador.icono16 = "src/resources/sprites/modificadores/MasVida2Pequeno.png";
+                modificador.icono16 = iconoPequeno;
                 break;
             case 2:
                 juego.vidaMaxima += 15;
                 juego.vidas += 15;
-                modificador.icono16 = "src/resources/sprites/modificadores/MasVida3Pequeno.png";
+                modificador.icono16 = iconoPequeno;
                 break;
             case 3:
                 juego.danyoExtraTreboles -= 1;
                 juego.danyoExtraPicas += 1;
-                modificador.icono16 = null;
+                modificador.icono16 = iconoPequeno;
                 break;
             case 4:
                 juego.danyoExtraPicas += 1;
                 juego.danyoExtraTreboles -= 2;
-                modificador.icono16 = null;
+                modificador.icono16 = iconoPequeno;
                 break;
             case 5:
                 juego.danyoExtraPicas += 1;
                 juego.danyoExtraTreboles -= 3;
-                modificador.icono16 = null;
+                modificador.icono16 = iconoPequeno;
                 break;
             case 6:
                 juego.danyoExtraPicas -= 1;
                 juego.danyoExtraTreboles += 1;
-                modificador.icono16 = null;
+                modificador.icono16 = iconoPequeno;
                 break;
             case 7:
                 juego.danyoExtraPicas -= 2;
                 juego.danyoExtraTreboles += 1;
-                modificador.icono16 = null;
+                modificador.icono16 = iconoPequeno;
                 break;
             case 8:
                 juego.danyoExtraPicas -= 3;
                 juego.danyoExtraTreboles += 1;
-                modificador.icono16 = null;
+                modificador.icono16 = iconoPequeno;
                 break;
             case 9:
                 juego.efectoExtraCuracion -= 1;
-                modificador.icono16 = null;
+                modificador.icono16 = iconoPequeno;
                 juego.questDracula = true;
                 break;
             case 10:
                 modArmas(juego, 4, 2);
-                modificador.icono16 = null;
+                modificador.icono16 = iconoPequeno;
                 break;
             case 11:
                 modArmas(juego, 7, 5);
-                modificador.icono16 = null;
+                modificador.icono16 = iconoPequeno;
                 break;
             case 12:
                 modArmas(juego, 10, 8);
-                modificador.icono16 = null;
+                modificador.icono16 = iconoPequeno;
                 break;
             case 13:
+                modificador.icono16 = iconoPequeno;
                 juego.questDragon = true;
                 break;
             case 14:
                 juego.danyoExtraArmas += 3;
                 juego.efectoExtraCuracion -= 4;
-                modificador.icono16 = null;
+                modificador.icono16 = iconoPequeno;
                 break;
             case 15:
                 juego.metabolismoRapido = true;
-                modificador.icono16 = null;
+                modificador.icono16 = iconoPequeno;
                 break;
             case 16:
                 juego.huir = 2;
                 juego.contadorHuir += 1;
-                modificador.icono16 = null;
+                modificador.icono16 = iconoPequeno;
                 break;
             case 17:
                 juego.efectoExtraCuracion += 4;
                 juego.danyoExtraArmas -= 3;
-                modificador.icono16 = null;
+                modificador.icono16 = iconoPequeno;
                 break;
             case 18:
                 juego.maldicionDelPerdido = true;
                 juego.botonHuir.setIcon(new ImageIcon("src/resources/sprites/botones/BotonHuirBloqueado.png"));
                 juego.botonHuir.setRolloverEnabled(false);
-                modificador.icono16 = null;
+                modificador.icono16 = iconoPequeno;
                 break;
             case 19:
                 juego.danyoExtraPicas += 1;
                 juego.danyoExtraTreboles += 1;
-                modificador.icono16 = null;
+                modificador.icono16 = iconoPequeno;
                 juego.questSans = true;
                 break;
             case 20:
                 sutnamiSlimes(juego);
-                modificador.icono16 = null;
+                modificador.icono16 = iconoPequeno;
                 break;
             case 21:
                 juego.herido = true;
-                modificador.icono16 = null;
+                modificador.icono16 = iconoPequeno;
                 break;
             case 22:
                 juego.heridoGrave = true;
-                modificador.icono16 = null;
+                modificador.icono16 = iconoPequeno;
+                break;
+            case 23:
+                juego.paranoia = true;
+                modificador.icono16 = iconoPequeno;
+                break;
+            case 24:
+                juego.gastroenteritis = true;
+                modificador.icono16 = iconoPequeno;
                 break;
             default:
                 break;
@@ -200,10 +226,9 @@ public class Modificador {
     }
 
     public static Modificador obtenerModificador() {
-        ArrayList<Modificador> modificadorAleatorio = modificadores;
-        Collections.shuffle(modificadorAleatorio);
-        Modificador modificador = modificadorAleatorio.getFirst();
-        modificadores.remove(modificador);
+        Collections.shuffle(modificadores);
+        Modificador modificador = modificadores.getFirst();
+        modificadores.removeFirst();
         return modificador;
     }
     public static void setIconoModificador(Modificador modificador, Juego juego) {
@@ -216,7 +241,6 @@ public class Modificador {
         if (modificador.nombre.contains("¿Sans?")) {
             juego.posicionModSans = juego.contadorModificador;
         }
-        modificador.icono16 = "src/resources/sprites/modificadores/MasVIda3Pequeno.png";
         switch (juego.contadorModificador) {
             case 1:
                 juego.mod1.setIcon(new ImageIcon(modificador.icono16));
@@ -299,7 +323,7 @@ public class Modificador {
     }
     public static void questDracula(Juego juego) {
         juego.efectoExtraCuracion += 4;
-        String iconoPequenyo = "";
+        String iconoPequenyo = "src/resources/sprites/modificadores/DraculaDerrotadoPequeno.png";
         switch (juego.posicionModDracula) {
             case 1:
                 juego.mod1.setIcon(new ImageIcon(iconoPequenyo));
@@ -347,7 +371,7 @@ public class Modificador {
     }
     public static void questDragon(Juego juego) {
         juego.danyoExtraArmas += 2;
-        String iconoPequenyo = "";
+        String iconoPequenyo = "src/resources/sprites/modificadores/DragonDerrotadoPequeno.png";
         switch (juego.posicionModDragon) {
             case 1:
                 juego.mod1.setIcon(new ImageIcon(iconoPequenyo));
@@ -397,7 +421,7 @@ public class Modificador {
         juego.danyoExtraArmas += 2;
         juego.danyoExtraPicas -= 1;
         juego.danyoExtraTreboles -= 1;
-        String iconoPequenyo = "";
+        String iconoPequenyo = "src/resources/sprites/modificadores/SansDerrotadoPequeno.png";
         switch (juego.posicionModSans) {
             case 1:
                 juego.mod1.setIcon(new ImageIcon(iconoPequenyo));

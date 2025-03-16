@@ -8,6 +8,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 public class FuncionSeleccionarModificadores {
     private JPanel panelModificadores;
@@ -23,7 +25,6 @@ public class FuncionSeleccionarModificadores {
     private JLabel descripcionMod1;
     private JLabel descripcionMod2;
     private JLabel descripcionMod3;
-    private JButton saltarButton;
     private JLabel iconoMod1;
     private JLabel iconoMod2;
     private JLabel iconoMod3;
@@ -36,7 +37,9 @@ public class FuncionSeleccionarModificadores {
         frame2.setUndecorated(true);
         frame2.setLocationRelativeTo(Main.frame);
         frame2.setContentPane(panelModificadores);
-        frame2.setVisible(true);
+        frame2.setVisible(true);;
+        frame2.setContentPane(panelModificadores);
+        Main.frame.setVisible(false);
         mod1 = new Modificador(Modificador.obtenerModificador());
         mod2 = new Modificador(Modificador.obtenerModificador());
         mod3 = new Modificador(Modificador.obtenerModificador());
@@ -55,6 +58,7 @@ public class FuncionSeleccionarModificadores {
             public void actionPerformed(ActionEvent e) {
                 FuncionSeleccionarModificadores.aplicar(juego, mod1);
                 frame2.dispose();
+                Main.frame.setVisible(true);
             }
         });
         selecMod2.addActionListener(new ActionListener() {
@@ -62,6 +66,7 @@ public class FuncionSeleccionarModificadores {
             public void actionPerformed(ActionEvent e) {
                 FuncionSeleccionarModificadores.aplicar(juego, mod2);
                 frame2.dispose();
+                Main.frame.setVisible(true);
             }
         });
         selecMod3.addActionListener(new ActionListener() {
@@ -69,17 +74,11 @@ public class FuncionSeleccionarModificadores {
             public void actionPerformed(ActionEvent e) {
                 FuncionSeleccionarModificadores.aplicar(juego, mod3);
                 frame2.dispose();
-            }
-        });
-        saltarButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                frame2.dispose();
+                Main.frame.setVisible(true);
             }
         });
     }
     public static void aplicar(Juego juego, Modificador modificador) {
         Modificador.aplicarModificador(modificador,juego);
-
     }
 }

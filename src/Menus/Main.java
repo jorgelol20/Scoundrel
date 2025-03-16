@@ -1,7 +1,11 @@
 package Menus;
 
 import JuegoNormal.Funciones.FuncionSonido;
-import JuegoNormal.Juego;
+import JuegoNormal.*;
+import JuegoQuest.*;
+import JuegoQuest.Juego;
+
+
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
@@ -15,6 +19,8 @@ public class Main {
     private JButton salirBoton;
     public JPanel panelMenu;
     private JButton aprenderAJugarButton;
+    private JuegoNormal.Juego juego;
+    private JuegoQuest.Juego juegoQuest;
     public static float valorVolumenMusica = 0.5f;
     public static float valorVolumenSonidos = 0.5f;
     private JSlider volumenSonidos;
@@ -40,28 +46,28 @@ public class Main {
         empezarPartidaBoton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new FuncionSonido(Juego.SonidosJuego.SonidoBotones).reproducirSonido();
-                new JuegoNormal.Juego();
+                new FuncionSonido(JuegoNormal.Juego.SonidosJuego.SonidoBotones).reproducirSonido();
+                juego = new JuegoNormal.Juego();
             }
         });
         empezarQuestBoton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new FuncionSonido(Juego.SonidosJuego.SonidoBotones).reproducirSonido();
+                new FuncionSonido(JuegoNormal.Juego.SonidosJuego.SonidoBotones).reproducirSonido();
                 empezarQuest();
             }
         });
         salirBoton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new FuncionSonido(Juego.SonidosJuego.SonidoBotones).reproducirSonido();
+                new FuncionSonido(JuegoNormal.Juego.SonidosJuego.SonidoBotones).reproducirSonido();
                 System.exit(0);
             }
         });
         aprenderAJugarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new FuncionSonido(Juego.SonidosJuego.SonidoBotones).reproducirSonido();
+                new FuncionSonido(JuegoNormal.Juego.SonidosJuego.SonidoBotones).reproducirSonido();
                 JOptionPane.showMessageDialog(panelMenu,"¡Bienvenido a Scoundrel! \nUn MiniRPG de cartas \ndesarrollado por dos frikis (Jorge y Adri)","Bienvenido",JOptionPane.INFORMATION_MESSAGE,new ImageIcon("src/resources/sprites/logoTemporal.png"));
                 JOptionPane.showMessageDialog(panelMenu, "En Scroundle hay 4 tipos de cartas: \nlos corazones, los diamantes, las picas y los tréboles.\n" +
                                                                     "Cada una de las cartas tiene sus propias acciones \ny funciones dentro del juego.", "Tipos de carta", JOptionPane.INFORMATION_MESSAGE, new ImageIcon("src/resources/sprites/imagenesTutorial/imagen1.png"));
@@ -95,6 +101,6 @@ public class Main {
         });
     }
     public void empezarQuest() {
-        new JuegoQuest.Juego();
+        juegoQuest = new JuegoQuest.Juego();
     }
 }
