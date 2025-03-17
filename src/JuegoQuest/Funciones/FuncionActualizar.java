@@ -10,6 +10,9 @@ public class FuncionActualizar {
         juego.botonAccion.setIcon(new ImageIcon(Juego.iconosBoton.Seleccionar.iconosBoton));
         juego.botonAccion.setRolloverIcon(new ImageIcon(Juego.iconosBoton.Seleccionar.iconosBoton));
         juego.numQuest.setText(String.valueOf(juego.contadorRondaQuest));
+        if (juego.pentakill) {
+            pentakill(juego);
+        }
         comprobarVidas(juego);
         desactivarBotones(juego);
         comprobacionesCartas(juego);
@@ -45,7 +48,12 @@ public class FuncionActualizar {
         }
         //Se la vida es menor o igual a 0, saldrá la pantalla de GameOver
         if (juego.vidas <= 0) {
-            MenuFin.llamarPantallaFinal(new MenuFin(),juego.victoria, juego.juegoNormal);
+            if (juego.ultimoSuspiro){
+                juego.ultimoSuspiro = false;
+                juego.vidas = 1;
+            }else{
+                MenuFin.llamarPantallaFinal(new MenuFin(),juego.victoria, juego.juegoNormal);
+            }
         }
         juego.numVida.setText(juego.vidas + "");
     }
@@ -154,6 +162,9 @@ public class FuncionActualizar {
             juego.contadorRondaQuest++;
             juego.obtener4Cartas();
             activarBotones(juego);
+            if (juego.ultimoSuspiroActivado){
+                juego.ultimoSuspiro = true;
+            }
             actualizaciones(juego);
         }
     }
@@ -164,5 +175,11 @@ public class FuncionActualizar {
         juego.carta2Boton.setEnabled(true);
         juego.carta3Boton.setEnabled(true);
         juego.carta4Boton.setEnabled(true);
+    }
+    public static void pentakill(Juego juego){
+        if (juego.contadorPentakill % 5 == 0){
+            juego.textoLogs += "¡PENTAKILL ("+(juego.contadorPentakill%5)+")!\n";
+            juego.danyoExtraArmas += 5;
+        }
     }
 }

@@ -31,3 +31,4 @@ bin/
 ### JDK ###
 /jdk/
 /jdk/jdk-23.0.2/
+/jre/

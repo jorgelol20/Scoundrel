@@ -41,6 +41,7 @@ public class Juego extends JFrame {
     public boolean curacionDisponible = true;
     public JTextArea log;
     public JLabel ultimoEnemigoAsimiladoLabel;
+    private JButton salir;
     public Carta ultimoEnemigoAsimilado;
     public String textoLogs = "";
     public boolean victoria = false;
@@ -180,6 +181,14 @@ public class Juego extends JFrame {
                     FuncionBoton4.funcionBoton(Juego.this);
                 }
                 funcionActualizar.actualizaciones(Juego.this);
+            }
+        });
+        salir.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (JOptionPane.showOptionDialog(mainPanel,"¿Seguro que quiere salir al menú principal?","Salir",JOptionPane.YES_NO_OPTION,JOptionPane.INFORMATION_MESSAGE,null,null,0) == 0){
+                    Main.main(new String[0]);
+                }
             }
         });
     }

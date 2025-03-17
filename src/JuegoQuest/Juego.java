@@ -68,6 +68,11 @@ public class Juego extends JFrame {
     public boolean maldicionDelPerdido = false;
     public boolean gastroenteritis = false;
     public boolean paranoia = false;
+    public boolean sinEscapatoria = false;
+    public boolean ultimoSuspiro = false;
+    public boolean ultimoSuspiroActivado = false;
+    public boolean pentakill = false;
+    public int contadorPentakill = 0;
     //Variables modificadores
     public JLabel mod1;
     public JLabel mod2;
@@ -79,6 +84,7 @@ public class Juego extends JFrame {
     public JLabel mod8;
     public JLabel mod9;
     public JLabel mod10;
+    private JButton salir;
 
     //Variables quest
     public int posicionModDracula = 0;
@@ -225,6 +231,14 @@ public class Juego extends JFrame {
                 }
             }
         });
+        salir.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (JOptionPane.showOptionDialog(mainPanel,"¿Seguro que quiere salir al menú principal?","Salir",JOptionPane.YES_NO_OPTION,JOptionPane.INFORMATION_MESSAGE,null,null,0) == 0){
+                    Main.main(new String[0]);
+                }
+            }
+        });
     }
 
     public void obtener4Cartas() {
@@ -257,17 +271,28 @@ public class Juego extends JFrame {
     }
 
     public void cartasTrasHuir() {
+        boolean efectoPersecucion = false;
+        if (sinEscapatoria){
+            int numAleatorio = (int) Math.ceil((Math.random() * 4));
+            if (numAleatorio == 1){
+                efectoPersecucion = true;
+            }
+        }
         if (carta4 != null && contadorHuir > 0 && !maldicionDelPerdido) {
-            cartasMazo.addLast(new Carta(carta1));
-            cartasMazo.addLast(new Carta(carta2));
-            cartasMazo.addLast(new Carta(carta3));
-            cartasMazo.addLast(new Carta(carta4));
+            if (efectoPersecucion){
+                textoLogs += "Intentaste escapar, pero te siguieron\n";
+            }else{
+                cartasMazo.addLast(new Carta(carta1));
+                cartasMazo.addLast(new Carta(carta2));
+                cartasMazo.addLast(new Carta(carta3));
+                cartasMazo.addLast(new Carta(carta4));
+                obtener4Cartas();
+            }
             contadorHuir--;
             if (contadorHuir == 0) {
                 botonHuir.setIcon(new ImageIcon("src/resources/sprites/botones/BotonHuirBloqueado.png"));
                 botonHuir.setRolloverEnabled(false);
             }
-            obtener4Cartas();
             funcionActualizar.actualizaciones(this);
         }
     }

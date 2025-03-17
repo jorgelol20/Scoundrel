@@ -32,9 +32,9 @@ public class FuncionSeleccionarModificadores {
     public FuncionSeleccionarModificadores(Juego juego) {
         JFrame frame2 = new JFrame("Modificadores");
         frame2.setIconImage(Main.frame.getIconImage());
-        frame2.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        frame2.setLocation(Main.frame.getLocation());
+        frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame2.setBounds(0,0, 1300, 768);
-        frame2.setUndecorated(true);
         frame2.setLocationRelativeTo(Main.frame);
         frame2.setContentPane(panelModificadores);
         frame2.setVisible(true);;
@@ -58,6 +58,7 @@ public class FuncionSeleccionarModificadores {
             public void actionPerformed(ActionEvent e) {
                 FuncionSeleccionarModificadores.aplicar(juego, mod1);
                 frame2.dispose();
+                Main.frame.setLocation(frame2.getLocation());
                 Main.frame.setVisible(true);
             }
         });
@@ -66,6 +67,7 @@ public class FuncionSeleccionarModificadores {
             public void actionPerformed(ActionEvent e) {
                 FuncionSeleccionarModificadores.aplicar(juego, mod2);
                 frame2.dispose();
+                Main.frame.setLocation(frame2.getLocation());
                 Main.frame.setVisible(true);
             }
         });
@@ -74,6 +76,7 @@ public class FuncionSeleccionarModificadores {
             public void actionPerformed(ActionEvent e) {
                 FuncionSeleccionarModificadores.aplicar(juego, mod3);
                 frame2.dispose();
+                Main.frame.setLocation(frame2.getLocation());
                 Main.frame.setVisible(true);
             }
         });

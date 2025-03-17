@@ -1,14 +1,10 @@
 package Entidades;
 
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.Collections;
 
 import JuegoQuest.Funciones.FuncionActualizar;
-import JuegoQuest.Funciones.FuncionesInicio;
-import JuegoQuest.Funciones.FuncionesJuego;
 import JuegoQuest.Juego;
-import Menus.Main;
 
 import javax.swing.*;
 
@@ -87,16 +83,16 @@ public class Modificador {
         modificadores.add(new Modificador(TipoModificador.DEBUFF,"Paranoia","<html><div style='width: 200px; text-align: justify;'>Cada 5 rondas, no conoces el valor de las cartas añadidas</div></html>", "src/resources/sprites/modificadores/Paranoia.png", 23));
         //Gastroenteritis (hay un 25% de no curarte puedes no curarte) #24
         modificadores.add(new Modificador(TipoModificador.DEBUFF,"Gastroenteritis","<html><div style='width: 200px; text-align: justify;'>Hay un 25% de probabilidades de no curarte</div></html>","src/resources/sprites/modificadores/Gatronteritis.png", 24));
-        //Persecución #25
-
+        //Sin escapatoria #25
+        modificadores.add(new Modificador(TipoModificador.DEBUFF, "Sin escapatoria", "<html><div style='width: 200px; text-align: justify;'>Hay un 25% de probabilidad de que no puedas huir</div></html>","src/resources/sprites/modificadores/Persecucion.png", 25));
         //Impacto crítico (25% enemigos 50%armas) #26
 
         //Pentakill #27
-
+        modificadores.add(new Modificador(TipoModificador.BUFF, "Pentakill", "<html><div style='width: 200px; text-align: justify;'>+5 de daño cada 5 enemigos hasta curarse o cambiar arma</div></html>","src/resources/sprites/modificadores/Pentakill.png", 27));
         //Fatiga (probabilidad del 10% de fallar el ataque con arma) #28
 
         //Último suspiro #29
-
+        modificadores.add(new Modificador(TipoModificador.BUFF, "Último suspiro", "<html><div style='width: 200px; text-align: justify;'>Si fueras a morir, sobrevivirás con una vida</div></html>", "src/resources/sprites/modificadores/Suspiro.png", 29));
     }
     public static void aplicarModificador(Modificador modificador, Juego juego) {
         String iconoPequeno = modificador.icono.replace(".png","Pequeno.png");
@@ -216,6 +212,19 @@ public class Modificador {
                 break;
             case 24:
                 juego.gastroenteritis = true;
+                modificador.icono16 = iconoPequeno;
+                break;
+            case 25:
+                juego.sinEscapatoria = true;
+                modificador.icono16 = iconoPequeno;
+                break;
+            case 27:
+                juego.pentakill = true;
+                juego.contadorPentakill = 0;
+                break;
+            case 29:
+                juego.ultimoSuspiro = true;
+                juego.ultimoSuspiroActivado = true;
                 modificador.icono16 = iconoPequeno;
                 break;
             default:

@@ -41,6 +41,9 @@ public class FuncionesJuego {
         }if (cartaEnemigo.getNombreCarta().contains("CuatroPica") && juego.questSans) {
             Modificador.questSans(juego);
         }
+        if (juego.pentakill){
+            juego.contadorPentakill++;
+        }
         new FuncionSonido(Juego.SonidosJuego.GirarCarta).reproducirSonido();
     }
     public static void funcionCurar(Juego juego, Carta cartaCuracion){
@@ -60,7 +63,10 @@ public class FuncionesJuego {
             juego.textoLogs += "Vomitaste la comida y no te curaste\n";
         }
         juego.curacionDisponible = false;
-
+        if (juego.pentakill){
+            juego.danyoExtraArmas -= (juego.contadorPentakill / 5) * 5;
+        }
+        juego.contadorPentakill = 0;
         new FuncionSonido(Juego.SonidosJuego.GirarCarta).reproducirSonido();
     }
     public static void funcionArma(Juego juego, Carta cartaArma){
@@ -72,6 +78,10 @@ public class FuncionesJuego {
         juego.ultimoEnemigoAsimilado = null;
         juego.ultimoEnemigoAsimiladoLabel.setIcon(null);
         juego.enemigoMuyFuerte = false;
+        if (juego.pentakill){
+            juego.danyoExtraArmas -= (juego.contadorPentakill / 5) * 5;
+        }
+        juego.contadorPentakill = 0;
         new FuncionSonido(Juego.SonidosJuego.GirarCarta).reproducirSonido();
     }
     private static int calcularDanyo(Carta carta, Juego juego){
