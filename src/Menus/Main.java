@@ -29,7 +29,7 @@ public class Main {
 
     public static void main(String[] args) {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(1300, 768);
+        frame.setSize(1400, 768);
         frame.setContentPane(new Main().mainPanel);
         frame.setVisible(true);
         frame.setResizable(false);

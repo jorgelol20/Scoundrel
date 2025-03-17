@@ -72,7 +72,10 @@ public class Juego extends JFrame {
     public boolean ultimoSuspiro = false;
     public boolean ultimoSuspiroActivado = false;
     public boolean pentakill = false;
-    public int contadorPentakill = 0;
+    public int contadorPentakill = 1;
+    public boolean criticoActivado = false;
+    public boolean fatiga = false;
+    public boolean chupacabras = false;
     //Variables modificadores
     public JLabel mod1;
     public JLabel mod2;
@@ -90,6 +93,7 @@ public class Juego extends JFrame {
     public int posicionModDracula = 0;
     public int posicionModDragon = 0;
     public int posicionModSans = 0;
+    public int posicionModPentakill = 0;
     public boolean questDracula = false;
     public boolean questDragon = false;
     public boolean questSans = false;
