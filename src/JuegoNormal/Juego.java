@@ -269,8 +269,14 @@ public class Juego extends JFrame {
     }
     public void seleccionCartaIcono(JButton cartaACambiarBoton, Carta cartaACambiar,JButton carta1Boton, Carta carta1, JButton carta2Boton,Carta carta2, JButton carta3Boton, Carta carta3) {
         cartaACambiarBoton.setIcon(new ImageIcon(cartaACambiar.imagenCartaSeleccionada));
-        carta1Boton.setIcon(new ImageIcon(carta1.imagenCarta));
-        carta2Boton.setIcon(new ImageIcon(carta2.imagenCarta));
-        carta3Boton.setIcon(new ImageIcon(carta3.imagenCarta));
+        if (carta1 != null) {
+            carta1Boton.setIcon(new ImageIcon(carta1.imagenCarta));
+        }
+        if (carta2 != null) {
+            carta2Boton.setIcon(new ImageIcon(carta2.imagenCarta));
+        }
+        if (carta3 != null) {
+            carta3Boton.setIcon(new ImageIcon(carta3.imagenCarta));
+        }
     }
 }
