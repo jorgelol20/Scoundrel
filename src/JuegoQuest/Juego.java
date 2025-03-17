@@ -118,6 +118,7 @@ public class Juego extends JFrame {
                         botonAccion.setRolloverIcon(new ImageIcon(iconosBoton.Descartar.iconosBoton));
                     }
                 }
+                seleccionCartaIcono(carta1Boton,carta1,carta2Boton,carta2,carta3Boton,carta3,carta4Boton,carta4);
                 cartaSeleccionada = carta1;
             }
         });
@@ -145,6 +146,7 @@ public class Juego extends JFrame {
                     }
 
                 }
+                seleccionCartaIcono(carta2Boton,carta2,carta1Boton,carta1,carta3Boton,carta3,carta4Boton,carta4);
                 cartaSeleccionada = carta2;
             }
         });
@@ -171,6 +173,7 @@ public class Juego extends JFrame {
                         botonAccion.setRolloverIcon(new ImageIcon(iconosBoton.Descartar.iconosBoton));
                     }
                 }
+                seleccionCartaIcono(carta3Boton,carta3,carta1Boton,carta1,carta2Boton,carta2,carta4Boton,carta4);
                 cartaSeleccionada = carta3;
             }
         });
@@ -196,6 +199,7 @@ public class Juego extends JFrame {
                         botonAccion.setRolloverIcon(new ImageIcon(iconosBoton.Descartar.iconosBoton));
                     }
                 }
+                seleccionCartaIcono(carta4Boton,carta4,carta1Boton,carta1,carta2Boton,carta2,carta3Boton,carta3);
                 cartaSeleccionada = carta4;
             }
         });
@@ -308,5 +312,11 @@ public class Juego extends JFrame {
         public String getSonido(){
             return sonidoJuego;
         }
+    }
+    public void seleccionCartaIcono(JButton cartaACambiarBoton, Carta cartaACambiar,JButton carta1Boton, Carta carta1, JButton carta2Boton,Carta carta2, JButton carta3Boton, Carta carta3) {
+        cartaACambiarBoton.setIcon(new ImageIcon(cartaACambiar.imagenCartaSeleccionada));
+        carta1Boton.setIcon(new ImageIcon(carta1.imagenCarta));
+        carta2Boton.setIcon(new ImageIcon(carta2.imagenCarta));
+        carta3Boton.setIcon(new ImageIcon(carta3.imagenCarta));
     }
 }
