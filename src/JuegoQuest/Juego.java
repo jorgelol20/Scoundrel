@@ -258,7 +258,7 @@ public class Juego extends JFrame {
                 JOptionPane.showMessageDialog(mainPanel,"Los enemigos son las Picas y los Tréboles.\nEstos te harán el daño correspondiente\nal número asignado no teniendo diferencias entre\nellas excepto en el modo QUEST.","Enemigos",JOptionPane.INFORMATION_MESSAGE, new ImageIcon("src/resources/sprites/imagenesTutorial/imagen4.png"));
                 JOptionPane.showMessageDialog(mainPanel,"Durante cada ronda, podrás huir una vez\ndejando las cartas que hay al final\ndel mazo y sacando las 4 siguientes.\nUna vez hayas huido una vez, se \nbloqueará la opción hasta pasar la ronda.", "Huir",JOptionPane.INFORMATION_MESSAGE,new ImageIcon("src/resources/sprites/imagenesTutorial/imagen5.png"));
                 JOptionPane.showMessageDialog(mainPanel,"A la hora de defenderte, solo podrás\ndefenderte si el último enemigo enfrentado\n con tu arma es más debil que el nuevo.\nSi no se cumple esta condición\nrecibirás todo el daño del enemigo.","Defenderte",JOptionPane.INFORMATION_MESSAGE,new ImageIcon("src/resources/sprites/imagenesTutorial/imagen6.png"));
-                JOptionPane.showMessageDialog(mainPanel,"","Modificadores",JOptionPane.INFORMATION_MESSAGE, new ImageIcon("src/resources/sprites/imagenesTutorial/mejorasQuest.png"));
+                JOptionPane.showMessageDialog(mainPanel,"Durante la partida podrás conseguir hasta 10 modificadores\nque podrás consultar durante la ronda en el panel\nde modificadores.","Modificadores",JOptionPane.INFORMATION_MESSAGE, new ImageIcon("src/resources/sprites/imagenesTutorial/mejorasQuest.png"));
             }
         });
     }
