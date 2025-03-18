@@ -41,6 +41,7 @@ public class Modificador {
     }
 
     public static void cargarModificadores() {
+        modificadores.clear();
         //Más vida máxima #0, #1, #2
         modificadores.add(new Modificador(TipoModificador.BUFF, "Más Vida I", "<html><div style='width: 200px; text-align: justify;'>Te da vida (5) extra durante el resto de la partida.</div></html>", "src/resources/sprites/modificadores/MasVida1.png", 0));
         modificadores.add(new Modificador(TipoModificador.BUFF, "Más Vida II", "<html><div style='width: 200px; text-align: justify;'>Te da vida (10) extra durante el resto de la partida.</div></html>", "src/resources/sprites/modificadores/MasVida2.png", 1));
@@ -248,8 +249,12 @@ public class Modificador {
                 modificador.icono16 = iconoPequeno;
                 break;
             case 31:
+                juego.espinas = true;
+                modificador.icono16 = iconoPequeno;
                 break;
             case 32:
+                juego.ICD = true;
+                modificador.icono16 = iconoPequeno;
                 break;
             default:
                 break;

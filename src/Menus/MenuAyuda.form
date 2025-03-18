@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Menus.MenuAyuda">
+  <grid id="27dc6" binding="panelAyuda" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="1404" height="767"/>
+    </constraints>
+    <properties>
+      <background color="-16760815"/>
+      <maximumSize width="1300" height="700"/>
+      <minimumSize width="1300" height="700"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <tabbedpane id="ae892" binding="menuAyuda">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <minimum-size width="1300" height="600"/>
+            <preferred-size width="1300" height="600"/>
+            <maximum-size width="1300" height="600"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-16760815"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <grid id="69b1c" binding="panelGeneral" layout-manager="GridLayoutManager" row-count="2" column-count="8" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <tabbedpane title="General"/>
+            </constraints>
+            <properties>
+              <background color="-16760815"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="c9f7b" class="javax.swing.JTextPane" binding="textoBienvenida">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="8" vsize-policy="7" hsize-policy="7" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-16760815"/>
+                  <caretColor color="-15877376"/>
+                  <font name="Arial Black" size="48"/>
+                  <foreground color="-1"/>
+                  <text value="¡Bienvenido a Scoundrel!"/>
+                </properties>
+              </component>
+              <component id="fa99c" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="1" column="3" row-span="1" col-span="5" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <icon value="resources/sprites/logoTemporal.png"/>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="df77e" class="javax.swing.JTextPane" binding="enScoundrelTuObjetivoTextPane" default-binding="true">
+                <constraints>
+                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="50"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <background color="-16760815"/>
+                  <caretColor color="-15877376"/>
+                  <font size="26" style="1"/>
+                  <foreground color="-1"/>
+                  <margin top="10" left="10" bottom="10" right="10"/>
+                  <text value="En Scoundrel tu objetivo es derrotar a todos los enemigos sin morir en el intento. &#10;Para ello, contarás con diversas armas y curaciones a lo largo de la run que te facilitarán en gran medida la tarea.&#10;Pero no te confies, aunque cuentes con estas&#10;mejoras, este juego supone un desafío de estratégia&#10;que no muchos pueden superar"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="29692" binding="panelCombate" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <tabbedpane title="Combate"/>
+            </constraints>
+            <properties>
+              <background color="-16760815"/>
+            </properties>
+            <border type="none"/>
+            <children/>
+          </grid>
+          <grid id="9c8af" binding="modificadores" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <tabbedpane title="Modificadores"/>
+            </constraints>
+            <properties>
+              <background color="-16760815"/>
+            </properties>
+            <border type="none"/>
+            <children/>
+          </grid>
+          <scrollpane id="828a8" binding="cartas">
+            <constraints>
+              <tabbedpane title="Cartas"/>
+            </constraints>
+            <properties>
+              <autoscrolls value="false"/>
+              <background color="-16760815"/>
+            </properties>
+            <border type="none"/>
+            <children/>
+          </scrollpane>
+        </children>
+      </tabbedpane>
+      <component id="f64ef" class="javax.swing.JButton" binding="button1" default-binding="true">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <borderPainted value="false"/>
+          <contentAreaFilled value="false"/>
+          <icon value="resources/sprites/botones/BotonSalir.png"/>
+          <pressedIcon value="resources/sprites/botones/BotonSalir_Selecc.png"/>
+          <rolloverIcon value="resources/sprites/botones/BotonSalir_Selecc.png"/>
+          <rolloverSelectedIcon value="resources/sprites/botones/BotonSalir_Selecc.png"/>
+          <selectedIcon value="resources/sprites/botones/BotonSalir_Selecc.png"/>
+          <text value=""/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>

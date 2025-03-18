@@ -55,7 +55,11 @@ public class FuncionActualizar {
                 MenuFin.llamarPantallaFinal(new MenuFin(),juego.victoria, juego.juegoNormal);
             }
         }
-        juego.numVida.setText(juego.vidas + "");
+        if (!juego.ICD) {
+            juego.numVida.setText(juego.vidas + "");
+        }else{
+            juego.numVida.setText("");
+        }
     }
     //Función que desactiva los botones si no hay carta en él.
     private void desactivarBotones(Juego juego) {

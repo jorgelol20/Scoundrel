@@ -4,6 +4,7 @@ import Entidades.Carta;
 import Entidades.Modificador;
 import JuegoQuest.Funciones.*;
 import Menus.Main;
+import Menus.MenuAyuda;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -76,6 +77,8 @@ public class Juego extends JFrame {
     public boolean criticoActivado = false;
     public boolean fatiga = false;
     public boolean chupacabras = false;
+    public boolean espinas = false;
+    public boolean ICD = false;
     //Variables modificadores
     public JLabel mod1;
     public JLabel mod2;
@@ -251,14 +254,7 @@ public class Juego extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 new JuegoNormal.Funciones.FuncionSonido(JuegoNormal.Juego.SonidosJuego.SonidoBotones).reproducirSonido();
-                JOptionPane.showMessageDialog(mainPanel, "En Scoundrel hay 4 tipos de cartas: \nlos corazones, los diamantes, las picas y los tréboles.\n" +
-                        "Cada una de las cartas tiene sus propias acciones \ny funciones dentro del juego.", "Tipos de carta", JOptionPane.INFORMATION_MESSAGE, new ImageIcon("src/resources/sprites/imagenesTutorial/imagen1.png"));
-                JOptionPane.showMessageDialog(mainPanel, "Los corazones son las \"curaciones\" en este juego y \ncada una de estas te cura una cantidad \nde daño distinta correspondiente a su número.\nTen en cuenta que solo podrás curarte una vez\npor ronda, descartando la segunda curación\nque fueras a usar en ese turno","Curaciones",JOptionPane.INFORMATION_MESSAGE,new ImageIcon("src/resources/sprites/imagenesTutorial/imagen2.png"));
-                JOptionPane.showMessageDialog(mainPanel,"Los diamantes son las \"armas\" que usarás\npara defenderte de los enemigos.\nCada carta te defenderá del enemigo\nrestando al daño del enemigo el del arma.\nLas armas tienen condiciones que se explicarán más adelante.","Armas",JOptionPane.INFORMATION_MESSAGE, new ImageIcon("src/resources/sprites/imagenesTutorial/imagen3.png"));
-                JOptionPane.showMessageDialog(mainPanel,"Los enemigos son las Picas y los Tréboles.\nEstos te harán el daño correspondiente\nal número asignado no teniendo diferencias entre\nellas excepto en el modo QUEST.","Enemigos",JOptionPane.INFORMATION_MESSAGE, new ImageIcon("src/resources/sprites/imagenesTutorial/imagen4.png"));
-                JOptionPane.showMessageDialog(mainPanel,"Durante cada ronda, podrás huir una vez\ndejando las cartas que hay al final\ndel mazo y sacando las 4 siguientes.\nUna vez hayas huido una vez, se \nbloqueará la opción hasta pasar la ronda.", "Huir",JOptionPane.INFORMATION_MESSAGE,new ImageIcon("src/resources/sprites/imagenesTutorial/imagen5.png"));
-                JOptionPane.showMessageDialog(mainPanel,"A la hora de defenderte, solo podrás\ndefenderte si el último enemigo enfrentado\n con tu arma es más debil que el nuevo.\nSi no se cumple esta condición\nrecibirás todo el daño del enemigo.","Defenderte",JOptionPane.INFORMATION_MESSAGE,new ImageIcon("src/resources/sprites/imagenesTutorial/imagen6.png"));
-                JOptionPane.showMessageDialog(mainPanel,"Durante la partida podrás conseguir hasta 10 modificadores\nque podrás consultar durante la ronda en el panel\nde modificadores.","Modificadores",JOptionPane.INFORMATION_MESSAGE, new ImageIcon("src/resources/sprites/imagenesTutorial/mejorasQuest.png"));
+                new MenuAyuda();
             }
         });
     }
@@ -361,15 +357,28 @@ public class Juego extends JFrame {
         }
     }
     public void seleccionCartaIcono(JButton cartaACambiarBoton, Carta cartaACambiar,JButton carta1Boton, Carta carta1, JButton carta2Boton,Carta carta2, JButton carta3Boton, Carta carta3) {
-        cartaACambiarBoton.setIcon(new ImageIcon(cartaACambiar.imagenCartaSeleccionada));
-        if (carta1 != null) {
-            carta1Boton.setIcon(new ImageIcon(carta1.imagenCarta));
-        }
-        if (carta2 != null) {
-            carta2Boton.setIcon(new ImageIcon(carta2.imagenCarta));
-        }
-        if (carta3 != null) {
-            carta3Boton.setIcon(new ImageIcon(carta3.imagenCarta));
+        if (paranoia){
+            cartaACambiarBoton.setIcon(new ImageIcon(cartaACambiar.getPaloCarta().imagenDefaultSeleccionada));
+            if (carta1 != null){
+                carta1Boton.setIcon(new ImageIcon(carta1.getPaloCarta().imagenDefault));
+            }
+            if (carta2 != null){
+                carta2Boton.setIcon(new ImageIcon(carta2.getPaloCarta().imagenDefault));
+            }
+            if (carta3 != null) {
+                carta3Boton.setIcon(new ImageIcon(carta3.getPaloCarta().imagenDefault));
+            }
+        }else {
+            cartaACambiarBoton.setIcon(new ImageIcon(cartaACambiar.imagenCartaSeleccionada));
+            if (carta1 != null) {
+                carta1Boton.setIcon(new ImageIcon(carta1.imagenCarta));
+            }
+            if (carta2 != null) {
+                carta2Boton.setIcon(new ImageIcon(carta2.imagenCarta));
+            }
+            if (carta3 != null) {
+                carta3Boton.setIcon(new ImageIcon(carta3.imagenCarta));
+            }
         }
     }
 }
