@@ -95,6 +95,10 @@ public class Modificador {
         modificadores.add(new Modificador(TipoModificador.BUFF, "Último suspiro", "<html><div style='width: 200px; text-align: justify;'>Si fueras a morir, sobrevivirás con una vida.</div></html>", "src/resources/sprites/modificadores/UltimoSuspiro.png", 29));
         //Chupacabras #30
         modificadores.add(new Modificador(TipoModificador.BUFF, "Chupacabras","<html><div style='width: 200px; text-align: justify;'>Si el arma es más fuerte que el enemigo, te curas 1 de vida.</div></html>","src/resources/sprites/modificadores/Chupacabras.png", 30));
+        //Espinas #31
+        modificadores.add(new Modificador(TipoModificador.DEBUFF, "Espinas","<html><div style='width: 200px; text-align: justify;'>Cada vez que cambias de arma o agarras una nuevo, te haces 1 de daño</div></html>","src/resources/sprites/modificadores/Espinas.png", 31));
+        //ICD #32
+        modificadores.add(new Modificador(TipoModificador.DEBUFF,"ICD","<html><div style='width: 200px; text-align: justify;'>No puedes ver el número de vidas restantes</div></html>","src/resources/sprites/modificadores/ICD.png", 32));
     }
     public static void aplicarModificador(Modificador modificador, Juego juego) {
         String iconoPequeno = modificador.icono.replace(".png","Pequeno.png");
@@ -241,6 +245,10 @@ public class Modificador {
             case 30:
                 juego.chupacabras = true;
                 modificador.icono16 = iconoPequeno;
+                break;
+            case 31:
+                break;
+            case 32:
                 break;
             default:
                 break;
