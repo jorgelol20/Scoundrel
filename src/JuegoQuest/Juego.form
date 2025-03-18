@@ -502,6 +502,21 @@
           <text value=""/>
         </properties>
       </component>
+      <component id="a259f" class="javax.swing.JButton" binding="ayuda">
+        <constraints>
+          <grid row="8" column="12" row-span="1" col-span="7" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <borderPainted value="false"/>
+          <contentAreaFilled value="false"/>
+          <icon value="resources/sprites/botones/BotonAyuda.png"/>
+          <pressedIcon value="resources/sprites/botones/BotonAyuda_Selecc.png"/>
+          <rolloverIcon value="resources/sprites/botones/BotonAyuda_Selecc.png"/>
+          <rolloverSelectedIcon value="resources/sprites/botones/BotonAyuda_Selecc.png"/>
+          <selectedIcon value="resources/sprites/botones/BotonAyuda_Selecc.png"/>
+          <text value=""/>
+        </properties>
+      </component>
     </children>
   </grid>
 </form>
