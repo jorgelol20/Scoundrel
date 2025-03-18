@@ -158,6 +158,7 @@ public class FuncionActualizar {
             new MenuFin().pantallaFinal(true);
         }
         if (juego.numCartasRestantes == 0 && juego.carta1 == null){
+            new FuncionSeleccionarModificadores(juego);
             FuncionesInicio.crearBaraja(juego);
             juego.contadorRondaQuest++;
             juego.obtener4Cartas();
@@ -177,9 +178,63 @@ public class FuncionActualizar {
         juego.carta4Boton.setEnabled(true);
     }
     public static void pentakill(Juego juego){
-        if (juego.contadorPentakill % 5 == 0){
-            juego.textoLogs += "¡PENTAKILL ("+(juego.contadorPentakill%5)+")!\n";
+        if (juego.contadorPentakill % 5 == 0 && juego.contadorPentakill >= 5){
+            juego.textoLogs += "¡PENTAKILL ("+(juego.contadorPentakill/5)+")!\n";
             juego.danyoExtraArmas += 5;
+            String icono = "";
+            switch (juego.contadorPentakill / 5){
+                case 1:
+                    icono = "src/resources/sprites/modificadores/Pentakill1.png";
+                    break;
+                case 2:
+                    icono = "src/resources/sprites/modificadores/Pentakill2.png";
+                    break;
+                case 3:
+                    icono = "src/resources/sprites/modificadores/Pentakill3.png";
+                    break;
+                case 4:
+                    icono = "src/resources/sprites/modificadores/Pentakill4.png";
+                    break;
+                case 5:
+                    icono = "src/resources/sprites/modificadores/Pentakill5.png";
+                    break;
+                default:
+                    break;
+            }
+            switch (juego.posicionModPentakill){
+                case 1:
+                    juego.mod1.setIcon(new ImageIcon(icono));
+                    break;
+                case 2:
+                    juego.mod2.setIcon(new ImageIcon(icono));
+                    break;
+                case 3:
+                    juego.mod3.setIcon(new ImageIcon(icono));
+                    break;
+                case 4:
+                    juego.mod4.setIcon(new ImageIcon(icono));
+                    break;
+                case 5:
+                    juego.mod5.setIcon(new ImageIcon(icono));
+                    break;
+                case 6:
+                    juego.mod6.setIcon(new ImageIcon(icono));
+                    break;
+                case 7:
+                    juego.mod7.setIcon(new ImageIcon(icono));
+                    break;
+                case 8:
+                    juego.mod8.setIcon(new ImageIcon(icono));
+                    break;
+                case 9:
+                    juego.mod9.setIcon(new ImageIcon(icono));
+                    break;
+                case 10:
+                    juego.mod10.setIcon(new ImageIcon(icono));
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }
