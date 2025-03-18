@@ -166,6 +166,9 @@ public class FuncionesJuego {
             }
         }
         juego.contadorPentakill = 0;
+        if (juego.espinas){
+            juego.vidas--;
+        }
         new FuncionSonido(Juego.SonidosJuego.GirarCarta).reproducirSonido();
     }
     private static int calcularDanyo(Carta carta, Juego juego){

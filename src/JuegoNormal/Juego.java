@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import JuegoNormal.Funciones.FuncionActualizar;
 import Entidades.Carta;
 import Menus.Main;
+import Menus.MenuAyuda;
 
 public class Juego extends JFrame {
     private FuncionActualizar funcionActualizar = new FuncionActualizar();
@@ -42,6 +43,7 @@ public class Juego extends JFrame {
     public JTextArea log;
     public JLabel ultimoEnemigoAsimiladoLabel;
     private JButton salir;
+    private JButton ayuda;
     public Carta ultimoEnemigoAsimilado;
     public String textoLogs = "";
     public boolean victoria = false;
@@ -186,9 +188,19 @@ public class Juego extends JFrame {
         salir.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (JOptionPane.showOptionDialog(mainPanel,"¿Seguro que quiere salir al menú principal?","Salir",JOptionPane.YES_NO_OPTION,JOptionPane.INFORMATION_MESSAGE,null,null,0) == 0){
+                int opcion = JOptionPane.showOptionDialog(mainPanel,"¿Seguro que quiere salir al menú principal?","Salir",JOptionPane.YES_NO_OPTION,JOptionPane.INFORMATION_MESSAGE,null,new String[]{"Al menú","Salir del juego","No"},0);
+                if (opcion == 0){
                     Main.main(new String[0]);
+                }else if (opcion == 1){
+                    System.exit(0);
                 }
+            }
+        });
+        ayuda.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new FuncionSonido(JuegoNormal.Juego.SonidosJuego.SonidoBotones).reproducirSonido();
+                new MenuAyuda();
             }
         });
     }

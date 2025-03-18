@@ -41,6 +41,7 @@ public class Modificador {
     }
 
     public static void cargarModificadores() {
+        modificadores.clear();
         //Más vida máxima #0, #1, #2
         modificadores.add(new Modificador(TipoModificador.BUFF, "Más Vida I", "<html><div style='width: 200px; text-align: justify;'>Te da vida (5) extra durante el resto de la partida.</div></html>", "src/resources/sprites/modificadores/MasVida1.png", 0));
         modificadores.add(new Modificador(TipoModificador.BUFF, "Más Vida II", "<html><div style='width: 200px; text-align: justify;'>Te da vida (10) extra durante el resto de la partida.</div></html>", "src/resources/sprites/modificadores/MasVida2.png", 1));
@@ -74,30 +75,35 @@ public class Modificador {
         //¿Sans? #19
         modificadores.add(new Modificador(TipoModificador.QUEST, "¿Sans?", "<html><div style='width: 200px; text-align: justify;'>Mientras siga vivo CincoPica, todos los enemigos hacen 1 más de daño.</div></html>", "src/resources/sprites/modificadores/Sans.png", 19));
         //Sutnami biscosa #20
-        modificadores.add(new Modificador(TipoModificador.DEBUFF,"Sutnami Viscoso","<html><div style='width: 200px; text-align: justify;'>Se agregan 6 doses a la baraja.</div></html>", "src/resources/sprites/modificadores/TsunamiSlimes.png", 20));
+        modificadores.add(new Modificador(TipoModificador.DEBUFF, "Sutnami Viscoso", "<html><div style='width: 200px; text-align: justify;'>Se agregan 6 doses a la baraja.</div></html>", "src/resources/sprites/modificadores/TsunamiSlimes.png", 20));
         //Herido #21
         modificadores.add(new Modificador(TipoModificador.DEBUFF, "Herido", "<html><div style='width: 200px; text-align: justify;'>Cada dos rondas, pierdes 1 de vida.</div></html>", "src/resources/sprites/modificadores/Herido.png", 21));
         //Herido de gravedad #22
-        modificadores.add(new Modificador(TipoModificador.DEBUFF,"Herido de gravedad", "<html><div style='width: 200px; text-align: justify;'>Cada dos rondas, pierdes 3 de vida.</div></html>","src/resources/sprites/modificadores/GraveHerido.png", 22));
+        modificadores.add(new Modificador(TipoModificador.DEBUFF, "Herido de gravedad", "<html><div style='width: 200px; text-align: justify;'>Cada dos rondas, pierdes 3 de vida.</div></html>", "src/resources/sprites/modificadores/GraveHerido.png", 22));
         //Paranoia #23
-        modificadores.add(new Modificador(TipoModificador.DEBUFF,"Paranoia","<html><div style='width: 200px; text-align: justify;'>Cada 5 rondas, no conoces el valor de las cartas añadidas.</div></html>", "src/resources/sprites/modificadores/Paranoia.png", 23));
+        modificadores.add(new Modificador(TipoModificador.DEBUFF, "Paranoia", "<html><div style='width: 200px; text-align: justify;'>Cada 5 rondas, no conoces el valor de las cartas añadidas.</div></html>", "src/resources/sprites/modificadores/Paranoia.png", 23));
         //Gastroenteritis (hay un 25% de no curarte puedes no curarte) #24
-        modificadores.add(new Modificador(TipoModificador.DEBUFF,"Gastroenteritis","<html><div style='width: 200px; text-align: justify;'>Hay un 25% de probabilidades de no curarte.</div></html>","src/resources/sprites/modificadores/Gatronteritis.png", 24));
+        modificadores.add(new Modificador(TipoModificador.DEBUFF, "Gastroenteritis", "<html><div style='width: 200px; text-align: justify;'>Hay un 25% de probabilidades de no curarte.</div></html>", "src/resources/sprites/modificadores/Gatronteritis.png", 24));
         //Sin escapatoria #25
-        modificadores.add(new Modificador(TipoModificador.DEBUFF, "Sin escapatoria", "<html><div style='width: 200px; text-align: justify;'>Hay un 25% de probabilidad de que no puedas huir.</div></html>","src/resources/sprites/modificadores/SinEscapatoria.png", 25));
+        modificadores.add(new Modificador(TipoModificador.DEBUFF, "Sin escapatoria", "<html><div style='width: 200px; text-align: justify;'>Hay un 25% de probabilidad de que no puedas huir.</div></html>", "src/resources/sprites/modificadores/SinEscapatoria.png", 25));
         //Impacto crítico (25% enemigos 50% armas) #26
-        modificadores.add(new Modificador(TipoModificador.BUFF,"Impacto Crítico","<html><div style='width: 200px; text-align: justify;'>50% de pegar el doble y un 25% de recibir 150% de daño.</div></html>","src/resources/sprites/modificadores/Critico.png", 26));
+        modificadores.add(new Modificador(TipoModificador.BUFF, "Impacto Crítico", "<html><div style='width: 200px; text-align: justify;'>50% de pegar el doble y un 25% de recibir 150% de daño.</div></html>", "src/resources/sprites/modificadores/Critico.png", 26));
         //Pentakill #27
-        modificadores.add(new Modificador(TipoModificador.BUFF, "Pentakill", "<html><div style='width: 200px; text-align: justify;'>+5 de daño cada 5 enemigos hasta curarse o cambiar arma.</div></html>","src/resources/sprites/modificadores/Pentakill.png", 27));
+        modificadores.add(new Modificador(TipoModificador.BUFF, "Pentakill", "<html><div style='width: 200px; text-align: justify;'>+5 de daño cada 5 enemigos hasta curarse o cambiar arma.</div></html>", "src/resources/sprites/modificadores/Pentakill.png", 27));
         //Fatiga (probabilidad del 10% de fallar el ataque con arma) #28
-        modificadores.add(new Modificador(TipoModificador.DEBUFF, "Fatiga","<html><div style='width: 200px; text-align: justify;'>Probabilidad del 10% de fallar el ataque con arma.</div></html>","src/resources/sprites/modificadores/Fatiga.png", 28));
+        modificadores.add(new Modificador(TipoModificador.DEBUFF, "Fatiga", "<html><div style='width: 200px; text-align: justify;'>Probabilidad del 10% de fallar el ataque con arma.</div></html>", "src/resources/sprites/modificadores/Fatiga.png", 28));
         //Último suspiro #29
         modificadores.add(new Modificador(TipoModificador.BUFF, "Último suspiro", "<html><div style='width: 200px; text-align: justify;'>Si fueras a morir, sobrevivirás con una vida.</div></html>", "src/resources/sprites/modificadores/UltimoSuspiro.png", 29));
         //Chupacabras #30
-        modificadores.add(new Modificador(TipoModificador.BUFF, "Chupacabras","<html><div style='width: 200px; text-align: justify;'>Si el arma es más fuerte que el enemigo, te curas 1 de vida.</div></html>","src/resources/sprites/modificadores/Chupacabras.png", 30));
+        modificadores.add(new Modificador(TipoModificador.BUFF, "Chupacabras", "<html><div style='width: 200px; text-align: justify;'>Si el arma es más fuerte que el enemigo, te curas 1 de vida.</div></html>", "src/resources/sprites/modificadores/Chupacabras.png", 30));
+        //Espinas #31
+        modificadores.add(new Modificador(TipoModificador.DEBUFF, "Espinas", "<html><div style='width: 200px; text-align: justify;'>Cada vez que cambias de arma o agarras una nuevo, te haces 1 de daño</div></html>", "src/resources/sprites/modificadores/Espinas.png", 31));
+        //ICD #32
+        modificadores.add(new Modificador(TipoModificador.DEBUFF, "ICD", "<html><div style='width: 200px; text-align: justify;'>No puedes ver el número de vidas restantes</div></html>", "src/resources/sprites/modificadores/ICD.png", 32));
     }
+
     public static void aplicarModificador(Modificador modificador, Juego juego) {
-        String iconoPequeno = modificador.icono.replace(".png","Pequeno.png");
+        String iconoPequeno = modificador.icono.replace(".png", "Pequeno.png");
         switch (modificador.id) {
             case 0:
                 juego.vidaMaxima += 5;
@@ -242,6 +248,14 @@ public class Modificador {
                 juego.chupacabras = true;
                 modificador.icono16 = iconoPequeno;
                 break;
+            case 31:
+                juego.espinas = true;
+                modificador.icono16 = iconoPequeno;
+                break;
+            case 32:
+                juego.ICD = true;
+                modificador.icono16 = iconoPequeno;
+                break;
             default:
                 break;
         }
@@ -255,6 +269,7 @@ public class Modificador {
         modificadores.removeFirst();
         return modificador;
     }
+
     public static void setIconoModificador(Modificador modificador, Juego juego) {
         if (modificador.nombre.contains("Castelvania")) {
             juego.posicionModDracula = juego.contadorModificador;
@@ -314,6 +329,7 @@ public class Modificador {
         }
         juego.contadorModificador++;
     }
+
     private static void modArmas(Juego juego, int max, int min) {
         int armaAleatoria = (int) (Math.random() * (max - min) + min);
         for (Carta.Valor valor : Carta.Valor.values()) {
@@ -337,6 +353,7 @@ public class Modificador {
             FuncionActualizar.setNumCartas(juego);
         }
     }
+
     public static void sutnamiSlimes(Juego juego) {
         for (int i = 0; i < 6; i++) {
             if (i % 2 == 0) {
@@ -348,6 +365,7 @@ public class Modificador {
         Collections.shuffle(Juego.cartasMazo);
         FuncionActualizar.setNumCartas(juego);
     }
+
     public static void questDracula(Juego juego) {
         juego.efectoExtraCuracion += 4;
         String iconoPequenyo = "src/resources/sprites/modificadores/DraculaDerrotadoPequeno.png";
@@ -396,6 +414,7 @@ public class Modificador {
                 break;
         }
     }
+
     public static void questDragon(Juego juego) {
         juego.danyoExtraArmas += 2;
         String iconoPequenyo = "src/resources/sprites/modificadores/DragonDerrotadoPequeno.png";
@@ -444,6 +463,7 @@ public class Modificador {
                 break;
         }
     }
+
     public static void questSans(Juego juego) {
         juego.danyoExtraArmas += 2;
         juego.danyoExtraPicas -= 1;

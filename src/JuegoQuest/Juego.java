@@ -4,6 +4,7 @@ import Entidades.Carta;
 import Entidades.Modificador;
 import JuegoQuest.Funciones.*;
 import Menus.Main;
+import Menus.MenuAyuda;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -76,6 +77,8 @@ public class Juego extends JFrame {
     public boolean criticoActivado = false;
     public boolean fatiga = false;
     public boolean chupacabras = false;
+    public boolean espinas = false;
+    public boolean ICD = false;
     //Variables modificadores
     public JLabel mod1;
     public JLabel mod2;
@@ -88,6 +91,7 @@ public class Juego extends JFrame {
     public JLabel mod9;
     public JLabel mod10;
     private JButton salir;
+    private JButton ayuda;
 
     //Variables quest
     public int posicionModDracula = 0;
@@ -238,9 +242,19 @@ public class Juego extends JFrame {
         salir.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (JOptionPane.showOptionDialog(mainPanel,"¿Seguro que quiere salir al menú principal?","Salir",JOptionPane.YES_NO_OPTION,JOptionPane.INFORMATION_MESSAGE,null,null,0) == 0){
+                int opcion = JOptionPane.showOptionDialog(mainPanel,"¿Seguro que quiere salir al menú principal?","Salir",JOptionPane.YES_NO_OPTION,JOptionPane.INFORMATION_MESSAGE,null,new String[]{"Al menú","Salir del juego","No"},0);
+                if (opcion == 0){
                     Main.main(new String[0]);
+                }else if (opcion == 1){
+                    System.exit(0);
                 }
+            }
+        });
+        ayuda.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new JuegoNormal.Funciones.FuncionSonido(JuegoNormal.Juego.SonidosJuego.SonidoBotones).reproducirSonido();
+                new MenuAyuda();
             }
         });
     }
@@ -343,15 +357,28 @@ public class Juego extends JFrame {
         }
     }
     public void seleccionCartaIcono(JButton cartaACambiarBoton, Carta cartaACambiar,JButton carta1Boton, Carta carta1, JButton carta2Boton,Carta carta2, JButton carta3Boton, Carta carta3) {
-        cartaACambiarBoton.setIcon(new ImageIcon(cartaACambiar.imagenCartaSeleccionada));
-        if (carta1 != null) {
-            carta1Boton.setIcon(new ImageIcon(carta1.imagenCarta));
-        }
-        if (carta2 != null) {
-            carta2Boton.setIcon(new ImageIcon(carta2.imagenCarta));
-        }
-        if (carta3 != null) {
-            carta3Boton.setIcon(new ImageIcon(carta3.imagenCarta));
+        if (paranoia){
+            cartaACambiarBoton.setIcon(new ImageIcon(cartaACambiar.getPaloCarta().imagenDefaultSeleccionada));
+            if (carta1 != null){
+                carta1Boton.setIcon(new ImageIcon(carta1.getPaloCarta().imagenDefault));
+            }
+            if (carta2 != null){
+                carta2Boton.setIcon(new ImageIcon(carta2.getPaloCarta().imagenDefault));
+            }
+            if (carta3 != null) {
+                carta3Boton.setIcon(new ImageIcon(carta3.getPaloCarta().imagenDefault));
+            }
+        }else {
+            cartaACambiarBoton.setIcon(new ImageIcon(cartaACambiar.imagenCartaSeleccionada));
+            if (carta1 != null) {
+                carta1Boton.setIcon(new ImageIcon(carta1.imagenCarta));
+            }
+            if (carta2 != null) {
+                carta2Boton.setIcon(new ImageIcon(carta2.imagenCarta));
+            }
+            if (carta3 != null) {
+                carta3Boton.setIcon(new ImageIcon(carta3.imagenCarta));
+            }
         }
     }
 }
