@@ -47,15 +47,15 @@ public class Modificador {
         modificadores.add(new Modificador(TipoModificador.BUFF, "Más Vida II", "<html><div style='width: 200px; text-align: justify;'>Te da vida (10) extra durante el resto de la partida.</div></html>", "src/resources/sprites/modificadores/MasVida2.png", 1));
         modificadores.add(new Modificador(TipoModificador.BUFF, "Más Vida III", "<html><div style='width: 200px; text-align: justify;'>Te da vida (15) extra durante el resto de la partida.</div></html>", "src/resources/sprites/modificadores/MasVida3.png", 2));
         //Debuff tréboles #3, #4, #5
-        modificadores.add(new Modificador(TipoModificador.DEBUFF, "Corten las flores I", "Trébol -1 daño, Picas +1 daño", "src/resources/sprites/modificadores/CortarFlores1.png", 3));
-        modificadores.add(new Modificador(TipoModificador.DEBUFF, "Corten las flores II", "Trébol -2 daño, Picas +1 daño", "src/resources/sprites/modificadores/CortarFlores2.png", 4));
-        modificadores.add(new Modificador(TipoModificador.DEBUFF, "Corten las flores III", "Trébol -3 daño, Picas +1 daño", "src/resources/sprites/modificadores/CortarFlores3.png", 5));
+        modificadores.add(new Modificador(TipoModificador.DEBUFF, "Corten las flores I", "Los Tréboles hacen 1 menos de daño, las Picas hacen 1 más", "src/resources/sprites/modificadores/CortarFlores1.png", 3));
+        modificadores.add(new Modificador(TipoModificador.DEBUFF, "Corten las flores II", "Los Tréboles hacen 2 menos de daño, las Picas hacen 1 más", "src/resources/sprites/modificadores/CortarFlores2.png", 4));
+        modificadores.add(new Modificador(TipoModificador.DEBUFF, "Corten las flores III", "Los Tréboles hacen 3 menos de daño, las Picas hacen 1 más", "src/resources/sprites/modificadores/CortarFlores3.png", 5));
         //Debuff picas #6, #7, #8
-        modificadores.add(new Modificador(TipoModificador.DEBUFF, "Que le corten la cabeza I", "Pica -1 daño, Trébol +1 daño", "src/resources/sprites/modificadores/CortarCabeza1.png", 6));
-        modificadores.add(new Modificador(TipoModificador.DEBUFF, "Que le corten la cabeza II", "Pica -2 daño, Trébol +1 daño", "src/resources/sprites/modificadores/CortarCabeza2.png", 7));
-        modificadores.add(new Modificador(TipoModificador.DEBUFF, "Que le corten la cabeza III", "Pica -3 daño, Trébol +1 daño", "src/resources/sprites/modificadores/CortarCabeza3.png", 8));
+        modificadores.add(new Modificador(TipoModificador.DEBUFF, "Que le corten la cabeza I", "Las Picas hacen 1 menos de daño, los Tréboles hacen 1 más", "src/resources/sprites/modificadores/CortarCabeza1.png", 6));
+        modificadores.add(new Modificador(TipoModificador.DEBUFF, "Que le corten la cabeza II", "Las Picas hacen 2 menos de daño, los Tréboles hacen 1 más", "src/resources/sprites/modificadores/CortarCabeza2.png", 7));
+        modificadores.add(new Modificador(TipoModificador.DEBUFF, "Que le corten la cabeza III", "Las Picas hacen 3 menos de daño, los Tréboles hacen 1 más", "src/resources/sprites/modificadores/CortarCabeza3.png", 8));
         //Castelvania #9
-        modificadores.add(new Modificador(TipoModificador.DEBUFF, "Castelvania", "<html><div style='width: 200px; text-align: justify;'>Hasta matar al ReyPica, las curaciones restaurarán 1 menos de vida.</div></html>", "src/resources/sprites/modificadores/Castlevania.png", 9));
+        modificadores.add(new Modificador(TipoModificador.DEBUFF, "Castlevania", "<html><div style='width: 200px; text-align: justify;'>Hasta matar al ReyPica, las curaciones restaurarán 1 menos de vida.</div></html>", "src/resources/sprites/modificadores/Castlevania.png", 9));
         //Armas #10, #11, #12
         modificadores.add(new Modificador(TipoModificador.BUFF, "Kit Armamentístico I", "<html><div style='width: 200px; text-align: justify;'>Obtienes un arma entre 2 y 4. Se añaden 3 enemigos débiles.</div></html>", "src/resources/sprites/modificadores/KitArmas1.png", 10));
         modificadores.add(new Modificador(TipoModificador.BUFF, "Kit Armamentístico II", "<html><div style='width: 200px; text-align: justify;'>Obtienes un arma entre 5 y 7. Se añaden 3 enemigos medianamente fuertes.</div></html>", "src/resources/sprites/modificadores/KitArmas2.png", 11));
@@ -93,7 +93,7 @@ public class Modificador {
         //Fatiga (probabilidad del 10% de fallar el ataque con arma) #28
         modificadores.add(new Modificador(TipoModificador.DEBUFF, "Fatiga", "<html><div style='width: 200px; text-align: justify;'>Probabilidad del 10% de fallar el ataque con arma.</div></html>", "src/resources/sprites/modificadores/Fatiga.png", 28));
         //Último suspiro #29
-        modificadores.add(new Modificador(TipoModificador.BUFF, "Último suspiro", "<html><div style='width: 200px; text-align: justify;'>Si fueras a morir, sobrevivirás con una vida.</div></html>", "src/resources/sprites/modificadores/UltimoSuspiro.png", 29));
+        modificadores.add(new Modificador(TipoModificador.BUFF, "Último suspiro", "<html><div style='width: 200px; text-align: justify;'>Si fueras a morir, sobrevivirás con una vida. Se resetea cada que superar un nivel.</div></html>", "src/resources/sprites/modificadores/UltimoSuspiro.png", 29));
         //Chupacabras #30
         modificadores.add(new Modificador(TipoModificador.BUFF, "Chupacabras", "<html><div style='width: 200px; text-align: justify;'>Si el arma es más fuerte que el enemigo, te curas 1 de vida.</div></html>", "src/resources/sprites/modificadores/Chupacabras.png", 30));
         //Espinas #31

@@ -21,11 +21,13 @@
           </grid>
         </constraints>
         <properties>
-          <background color="-16760815"/>
+          <background color="-13092808"/>
+          <font name="Arial Black"/>
+          <foreground color="-1"/>
         </properties>
         <border type="none"/>
         <children>
-          <grid id="69b1c" binding="panelGeneral" layout-manager="GridLayoutManager" row-count="2" column-count="8" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+          <grid id="69b1c" binding="panelGeneral" layout-manager="GridLayoutManager" row-count="6" column-count="7" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
             <margin top="0" left="0" bottom="0" right="0"/>
             <constraints>
               <tabbedpane title="General"/>
@@ -35,27 +37,6 @@
             </properties>
             <border type="none"/>
             <children>
-              <component id="c9f7b" class="javax.swing.JTextPane" binding="textoBienvenida">
-                <constraints>
-                  <grid row="0" column="0" row-span="1" col-span="8" vsize-policy="7" hsize-policy="7" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-                </constraints>
-                <properties>
-                  <background color="-16760815"/>
-                  <caretColor color="-15877376"/>
-                  <font name="Arial Black" size="48"/>
-                  <foreground color="-1"/>
-                  <text value="¡Bienvenido a Scoundrel!"/>
-                </properties>
-              </component>
-              <component id="fa99c" class="javax.swing.JLabel">
-                <constraints>
-                  <grid row="1" column="3" row-span="1" col-span="5" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-                </constraints>
-                <properties>
-                  <icon value="resources/sprites/logoTemporal.png"/>
-                  <text value=""/>
-                </properties>
-              </component>
               <component id="df77e" class="javax.swing.JTextPane" binding="enScoundrelTuObjetivoTextPane" default-binding="true">
                 <constraints>
                   <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
@@ -65,50 +46,2039 @@
                 <properties>
                   <background color="-16760815"/>
                   <caretColor color="-15877376"/>
-                  <font size="26" style="1"/>
+                  <editable value="false"/>
+                  <font size="16" style="1"/>
                   <foreground color="-1"/>
                   <margin top="10" left="10" bottom="10" right="10"/>
                   <text value="En Scoundrel tu objetivo es derrotar a todos los enemigos sin morir en el intento. &#10;Para ello, contarás con diversas armas y curaciones a lo largo de la run que te facilitarán en gran medida la tarea.&#10;Pero no te confies, aunque cuentes con estas&#10;mejoras, este juego supone un desafío de estratégia&#10;que no muchos pueden superar"/>
                 </properties>
               </component>
+              <component id="fa99c" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="1" column="2" row-span="5" col-span="5" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <icon value="resources/sprites/logoTemporal.png"/>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="34d18" class="javax.swing.JTextPane">
+                <constraints>
+                  <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="10" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-16760815"/>
+                  <caretColor color="-15877376"/>
+                  <editable value="false"/>
+                  <font name="Arial Black" size="28"/>
+                  <foreground color="-1"/>
+                  <text value="Modo Normal"/>
+                </properties>
+              </component>
+              <component id="69c4f" class="javax.swing.JTextPane" default-binding="true">
+                <constraints>
+                  <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="50"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <background color="-16760815"/>
+                  <caretColor color="-15877376"/>
+                  <editable value="false"/>
+                  <font size="16" style="1"/>
+                  <foreground color="-1"/>
+                  <margin top="10" left="10" bottom="10" right="10"/>
+                  <text value="El modo QUEST es una variación del modo normal donde tu objetivo es ganar 10 partidas seguidas sin ser derrotado. ¡Pero no te preocupes! Este modo cuenta con modificadores y mejoras que harán de la experiencia algo más desafiante y divertida para quien busca desafios."/>
+                </properties>
+              </component>
+              <component id="68595" class="javax.swing.JTextPane">
+                <constraints>
+                  <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="10" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-16760815"/>
+                  <caretColor color="-15877376"/>
+                  <editable value="false"/>
+                  <font name="Arial Black" size="28"/>
+                  <foreground color="-1"/>
+                  <text value="Modo Quest"/>
+                </properties>
+              </component>
+              <component id="ba7be" class="javax.swing.JTextPane" default-binding="true">
+                <constraints>
+                  <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="50"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <background color="-16760815"/>
+                  <caretColor color="-15877376"/>
+                  <editable value="false"/>
+                  <font size="16" style="1"/>
+                  <foreground color="-1"/>
+                  <margin top="10" left="10" bottom="10" right="10"/>
+                  <text value="El modo normal o clásico es a una sola ronda sin ningún tipo de mejora ni modificación donde tendrás que acabar con todos los enemigos con la herramientas base del juego siendo una muy buena experiencia para iniciarse."/>
+                </properties>
+              </component>
+              <component id="c9f7b" class="javax.swing.JTextPane" binding="textoBienvenida">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-16760815"/>
+                  <caretColor color="-15877376"/>
+                  <editable value="false"/>
+                  <font name="Arial Black" size="48"/>
+                  <foreground color="-1"/>
+                  <text value="¡Bienvenido a Scoundrel!"/>
+                </properties>
+              </component>
+              <component id="a17f8" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                    <minimum-size width="20" height="20"/>
+                    <preferred-size width="20" height="20"/>
+                    <maximum-size width="20" height="20"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <text value=""/>
+                </properties>
+              </component>
             </children>
-          </grid>
-          <grid id="29692" binding="panelCombate" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-            <margin top="0" left="0" bottom="0" right="0"/>
-            <constraints>
-              <tabbedpane title="Combate"/>
-            </constraints>
-            <properties>
-              <background color="-16760815"/>
-            </properties>
-            <border type="none"/>
-            <children/>
-          </grid>
-          <grid id="9c8af" binding="modificadores" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-            <margin top="0" left="0" bottom="0" right="0"/>
-            <constraints>
-              <tabbedpane title="Modificadores"/>
-            </constraints>
-            <properties>
-              <background color="-16760815"/>
-            </properties>
-            <border type="none"/>
-            <children/>
           </grid>
           <scrollpane id="828a8" binding="cartas">
             <constraints>
-              <tabbedpane title="Cartas"/>
+              <tabbedpane title="Coleccion Cartas"/>
             </constraints>
             <properties>
-              <autoscrolls value="false"/>
-              <background color="-16760815"/>
+              <autoscrolls value="true"/>
+              <background color="-16777216"/>
+              <foreground color="-16777216"/>
+              <horizontalScrollBarPolicy value="31"/>
+              <verticalScrollBarPolicy value="20"/>
             </properties>
+            <clientProperties>
+              <html.disable class="java.lang.Boolean" value="false"/>
+            </clientProperties>
             <border type="none"/>
-            <children/>
+            <children>
+              <grid id="b1881" layout-manager="GridLayoutManager" row-count="12" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints/>
+                <properties>
+                  <background color="-16760815"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <hspacer id="a710c">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="5" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                  </hspacer>
+                  <grid id="98727" binding="AsPica" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="11" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="200" height="300"/>
+                        <preferred-size width="200" height="300"/>
+                        <maximum-size width="200" height="300"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-16568320"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="15f01" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="resources/sprites/cartas/AsPica.png"/>
+                          <text value=""/>
+                          <toolTipText value="As de Pica"/>
+                        </properties>
+                      </component>
+                      <component id="afecb" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Arial Black" size="14"/>
+                          <foreground color="-1"/>
+                          <text value="Valor: 14"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="45975" binding="AsTrebol" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="11" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="200" height="300"/>
+                        <preferred-size width="200" height="300"/>
+                        <maximum-size width="200" height="300"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-16568320"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="cd301" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="resources/sprites/cartas/AsTrebol.png"/>
+                          <text value=""/>
+                          <toolTipText value="As de Tréboles"/>
+                        </properties>
+                      </component>
+                      <component id="226f6" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Arial Black" size="14"/>
+                          <foreground color="-1"/>
+                          <text value="Valor: 14"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="d4fb1" binding="ReyPica" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="11" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="200" height="300"/>
+                        <preferred-size width="200" height="300"/>
+                        <maximum-size width="200" height="300"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-16568320"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="54fbc" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="resources/sprites/cartas/ReyPica.png"/>
+                          <text value=""/>
+                          <toolTipText value="Rey de Picas"/>
+                        </properties>
+                      </component>
+                      <component id="bce3f" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Arial Black" size="14"/>
+                          <foreground color="-1"/>
+                          <text value="Valor: 13"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="7501a" binding="ReyTrebol" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="11" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="200" height="300"/>
+                        <preferred-size width="200" height="300"/>
+                        <maximum-size width="200" height="300"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-16568320"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="8d24d" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="resources/sprites/cartas/ReyTrebol.png"/>
+                          <text value=""/>
+                          <toolTipText value="Rey de Tréboles"/>
+                        </properties>
+                      </component>
+                      <component id="c9d29" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Arial Black" size="14"/>
+                          <foreground color="-1"/>
+                          <text value="Valor: 13"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="bdea4" binding="ReinaPica" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="10" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="200" height="300"/>
+                        <preferred-size width="200" height="300"/>
+                        <maximum-size width="200" height="300"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-16568320"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="e0f7" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="resources/sprites/cartas/ReinaPica.png"/>
+                          <text value=""/>
+                          <toolTipText value="Reina de Picas"/>
+                        </properties>
+                      </component>
+                      <component id="49698" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Arial Black" size="14"/>
+                          <foreground color="-1"/>
+                          <text value="Valor: 12"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="b8ae0" binding="ReinaTrebol" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="10" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="200" height="300"/>
+                        <preferred-size width="200" height="300"/>
+                        <maximum-size width="200" height="300"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-16568320"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="188bc" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="resources/sprites/cartas/ReinaTrebol.png"/>
+                          <text value=""/>
+                          <toolTipText value="Reina de Tréboles"/>
+                        </properties>
+                      </component>
+                      <component id="23e2f" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Arial Black" size="14"/>
+                          <foreground color="-1"/>
+                          <text value="Valor: 12"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="82c35" binding="SotaPica" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="10" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="200" height="300"/>
+                        <preferred-size width="200" height="300"/>
+                        <maximum-size width="200" height="300"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-16568320"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="32d45" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="resources/sprites/cartas/SotaPica.png"/>
+                          <text value=""/>
+                          <toolTipText value="Sota de Picas"/>
+                        </properties>
+                      </component>
+                      <component id="f49bc" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Arial Black" size="14"/>
+                          <foreground color="-1"/>
+                          <text value="Valor: 11"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="9ddbd" binding="SotaTrebol" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="10" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="200" height="300"/>
+                        <preferred-size width="200" height="300"/>
+                        <maximum-size width="200" height="300"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-16568320"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="42faa" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="resources/sprites/cartas/SotaTrebol.png"/>
+                          <text value=""/>
+                          <toolTipText value="Sota de Tréboles"/>
+                        </properties>
+                      </component>
+                      <component id="dfb50" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Arial Black" size="14"/>
+                          <foreground color="-1"/>
+                          <text value="Valor: 11"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="82397" binding="DiezPica" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="9" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="200" height="300"/>
+                        <preferred-size width="200" height="300"/>
+                        <maximum-size width="200" height="300"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-16568320"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="2db3f" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="resources/sprites/cartas/DiezPica.png"/>
+                          <text value=""/>
+                          <toolTipText value="Diez de Picas"/>
+                        </properties>
+                      </component>
+                      <component id="9f72e" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Arial Black" size="14"/>
+                          <foreground color="-1"/>
+                          <text value="Valor: 10"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="fb6ad" binding="DiezTrebol" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="9" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="200" height="300"/>
+                        <preferred-size width="200" height="300"/>
+                        <maximum-size width="200" height="300"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-16568320"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="1c4a3" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="resources/sprites/cartas/DiezTrebol.png"/>
+                          <text value=""/>
+                          <toolTipText value="Diez de Tréboles"/>
+                        </properties>
+                      </component>
+                      <component id="c86e9" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Arial Black" size="14"/>
+                          <foreground color="-1"/>
+                          <text value="Valor: 10"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="6566c" binding="DiezDiamante" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="9" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="200" height="300"/>
+                        <preferred-size width="200" height="300"/>
+                        <maximum-size width="200" height="300"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-16568320"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="bfe9a" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="resources/sprites/cartas/DiezDiamante.png"/>
+                          <text value=""/>
+                          <toolTipText value="Diez de Diamantes"/>
+                        </properties>
+                      </component>
+                      <component id="66bb7" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Arial Black" size="14"/>
+                          <foreground color="-1"/>
+                          <text value="Valor: 10"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="1b766" binding="DiezCorazon" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="9" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="200" height="300"/>
+                        <preferred-size width="200" height="300"/>
+                        <maximum-size width="200" height="300"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-16568320"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="3eaea" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="resources/sprites/cartas/DiezCorazon.png"/>
+                          <text value=""/>
+                          <toolTipText value="Diez de Corazones"/>
+                        </properties>
+                      </component>
+                      <component id="cd334" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Arial Black" size="14"/>
+                          <foreground color="-1"/>
+                          <text value="Valor: 10"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="75c27" binding="NuevePica" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="8" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="200" height="300"/>
+                        <preferred-size width="200" height="300"/>
+                        <maximum-size width="200" height="300"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-16568320"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="b6d12" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="resources/sprites/cartas/NuevePica.png"/>
+                          <text value=""/>
+                          <toolTipText value="Nueve de Picas"/>
+                        </properties>
+                      </component>
+                      <component id="da52e" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Arial Black" size="14"/>
+                          <foreground color="-1"/>
+                          <text value="Valor: 9"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="9a983" binding="NueveTrebol" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="8" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="200" height="300"/>
+                        <preferred-size width="200" height="300"/>
+                        <maximum-size width="200" height="300"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <autoscrolls value="false"/>
+                      <background color="-16568320"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="92f45" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="resources/sprites/cartas/NueveTrebol.png"/>
+                          <text value=""/>
+                          <toolTipText value="Nueve de Tréboles"/>
+                        </properties>
+                      </component>
+                      <component id="1b72a" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Arial Black" size="14"/>
+                          <foreground color="-1"/>
+                          <text value="Valor: 9"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="ed029" binding="NueveDiamante" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="8" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="200" height="300"/>
+                        <preferred-size width="200" height="300"/>
+                        <maximum-size width="200" height="300"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-16568320"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="354c0" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="resources/sprites/cartas/NueveDiamante.png"/>
+                          <text value=""/>
+                          <toolTipText value="Nueve de Diamantes"/>
+                        </properties>
+                      </component>
+                      <component id="fe67c" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Arial Black" size="14"/>
+                          <foreground color="-1"/>
+                          <text value="Valor: 9"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="22e19" binding="NueveCorazon" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="200" height="300"/>
+                        <preferred-size width="200" height="300"/>
+                        <maximum-size width="200" height="300"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-16568320"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="b690f" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="resources/sprites/cartas/NueveCorazon.png"/>
+                          <text value=""/>
+                          <toolTipText value="Nueve de Corazones"/>
+                        </properties>
+                      </component>
+                      <component id="f8bed" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Arial Black" size="14"/>
+                          <foreground color="-1"/>
+                          <text value="Valor: 9"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="21bfd" binding="OchoPica" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="7" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="200" height="300"/>
+                        <preferred-size width="200" height="300"/>
+                        <maximum-size width="200" height="300"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-16568320"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="5de8c" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="resources/sprites/cartas/OchoPica.png"/>
+                          <text value=""/>
+                          <toolTipText value="Ocho de Picas"/>
+                        </properties>
+                      </component>
+                      <component id="41c7a" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Arial Black" size="14"/>
+                          <foreground color="-1"/>
+                          <text value="Valor: 8"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="183b7" binding="OchoTrebol" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="7" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="200" height="300"/>
+                        <preferred-size width="200" height="300"/>
+                        <maximum-size width="200" height="300"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-16568320"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="c6ce7" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="resources/sprites/cartas/OchoTrebol.png"/>
+                          <text value=""/>
+                          <toolTipText value="Ocho de Tréboles"/>
+                        </properties>
+                      </component>
+                      <component id="80b0e" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Arial Black" size="14"/>
+                          <foreground color="-1"/>
+                          <text value="Valor: 8"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="a09b1" binding="OchoDiamante" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="200" height="300"/>
+                        <preferred-size width="200" height="300"/>
+                        <maximum-size width="200" height="300"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-16568320"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="9901c" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="resources/sprites/cartas/OchoDiamante.png"/>
+                          <text value=""/>
+                          <toolTipText value="Ocho de Diamantes"/>
+                        </properties>
+                      </component>
+                      <component id="5787f" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Arial Black" size="14"/>
+                          <foreground color="-1"/>
+                          <text value="Valor: 8"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="548cc" binding="OchoCorazon" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="200" height="300"/>
+                        <preferred-size width="200" height="300"/>
+                        <maximum-size width="200" height="300"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-16568320"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="c1abf" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="resources/sprites/cartas/OchoCorazon.png"/>
+                          <text value=""/>
+                          <toolTipText value="Ocho de Corazones"/>
+                        </properties>
+                      </component>
+                      <component id="226f7" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Arial Black" size="14"/>
+                          <foreground color="-1"/>
+                          <text value="Valor: 8"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="8f47a" binding="SietePica" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="6" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="200" height="300"/>
+                        <preferred-size width="200" height="300"/>
+                        <maximum-size width="200" height="300"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-16568320"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="5f4aa" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="resources/sprites/cartas/SietePica.png"/>
+                          <text value=""/>
+                          <toolTipText value="Siete de Picas"/>
+                        </properties>
+                      </component>
+                      <component id="93b3e" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Arial Black" size="14"/>
+                          <foreground color="-1"/>
+                          <text value="Valor: 7"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="68835" binding="SieteTrebol" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="200" height="300"/>
+                        <preferred-size width="200" height="300"/>
+                        <maximum-size width="200" height="300"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-16568320"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="b0fa2" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="resources/sprites/cartas/SieteTrebol.png"/>
+                          <text value=""/>
+                          <toolTipText value="Siete de Tréboles"/>
+                        </properties>
+                      </component>
+                      <component id="23dce" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Arial Black" size="14"/>
+                          <foreground color="-1"/>
+                          <text value="Valor: 7"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="7b8a8" binding="SieteDiamante" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="200" height="300"/>
+                        <preferred-size width="200" height="300"/>
+                        <maximum-size width="200" height="300"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-16568320"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="3bf79" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="resources/sprites/cartas/SieteDiamante.png"/>
+                          <text value=""/>
+                          <toolTipText value="Siete de Diamantes"/>
+                        </properties>
+                      </component>
+                      <component id="e9fc2" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Arial Black" size="14"/>
+                          <foreground color="-1"/>
+                          <text value="Valor: 7"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="532ab" binding="SieteCorazon" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="200" height="300"/>
+                        <preferred-size width="200" height="300"/>
+                        <maximum-size width="200" height="300"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-16568320"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="c4bde" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="resources/sprites/cartas/SieteCorazon.png"/>
+                          <text value=""/>
+                          <toolTipText value="Siete de Corazones"/>
+                        </properties>
+                      </component>
+                      <component id="df900" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Arial Black" size="14"/>
+                          <foreground color="-1"/>
+                          <text value="Valor: 7"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="b722d" binding="SeisPica" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="5" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="200" height="300"/>
+                        <preferred-size width="200" height="300"/>
+                        <maximum-size width="200" height="300"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-16568320"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="a4e84" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="resources/sprites/cartas/SeisPica.png"/>
+                          <text value=""/>
+                          <toolTipText value="Seis de Picas"/>
+                        </properties>
+                      </component>
+                      <component id="36775" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Arial Black" size="14"/>
+                          <foreground color="-1"/>
+                          <text value="Valor: 6"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="a2f65" binding="SeisTrebol" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="200" height="300"/>
+                        <preferred-size width="200" height="300"/>
+                        <maximum-size width="200" height="300"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-16568320"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="e7ace" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="resources/sprites/cartas/SeisTrebol.png"/>
+                          <text value=""/>
+                          <toolTipText value="Seis de Tréboles"/>
+                        </properties>
+                      </component>
+                      <component id="ad3a9" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Arial Black" size="14"/>
+                          <foreground color="-1"/>
+                          <text value="Valor: 6"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="d3f1d" binding="SeisDiamante" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="200" height="300"/>
+                        <preferred-size width="200" height="300"/>
+                        <maximum-size width="200" height="300"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-16568320"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="6fc74" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="resources/sprites/cartas/SeisDiamante.png"/>
+                          <text value=""/>
+                          <toolTipText value="Seis de Diamantes"/>
+                        </properties>
+                      </component>
+                      <component id="72740" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Arial Black" size="14"/>
+                          <foreground color="-1"/>
+                          <text value="Valor: 6"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="687c3" binding="SeisCorazon" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="200" height="300"/>
+                        <preferred-size width="200" height="300"/>
+                        <maximum-size width="200" height="300"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-16568320"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="8fdbc" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="resources/sprites/cartas/SeisCorazon.png"/>
+                          <text value=""/>
+                          <toolTipText value="Seis de Corazones"/>
+                        </properties>
+                      </component>
+                      <component id="5c8f9" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Arial Black" size="14"/>
+                          <foreground color="-1"/>
+                          <text value="Valor: 6"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="9c9f5" binding="CincoPica" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="4" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="200" height="300"/>
+                        <preferred-size width="200" height="300"/>
+                        <maximum-size width="200" height="300"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-16568320"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="53b9e" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="resources/sprites/cartas/CincoPica.png"/>
+                          <text value=""/>
+                          <toolTipText value="Cinco de Picas"/>
+                        </properties>
+                      </component>
+                      <component id="835ae" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Arial Black" size="14"/>
+                          <foreground color="-1"/>
+                          <text value="Valor: 5"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="462e9" binding="CincoTrebol" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="200" height="300"/>
+                        <preferred-size width="200" height="300"/>
+                        <maximum-size width="200" height="300"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-16568320"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="d1102" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="resources/sprites/cartas/CincoTrebol.png"/>
+                          <text value=""/>
+                          <toolTipText value="Cinco de Tréboles"/>
+                        </properties>
+                      </component>
+                      <component id="2bb7f" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Arial Black" size="14"/>
+                          <foreground color="-1"/>
+                          <text value="Valor: 5"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="e4a2f" binding="CincoDiamante" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="200" height="300"/>
+                        <preferred-size width="200" height="300"/>
+                        <maximum-size width="200" height="300"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-16568320"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="86d32" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="resources/sprites/cartas/CincoDiamante.png"/>
+                          <text value=""/>
+                          <toolTipText value="Cinco de Diamantes"/>
+                        </properties>
+                      </component>
+                      <component id="fb842" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Arial Black" size="14"/>
+                          <foreground color="-1"/>
+                          <text value="Valor: 5"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="ff131" binding="CincoCorazon" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="200" height="300"/>
+                        <preferred-size width="200" height="300"/>
+                        <maximum-size width="200" height="300"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-16568320"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="1bfcc" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="resources/sprites/cartas/CincoCorazon.png"/>
+                          <text value=""/>
+                          <toolTipText value="Cinco de Corazones"/>
+                        </properties>
+                      </component>
+                      <component id="eb0be" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Arial Black" size="14"/>
+                          <foreground color="-1"/>
+                          <text value="Valor: 5"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="5304c" binding="CuatroPica" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="200" height="300"/>
+                        <preferred-size width="200" height="300"/>
+                        <maximum-size width="200" height="300"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-16568320"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="e4d5b" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="resources/sprites/cartas/CuatroPica.png"/>
+                          <text value=""/>
+                          <toolTipText value="Cuatro de Picas"/>
+                        </properties>
+                      </component>
+                      <component id="4b9f8" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Arial Black" size="14"/>
+                          <foreground color="-1"/>
+                          <text value="Valor: 4"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="275c5" binding="CuatroTrebol" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="200" height="300"/>
+                        <preferred-size width="200" height="300"/>
+                        <maximum-size width="200" height="300"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-16568320"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="d83e4" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="resources/sprites/cartas/CuatroTrebol.png"/>
+                          <text value=""/>
+                          <toolTipText value="Cuatro de Tréboles"/>
+                        </properties>
+                      </component>
+                      <component id="ca408" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Arial Black" size="14"/>
+                          <foreground color="-1"/>
+                          <text value="Valor: 4"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="93553" binding="CuatroDiamante" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="200" height="300"/>
+                        <preferred-size width="200" height="300"/>
+                        <maximum-size width="200" height="300"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-16568320"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="4a659" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="resources/sprites/cartas/CuatroDiamante.png"/>
+                          <text value=""/>
+                          <toolTipText value="Cuatro de Diamantes"/>
+                        </properties>
+                      </component>
+                      <component id="415ad" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Arial Black" size="14"/>
+                          <foreground color="-1"/>
+                          <text value="Valor: 4"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="ee9cb" binding="CuatroCorazon" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="200" height="300"/>
+                        <preferred-size width="200" height="300"/>
+                        <maximum-size width="200" height="300"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-16568320"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="be1eb" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="resources/sprites/cartas/CuatroCorazon.png"/>
+                          <text value=""/>
+                          <toolTipText value="Cuatro de Corazones"/>
+                        </properties>
+                      </component>
+                      <component id="8e7c6" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Arial Black" size="14"/>
+                          <foreground color="-1"/>
+                          <text value="Valor: 4"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="73faa" binding="TresPIca" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="200" height="300"/>
+                        <preferred-size width="200" height="300"/>
+                        <maximum-size width="200" height="300"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-16568320"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="ed999" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="resources/sprites/cartas/TresPica.png"/>
+                          <text value=""/>
+                          <toolTipText value="Tres de Picas"/>
+                        </properties>
+                      </component>
+                      <component id="f226a" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Arial Black" size="14"/>
+                          <foreground color="-1"/>
+                          <text value="Valor: 3"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="6a4ad" binding="TresTrebol" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="200" height="300"/>
+                        <preferred-size width="200" height="300"/>
+                        <maximum-size width="200" height="300"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-16568320"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="343bf" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="resources/sprites/cartas/TresTrebol.png"/>
+                          <text value=""/>
+                          <toolTipText value="Tres de Tréboles"/>
+                        </properties>
+                      </component>
+                      <component id="a84c1" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Arial Black" size="14"/>
+                          <foreground color="-1"/>
+                          <text value="Valor: 3"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="309c3" binding="TresDiamante" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="200" height="300"/>
+                        <preferred-size width="200" height="300"/>
+                        <maximum-size width="200" height="300"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-16568320"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="8cb87" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="resources/sprites/cartas/TresDiamante.png"/>
+                          <text value=""/>
+                          <toolTipText value="Tres de Diamantes"/>
+                        </properties>
+                      </component>
+                      <component id="b45ee" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Arial Black" size="14"/>
+                          <foreground color="-1"/>
+                          <text value="Valor: 3"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="aabcf" binding="TresCorazon" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="200" height="300"/>
+                        <preferred-size width="200" height="300"/>
+                        <maximum-size width="200" height="300"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-16568320"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="8976f" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="resources/sprites/cartas/TresCorazon.png"/>
+                          <text value=""/>
+                          <toolTipText value="Tres de Corazones"/>
+                        </properties>
+                      </component>
+                      <component id="2eb8b" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Arial Black" size="14"/>
+                          <foreground color="-1"/>
+                          <text value="Valor: 3"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="94fc8" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="200" height="300"/>
+                        <preferred-size width="200" height="300"/>
+                        <maximum-size width="200" height="300"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-16568320"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="bd5b9" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="resources/sprites/cartas/DosPica.png"/>
+                          <text value=""/>
+                          <toolTipText value="Tres de Picas"/>
+                        </properties>
+                      </component>
+                      <component id="91935" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Arial Black" size="14"/>
+                          <foreground color="-1"/>
+                          <text value="Valor: 2"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="12ff1" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="200" height="300"/>
+                        <preferred-size width="200" height="300"/>
+                        <maximum-size width="200" height="300"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-16568320"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="89449" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="resources/sprites/cartas/DosTrebol.png"/>
+                          <text value=""/>
+                          <toolTipText value="Tres de Tréboles"/>
+                        </properties>
+                      </component>
+                      <component id="7bbc" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Arial Black" size="14"/>
+                          <foreground color="-1"/>
+                          <text value="Valor: 2"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="6d38d" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="200" height="300"/>
+                        <preferred-size width="200" height="300"/>
+                        <maximum-size width="200" height="300"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-16568320"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="fc2a7" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="resources/sprites/cartas/DosDiamante.png"/>
+                          <text value=""/>
+                          <toolTipText value="Tres de Diamantes"/>
+                        </properties>
+                      </component>
+                      <component id="fa02e" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Arial Black" size="14"/>
+                          <foreground color="-1"/>
+                          <text value="Valor: 2"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="d195b" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <minimum-size width="200" height="300"/>
+                        <preferred-size width="200" height="300"/>
+                        <maximum-size width="200" height="300"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-16568320"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="d154f" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="resources/sprites/cartas/DosCorazon.png"/>
+                          <text value=""/>
+                          <toolTipText value="Tres de Corazones"/>
+                        </properties>
+                      </component>
+                      <component id="98f5c" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Arial Black" size="14"/>
+                          <foreground color="-1"/>
+                          <text value="Valor: 2"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                </children>
+              </grid>
+            </children>
+          </scrollpane>
+          <scrollpane id="b55d0" binding="combate">
+            <constraints>
+              <tabbedpane title="Combate"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <grid id="88baf" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints/>
+                <properties>
+                  <background color="-16760815"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <grid id="30140" layout-manager="GridLayoutManager" row-count="3" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                        <minimum-size width="1000" height="350"/>
+                        <preferred-size width="1000" height="350"/>
+                        <maximum-size width="1000" height="350"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-16568320"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="910af" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Arial Black" size="20"/>
+                          <foreground color="-1"/>
+                          <text value="Armas"/>
+                        </properties>
+                      </component>
+                      <component id="a9069" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="resources/sprites/imagenesTutorial/imagen3.png"/>
+                          <text value=""/>
+                        </properties>
+                      </component>
+                      <component id="ddc23" class="javax.swing.JTextPane" binding="losDiamantesSonLasTextPane" default-binding="true">
+                        <constraints>
+                          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                            <preferred-size width="150" height="50"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <background color="-16568320"/>
+                          <editable value="false"/>
+                          <font name="Arial Black" size="14"/>
+                          <foreground color="-1"/>
+                          <text value="Los diamantes son las &quot;armas&quot; que usarás para defenderte de los enemigos. Cada carta te defenderá del enemigo restando al daño del enemigo el del arma. Las armas tienen condiciones que se explicarán más adelante."/>
+                        </properties>
+                      </component>
+                      <component id="b8cc7" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                            <minimum-size width="20" height="20"/>
+                            <preferred-size width="20" height="20"/>
+                            <maximum-size width="20" height="20"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <text value=""/>
+                        </properties>
+                      </component>
+                      <component id="8edc7" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                            <minimum-size width="20" height="20"/>
+                            <preferred-size width="20" height="20"/>
+                            <maximum-size width="20" height="20"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <text value=""/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="7e495" layout-manager="GridLayoutManager" row-count="3" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                        <minimum-size width="1000" height="350"/>
+                        <preferred-size width="1000" height="350"/>
+                        <maximum-size width="1000" height="350"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-16568320"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="b2b38" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Arial Black" size="20"/>
+                          <foreground color="-1"/>
+                          <text value="Curaciones"/>
+                        </properties>
+                      </component>
+                      <component id="ec663" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="resources/sprites/imagenesTutorial/imagen2.png"/>
+                          <text value=""/>
+                        </properties>
+                      </component>
+                      <component id="6978e" class="javax.swing.JTextPane" default-binding="true">
+                        <constraints>
+                          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                            <preferred-size width="150" height="50"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <background color="-16568320"/>
+                          <editable value="false"/>
+                          <font name="Arial Black" size="14"/>
+                          <foreground color="-1"/>
+                          <text value="Los corazones son las &quot;curaciones&quot; en este juego y cada una de estas te cura una cantidad de daño  distinta correspondiente a su número. Ten en cuenta que solo podrás curarte una vez por ronda,  descartando la segunda curación que fueras a usar  en ese turno."/>
+                        </properties>
+                      </component>
+                      <component id="3b99e" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                            <minimum-size width="20" height="20"/>
+                            <preferred-size width="20" height="20"/>
+                            <maximum-size width="20" height="20"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <text value=""/>
+                        </properties>
+                      </component>
+                      <component id="28e2d" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                            <minimum-size width="20" height="20"/>
+                            <preferred-size width="20" height="20"/>
+                            <maximum-size width="20" height="20"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <text value=""/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="c6304" layout-manager="GridLayoutManager" row-count="3" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                        <minimum-size width="1000" height="300"/>
+                        <preferred-size width="1000" height="300"/>
+                        <maximum-size width="1000" height="300"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-16568320"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="57a1e" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Arial Black" size="20"/>
+                          <foreground color="-1"/>
+                          <text value="Enemigos"/>
+                        </properties>
+                      </component>
+                      <component id="c79fb" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="resources/sprites/imagenesTutorial/imagen4.png"/>
+                          <text value=""/>
+                        </properties>
+                      </component>
+                      <component id="86245" class="javax.swing.JTextPane" default-binding="true">
+                        <constraints>
+                          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                            <preferred-size width="150" height="50"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <background color="-16568320"/>
+                          <editable value="false"/>
+                          <font name="Arial Black" size="14"/>
+                          <foreground color="-1"/>
+                          <text value="Los enemigos son las Picas y los Tréboles. Estos te harán el daño correspondiente al número asignado no teniendo diferencias entre ellas excepto en el modo QUEST."/>
+                        </properties>
+                      </component>
+                      <component id="ad5f" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                            <minimum-size width="20" height="20"/>
+                            <preferred-size width="20" height="20"/>
+                            <maximum-size width="20" height="20"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <text value=""/>
+                        </properties>
+                      </component>
+                      <component id="cab00" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                            <minimum-size width="20" height="20"/>
+                            <preferred-size width="20" height="20"/>
+                            <maximum-size width="20" height="20"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <text value=""/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="66219" layout-manager="GridLayoutManager" row-count="3" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                        <minimum-size width="1000" height="300"/>
+                        <preferred-size width="1000" height="300"/>
+                        <maximum-size width="1000" height="300"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-16568320"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="f6cf0" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Arial Black" size="20"/>
+                          <foreground color="-1"/>
+                          <text value="Combate"/>
+                        </properties>
+                      </component>
+                      <component id="dadf4" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="resources/sprites/imagenesTutorial/imagen6.png"/>
+                          <text value=""/>
+                        </properties>
+                      </component>
+                      <component id="f44a8" class="javax.swing.JTextPane" default-binding="true">
+                        <constraints>
+                          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                            <preferred-size width="150" height="50"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <background color="-16568320"/>
+                          <editable value="false"/>
+                          <font name="Arial Black" size="14"/>
+                          <foreground color="-1"/>
+                          <text value="A la hora de defenderte, solo podrás defenderte si el último enemigo enfrentado con tu arma es más debil que el nuevo. Si no se cumple esta condición recibirás todo el daño del enemigo.&#10;En este ejemplo, a la izquierda vemos que hay un 3 y vamos a atacar a un dos. Al ser el 2 menor que 3, nos defenderemos con el arma y recibiremos 0 de daño.&#10;En cambio, a la derecha vemos que tenemos un 2 y vamos a defendernos de un 3. Al ser 2 menor que 3, no podremos usar nuestra arma y nos tragaremos todo el daño"/>
+                        </properties>
+                      </component>
+                      <component id="b3a56" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                            <minimum-size width="20" height="20"/>
+                            <preferred-size width="20" height="20"/>
+                            <maximum-size width="20" height="20"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <text value=""/>
+                        </properties>
+                      </component>
+                      <component id="6a913" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                            <minimum-size width="20" height="20"/>
+                            <preferred-size width="20" height="20"/>
+                            <maximum-size width="20" height="20"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <text value=""/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                </children>
+              </grid>
+            </children>
           </scrollpane>
         </children>
       </tabbedpane>
-      <component id="f64ef" class="javax.swing.JButton" binding="button1" default-binding="true">
+      <component id="f64ef" class="javax.swing.JButton" binding="salir" default-binding="true">
         <constraints>
           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
