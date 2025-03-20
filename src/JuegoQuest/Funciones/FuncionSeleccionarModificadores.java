@@ -39,6 +39,7 @@ public class FuncionSeleccionarModificadores {
         frame2.setContentPane(panelModificadores);
         frame2.setVisible(true);;
         frame2.setContentPane(panelModificadores);
+        frame2.setResizable(false);
         Main.frame.setVisible(false);
         mod1 = new Modificador(Modificador.obtenerModificador());
         mod2 = new Modificador(Modificador.obtenerModificador());

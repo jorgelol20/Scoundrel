@@ -358,7 +358,7 @@ public class Juego extends JFrame {
         }
     }
     public void seleccionCartaIcono(JButton cartaACambiarBoton, Carta cartaACambiar,JButton carta1Boton, Carta carta1, JButton carta2Boton,Carta carta2, JButton carta3Boton, Carta carta3) {
-        if (paranoia){
+        if (paranoia && numRonda % 5 == 0){
             cartaACambiarBoton.setIcon(new ImageIcon(cartaACambiar.getPaloCarta().imagenDefaultSeleccionada));
             if (carta1 != null){
                 carta1Boton.setIcon(new ImageIcon(carta1.getPaloCarta().imagenDefault));
