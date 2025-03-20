@@ -79,6 +79,7 @@ public class Juego extends JFrame {
     public boolean chupacabras = false;
     public boolean espinas = false;
     public boolean ICD = false;
+    public boolean soloLeveling = false;
     //Variables modificadores
     public JLabel mod1;
     public JLabel mod2;

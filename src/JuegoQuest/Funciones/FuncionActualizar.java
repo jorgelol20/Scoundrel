@@ -170,6 +170,10 @@ public class FuncionActualizar {
             if (juego.ultimoSuspiroActivado){
                 juego.ultimoSuspiro = true;
             }
+            if (juego.soloLeveling){
+                juego.vidaMaxima++;
+                juego.vidas++;
+            }
             actualizaciones(juego);
         }
     }

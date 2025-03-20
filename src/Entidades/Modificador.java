@@ -97,11 +97,12 @@ public class Modificador {
         //Chupacabras #30
         modificadores.add(new Modificador(TipoModificador.BUFF, "Chupacabras", "<html><div style='width: 200px; text-align: justify;'>Si el arma es más fuerte que el enemigo, te curas 1 de vida.</div></html>", "src/resources/sprites/modificadores/Chupacabras.png", 30));
         //Espinas #31
-        modificadores.add(new Modificador(TipoModificador.DEBUFF, "Espinas", "<html><div style='width: 200px; text-align: justify;'>Cada vez que cambias de arma o agarras una nuevo, te haces 1 de daño</div></html>", "src/resources/sprites/modificadores/Espinas.png", 31));
+        modificadores.add(new Modificador(TipoModificador.DEBUFF, "Espinas", "<html><div style='width: 200px; text-align: justify;'>Cada vez que cambias de arma o agarras una nuevo, te haces 1 de daño.</div></html>", "src/resources/sprites/modificadores/Espinas.png", 31));
         //ICD #32
-        modificadores.add(new Modificador(TipoModificador.DEBUFF, "ICD", "<html><div style='width: 200px; text-align: justify;'>No puedes ver el número de vidas restantes</div></html>", "src/resources/sprites/modificadores/ICD.png", 32));
+        modificadores.add(new Modificador(TipoModificador.DEBUFF, "ICD", "<html><div style='width: 200px; text-align: justify;'>No puedes ver el número de vidas restantes.</div></html>", "src/resources/sprites/modificadores/ICD.png", 32));
+        //Solo Leveling #33
+        modificadores.add(new Modificador(TipoModificador.BUFF, "Solo Leveling","<html><div style='width: 200px; text-align: justify;'>Cada mazo completado, obtienes 1 más de vida.</div></html>", "src/resources/sprites/modificadores/SoloLeveling.png", 33));
     }
-
     public static void aplicarModificador(Modificador modificador, Juego juego) {
         String iconoPequeno = modificador.icono.replace(".png", "Pequeno.png");
         switch (modificador.id) {
@@ -256,6 +257,9 @@ public class Modificador {
                 juego.ICD = true;
                 modificador.icono16 = iconoPequeno;
                 break;
+            case 33:
+                juego.soloLeveling = true;
+                modificador.icono16 = iconoPequeno;
             default:
                 break;
         }
