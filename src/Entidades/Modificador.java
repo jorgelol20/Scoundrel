@@ -278,8 +278,8 @@ public class Modificador {
         if (modificador.nombre.contains("Castelvania")) {
             juego.posicionModDracula = juego.contadorModificador;
         }
-        if (modificador.nombre.contains("A por el dragón")) {
-            juego.posicionModDracula = juego.contadorModificador;
+        if (modificador.nombre.contains("A por")) {
+            juego.posicionModDragon = juego.contadorModificador;
         }
         if (modificador.nombre.contains("¿Sans?")) {
             juego.posicionModSans = juego.contadorModificador;
