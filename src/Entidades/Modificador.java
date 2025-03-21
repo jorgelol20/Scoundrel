@@ -275,7 +275,7 @@ public class Modificador {
     }
 
     public static void setIconoModificador(Modificador modificador, Juego juego) {
-        if (modificador.nombre.contains("Castelvania")) {
+        if (modificador.nombre.contains("Castlevania")) {
             juego.posicionModDracula = juego.contadorModificador;
         }
         if (modificador.nombre.contains("A por")) {
@@ -373,6 +373,7 @@ public class Modificador {
     public static void questDracula(Juego juego) {
         juego.efectoExtraCuracion += 4;
         String iconoPequenyo = "src/resources/sprites/modificadores/DraculaDerrotadoPequeno.png";
+        juego.questDracula = false;
         switch (juego.posicionModDracula) {
             case 1:
                 juego.mod1.setIcon(new ImageIcon(iconoPequenyo));
@@ -422,6 +423,7 @@ public class Modificador {
     public static void questDragon(Juego juego) {
         juego.danyoExtraArmas += 2;
         String iconoPequenyo = "src/resources/sprites/modificadores/DragonDerrotadoPequeno.png";
+        juego.questDragon = false;
         switch (juego.posicionModDragon) {
             case 1:
                 juego.mod1.setIcon(new ImageIcon(iconoPequenyo));
@@ -473,6 +475,7 @@ public class Modificador {
         juego.danyoExtraPicas -= 1;
         juego.danyoExtraTreboles -= 1;
         String iconoPequenyo = "src/resources/sprites/modificadores/SansDerrotadoPequeno.png";
+        juego.questSans = false;
         switch (juego.posicionModSans) {
             case 1:
                 juego.mod1.setIcon(new ImageIcon(iconoPequenyo));

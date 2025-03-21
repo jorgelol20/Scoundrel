@@ -3,6 +3,9 @@ package Menus;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+import java.util.Objects;
 
 public class MenuAyuda {
     private JPanel panelAyuda;
@@ -69,7 +72,7 @@ public class MenuAyuda {
             System.out.println("Error de posición");
         }
         try {
-            frame2.setBounds(0, 0, 1400, 768);
+            frame2.setBounds(0, 0, Main.frame.getWidth(), Main.frame.getHeight());
             frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             frame2.setVisible(true);
             frame2.setContentPane(panelAyuda);

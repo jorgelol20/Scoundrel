@@ -34,7 +34,7 @@ public class FuncionSeleccionarModificadores {
         frame2.setIconImage(Main.frame.getIconImage());
         frame2.setLocation(Main.frame.getLocation());
         frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame2.setBounds(0,0, 1400, 768);
+        frame2.setBounds(0,0, Main.frame.getWidth(), Main.frame.getHeight());
         frame2.setLocationRelativeTo(Main.frame);
         frame2.setContentPane(panelModificadores);
         frame2.setVisible(true);;

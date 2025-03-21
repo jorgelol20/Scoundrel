@@ -71,7 +71,8 @@ public class FuncionSonido {
                 public void run() {
                     try {
                         while (true) {
-                            if (!reproductor.isOpen()) {
+                                reproductor.close();
+                                reproductor.stop();
                                 reproducirAudio = AudioSystem.getAudioInputStream(new File("src/resources/sounds/musica.wav"));
                                 reproductor.open(reproducirAudio);
                                 controlVolumen = (FloatControl) reproductor.getControl(FloatControl.Type.MASTER_GAIN);
@@ -80,11 +81,7 @@ public class FuncionSonido {
                                 float volumenDB = min + (max - min) * Main.valorVolumenMusica;
                                 controlVolumen.setValue(volumenDB);
                                 reproductor.start();
-                            }else{
                                 Thread.sleep(117000);
-                                reproductor.close();
-                                reproductor.stop();
-                            }
                         }
                     }catch (Exception e) {
                         System.out.println("Error Sonidos");

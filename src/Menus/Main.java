@@ -1,14 +1,12 @@
 package Menus;
 
 import JuegoNormal.Funciones.FuncionSonido;
-import JuegoNormal.*;
-import JuegoQuest.*;
-import JuegoQuest.Juego;
 
 
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
+import java.awt.*;
 import java.awt.event.*;
 
 public class Main {
@@ -25,7 +23,9 @@ public class Main {
     public static float valorVolumenSonidos = 0.5f;
     private JSlider volumenSonidos;
     private JSlider volumenMusica;
+    private JCheckBox fullScreen;
     private static FuncionSonido musicaFondo = new FuncionSonido();
+    private static boolean fullScreenSelected = false;
 
     public static void main(String[] args) {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -36,6 +36,10 @@ public class Main {
         frame.setIconImage(new ImageIcon("src/resources/sprites/logoTemporal.png").getImage());
     }
     public Main() {
+        fullScreen.setSelected(fullScreenSelected);
+        if (fullScreenSelected) {
+            frame.setBounds(0, 0, 1920, 1080);
+        }
         volumenSonidos.setMaximum(100);
         volumenSonidos.setMinimum(0);
         volumenSonidos.setValue(Integer.parseInt(String.valueOf(valorVolumenSonidos*100f).replace(".0","")));
@@ -87,6 +91,19 @@ public class Main {
             public void stateChanged(ChangeEvent e) {
                 valorVolumenSonidos = (float)  volumenSonidos.getValue() / 100;
 
+            }
+        });
+        fullScreen.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+                if (fullScreen.isSelected()) {
+                    frame.setBounds(0, 0, screenSize.width, screenSize.height);
+                    fullScreenSelected = true;
+                }else{
+                    frame.setBounds(0, 0, 1400, 768);
+                    fullScreenSelected = false;
+                }
             }
         });
     }
