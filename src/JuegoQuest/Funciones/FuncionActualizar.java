@@ -174,6 +174,9 @@ public class FuncionActualizar {
                 juego.vidaMaxima++;
                 juego.vidas++;
             }
+            juego.contadorHuir = juego.huir;
+            juego.botonHuir.setIcon(new ImageIcon("src/resources/sprites/botones/BotonHuir.png"));
+            juego.botonHuir.setRolloverEnabled(true);
             actualizaciones(juego);
         }
     }
