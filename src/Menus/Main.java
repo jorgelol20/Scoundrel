@@ -24,8 +24,12 @@ public class Main {
     private JSlider volumenSonidos;
     private JSlider volumenMusica;
     private JCheckBox fullScreen;
+    private JButton botonMusica;
+    private JButton botonSonidos;
     private static FuncionSonido musicaFondo = new FuncionSonido();
     private static boolean fullScreenSelected = false;
+    private static int volumenMusicaSelected = 50;
+    private static int volumenSonidosSelected = 50;
 
     public static void main(String[] args) {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -39,6 +43,12 @@ public class Main {
         fullScreen.setSelected(fullScreenSelected);
         if (fullScreenSelected) {
             frame.setBounds(0, 0, 1920, 1080);
+        }
+        if (valorVolumenMusica == 0) {
+            cambiarIconoMusica();
+        }
+        if (valorVolumenSonidos == 0) {
+            cambiarIconoSonidos();
         }
         volumenSonidos.setMaximum(100);
         volumenSonidos.setMinimum(0);
@@ -78,19 +88,19 @@ public class Main {
         volumenMusica.addChangeListener(new ChangeListener() {
             @Override
             public void stateChanged(ChangeEvent e) {
-                valorVolumenMusica = (float) volumenMusica.getValue() / 100;
-                float min = musicaFondo.controlVolumen.getMinimum(); // Volumen mínimo en dB
-                float max = 0.0f; // Volumen máximo en dB (normal)
-                float volumenDB;
-                volumenDB = min + (max - min) * valorVolumenMusica;
-                musicaFondo.controlVolumen.setValue(volumenDB);
+                if (volumenMusica.getValue() != 0) {
+                    volumenMusicaSelected = volumenMusica.getValue();
+                }
+                cambiarVolumenMusica();
             }
         });
         volumenSonidos.addChangeListener(new ChangeListener() {
             @Override
             public void stateChanged(ChangeEvent e) {
-                valorVolumenSonidos = (float)  volumenSonidos.getValue() / 100;
-
+                if (volumenSonidos.getValue() != 0) {
+                    volumenSonidosSelected = volumenSonidos.getValue();
+                }
+                cambiarVolumenSonidos();
             }
         });
         fullScreen.addActionListener(new ActionListener() {
@@ -106,8 +116,63 @@ public class Main {
                 }
             }
         });
+        botonMusica.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                cambiarIconoMusica();
+                cambiarVolumenMusica();
+            }
+        });
+        botonSonidos.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                cambiarIconoSonidos();
+                cambiarVolumenSonidos();
+            }
+        });
+    }
+    public void cambiarVolumenMusica() {
+        valorVolumenMusica = (float) volumenMusica.getValue() / 100;
+        float min = musicaFondo.controlVolumen.getMinimum(); // Volumen mínimo en dB
+        float max = 0.0f; // Volumen máximo en dB (normal)
+        float volumenDB;
+        volumenDB = min + (max - min) * valorVolumenMusica;
+        musicaFondo.controlVolumen.setValue(volumenDB);
+    }
+    public void cambiarVolumenSonidos() {
+        valorVolumenSonidos = (float)  volumenSonidos.getValue() / 100;
     }
     public void empezarQuest() {
         juegoQuest = new JuegoQuest.Juego();
+    }
+    private void cambiarIconoMusica() {
+        if (botonMusica.getIcon().toString().contains("No")) {
+            botonMusica.setIcon(new ImageIcon("src/resources/sprites/botones/Musica.png"));
+            botonMusica.setPressedIcon(new ImageIcon("src/resources/sprites/botones/MusicaSeleccionado.png"));
+            botonMusica.setRolloverIcon(new ImageIcon("src/resources/sprites/botones/MusicaSeleccionado.png"));
+            botonMusica.setSelectedIcon(new ImageIcon("src/resources/sprites/botones/MusicaSeleccionado.png"));
+            volumenMusica.setValue(volumenMusicaSelected);
+        }else{
+            botonMusica.setIcon(new ImageIcon("src/resources/sprites/botones/NoMusica.png"));
+            botonMusica.setSelectedIcon(new ImageIcon("src/resources/sprites/botones/NoMusicaSeleccionado.png"));
+            botonMusica.setPressedIcon(new ImageIcon("src/resources/sprites/botones/NoMusicaSeleccionado.png"));
+            botonMusica.setRolloverIcon(new ImageIcon("src/resources/sprites/botones/NoMusicaSeleccionado.png"));
+            volumenMusica.setValue(0);
+        }
+    }
+    private void cambiarIconoSonidos() {
+        if (botonSonidos.getIcon().toString().contains("No")) {
+            botonSonidos.setIcon(new ImageIcon("src/resources/sprites/botones/Efectos.png"));
+            botonSonidos.setRolloverIcon(new ImageIcon("src/resources/sprites/botones/EfectosSeleccionado.png"));
+            botonSonidos.setSelectedIcon(new ImageIcon("src/resources/sprites/botones/EfectosSeleccionado.png"));
+            botonSonidos.setPressedIcon(new ImageIcon("src/resources/sprites/botones/EfectosSeleccionado.png"));
+            volumenSonidos.setValue(volumenSonidosSelected);
+        }else {
+            botonSonidos.setIcon(new ImageIcon("src/resources/sprites/botones/NoEfectos.png"));
+            botonSonidos.setRolloverIcon(new ImageIcon("src/resources/sprites/botones/NoEfectosSeleccionado.png"));
+            botonSonidos.setSelectedIcon(new ImageIcon("src/resources/sprites/botones/NoEfectosSeleccionado.png"));
+            botonSonidos.setPressedIcon(new ImageIcon("src/resources/sprites/botones/NoEfectosSeleccionado.png"));
+            volumenSonidos.setValue(0);
+        }
     }
 }
