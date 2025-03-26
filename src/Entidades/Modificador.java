@@ -102,6 +102,7 @@ public class Modificador {
         modificadores.add(new Modificador(TipoModificador.DEBUFF, "ICD", "<html><div style='width: 200px; text-align: justify;'>No puedes ver el número de vidas restantes.</div></html>", "src/resources/sprites/modificadores/ICD.png", 32));
         //Solo Leveling #33
         modificadores.add(new Modificador(TipoModificador.BUFF, "Solo Leveling","<html><div style='width: 200px; text-align: justify;'>Cada mazo completado, obtienes 1 más de vida.</div></html>", "src/resources/sprites/modificadores/SoloLeveling.png", 33));
+        //
     }
     public static void aplicarModificador(Modificador modificador, Juego juego) {
         String iconoPequeno = modificador.icono.replace(".png", "Pequeno.png");
@@ -268,9 +269,12 @@ public class Modificador {
     }
 
     public static Modificador obtenerModificador() {
+        /*
         Collections.shuffle(modificadores);
         Modificador modificador = modificadores.getFirst();
         modificadores.removeFirst();
+         */
+        Modificador modificador = new Modificador(TipoModificador.DEBUFF, "Paranoia", "<html><div style='width: 200px; text-align: justify;'>Cada 5 rondas, no conoces el valor de las cartas añadidas.</div></html>", "src/resources/sprites/modificadores/Paranoia.png", 23);
         return modificador;
     }
 

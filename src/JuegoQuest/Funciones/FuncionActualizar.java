@@ -108,18 +108,7 @@ public class FuncionActualizar {
                 juego.botonHuir.setRolloverEnabled(true);
             }
             if (juego.paranoia && juego.numRonda % 5 == 0){
-                juego.carta2Boton.setIcon(new ImageIcon(juego.carta2.getPaloCarta().imagenDefault));
-                juego.carta2Boton.setPressedIcon(new ImageIcon(juego.carta2.getPaloCarta().imagenDefault.replace(".png","Seleccionado.png")));
-                juego.carta2Boton.setPressedIcon(new ImageIcon(juego.carta2.getPaloCarta().imagenDefault.replace(".png","Seleccionado.png")));
-                juego.carta2Boton.setRolloverIcon(new ImageIcon(juego.carta2.getPaloCarta().imagenDefault.replace(".png","Seleccionado.png")));
-                juego.carta3Boton.setIcon(new ImageIcon(juego.carta3.getPaloCarta().imagenDefault));
-                juego.carta3Boton.setPressedIcon(new ImageIcon(juego.carta3.getPaloCarta().imagenDefault.replace(".png","Seleccionado.png")));
-                juego.carta3Boton.setPressedIcon(new ImageIcon(juego.carta3.getPaloCarta().imagenDefault.replace(".png","Seleccionado.png")));
-                juego.carta3Boton.setRolloverIcon(new ImageIcon(juego.carta3.getPaloCarta().imagenDefault.replace(".png","Seleccionado.png")));
-                juego.carta4Boton.setIcon(new ImageIcon(juego.carta4.getPaloCarta().imagenDefault));
-                juego.carta4Boton.setPressedIcon(new ImageIcon(juego.carta4.getPaloCarta().imagenDefault.replace(".png","Seleccionado.png")));
-                juego.carta4Boton.setPressedIcon(new ImageIcon(juego.carta4.getPaloCarta().imagenDefault.replace(".png","Seleccionado.png")));
-                juego.carta4Boton.setRolloverIcon(new ImageIcon(juego.carta4.getPaloCarta().imagenDefault.replace(".png","Seleccionado.png")));
+                cambiarImagenesParanoia(juego);
             }
             juego.curacionDisponible = true;
             juego.numRonda++;
@@ -247,5 +236,31 @@ public class FuncionActualizar {
                     break;
             }
         }
+    }
+    public static void cambiarImagenesParanoia(Juego juego){
+        juego.carta1Boton.setIcon(new ImageIcon(juego.carta1.getPaloCarta().imagenDefault));
+        juego.carta1Boton.setSelectedIcon(new ImageIcon(juego.carta1.getPaloCarta().imagenDefaultSeleccionada));
+        juego.carta1Boton.setPressedIcon(new ImageIcon(juego.carta1.getPaloCarta().imagenDefaultSeleccionada));
+        juego.carta1Boton.setRolloverIcon(new ImageIcon(juego.carta1.getPaloCarta().imagenDefaultSeleccionada));
+        juego.carta1Boton.setRolloverSelectedIcon(new ImageIcon(juego.carta1.getPaloCarta().imagenDefaultSeleccionada));
+        //Carta 2
+        juego.carta2Boton.setIcon(new ImageIcon(juego.carta2.getPaloCarta().imagenDefault));
+        juego.carta2Boton.setSelectedIcon(new ImageIcon(juego.carta2.getPaloCarta().imagenDefault.replace(".png","Seleccionado.png")));
+        juego.carta2Boton.setPressedIcon(new ImageIcon(juego.carta2.getPaloCarta().imagenDefault.replace(".png","Seleccionado.png")));
+        juego.carta2Boton.setRolloverIcon(new ImageIcon(juego.carta2.getPaloCarta().imagenDefault.replace(".png","Seleccionado.png")));
+        juego.carta2Boton.setRolloverSelectedIcon(new ImageIcon(juego.carta2.getPaloCarta().imagenDefault.replace(".png","Seleccionado.png")));
+        //Carta 3
+        juego.carta3Boton.setIcon(new ImageIcon(juego.carta3.getPaloCarta().imagenDefault));
+        juego.carta3Boton.setSelectedIcon(new ImageIcon(juego.carta3.getPaloCarta().imagenDefault.replace(".png","Seleccionado.png")));
+        juego.carta3Boton.setPressedIcon(new ImageIcon(juego.carta3.getPaloCarta().imagenDefault.replace(".png","Seleccionado.png")));
+        juego.carta3Boton.setRolloverIcon(new ImageIcon(juego.carta3.getPaloCarta().imagenDefault.replace(".png","Seleccionado.png")));
+        juego.carta3Boton.setRolloverSelectedIcon(new ImageIcon(juego.carta3.getPaloCarta().imagenDefault.replace(".png","Seleccionado.png")));
+        //Carta 4
+        juego.carta4Boton.setIcon(new ImageIcon(juego.carta4.getPaloCarta().imagenDefault));
+        juego.carta4Boton.setSelectedIcon(new ImageIcon(juego.carta4.getPaloCarta().imagenDefault.replace(".png","Seleccionado.png")));
+        juego.carta4Boton.setPressedIcon(new ImageIcon(juego.carta4.getPaloCarta().imagenDefault.replace(".png","Seleccionado.png")));
+        juego.carta4Boton.setRolloverIcon(new ImageIcon(juego.carta4.getPaloCarta().imagenDefault.replace(".png","Seleccionado.png")));
+        juego.carta4Boton.setRolloverSelectedIcon(new ImageIcon(juego.carta4.getPaloCarta().imagenDefault.replace(".png","Seleccionado.png")));
+
     }
 }

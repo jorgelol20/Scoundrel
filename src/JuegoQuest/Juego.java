@@ -111,6 +111,9 @@ public class Juego extends JFrame {
         new FuncionSeleccionarModificadores(this);
         obtener4Cartas();
         funcionActualizar.actualizaciones(this);
+        if (paranoia && numRonda % 5 == 0){
+            FuncionActualizar.cambiarImagenesParanoia(this);
+        }
         carta1Boton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -287,6 +290,9 @@ public class Juego extends JFrame {
         carta4Boton.setRolloverIcon(new ImageIcon(cartasMazo.getFirst().imagenCartaSeleccionada));
         carta4 = cartasMazo.getFirst();
         cartasMazo.removeFirst();
+        if (paranoia && numRonda % 5 == 0){
+            FuncionActualizar.cambiarImagenesParanoia(this);
+        }
     }
 
     public void cartasTrasHuir() {
@@ -362,12 +368,21 @@ public class Juego extends JFrame {
             cartaACambiarBoton.setIcon(new ImageIcon(cartaACambiar.getPaloCarta().imagenDefaultSeleccionada));
             if (carta1 != null){
                 carta1Boton.setIcon(new ImageIcon(carta1.getPaloCarta().imagenDefault));
+                carta1Boton.setRolloverSelectedIcon(new ImageIcon(carta1.getPaloCarta().imagenDefaultSeleccionada));
+                carta1Boton.setRolloverIcon(new ImageIcon(carta1.getPaloCarta().imagenDefaultSeleccionada));
+                carta1Boton.setPressedIcon(new ImageIcon(carta1.getPaloCarta().imagenDefaultSeleccionada));
             }
             if (carta2 != null){
                 carta2Boton.setIcon(new ImageIcon(carta2.getPaloCarta().imagenDefault));
+                carta2Boton.setRolloverSelectedIcon(new ImageIcon(carta2.getPaloCarta().imagenDefaultSeleccionada));
+                carta2Boton.setRolloverIcon(new ImageIcon(carta2.getPaloCarta().imagenDefaultSeleccionada));
+                carta2Boton.setPressedIcon(new ImageIcon(carta2.getPaloCarta().imagenDefaultSeleccionada));
             }
             if (carta3 != null) {
                 carta3Boton.setIcon(new ImageIcon(carta3.getPaloCarta().imagenDefault));
+                carta3Boton.setRolloverSelectedIcon(new ImageIcon(carta3.getPaloCarta().imagenDefaultSeleccionada));
+                carta3Boton.setRolloverIcon(new ImageIcon(carta3.getPaloCarta().imagenDefaultSeleccionada));
+                carta3Boton.setPressedIcon(new ImageIcon(carta3.getPaloCarta().imagenDefaultSeleccionada));
             }
         }else {
             cartaACambiarBoton.setIcon(new ImageIcon(cartaACambiar.imagenCartaSeleccionada));

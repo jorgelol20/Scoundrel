@@ -8,7 +8,7 @@ public class Carta {
         public final String imagenDefaultSeleccionada;
         Palo(String imagen){
             imagenDefault = imagen;
-            imagenDefaultSeleccionada = imagen;
+            imagenDefaultSeleccionada = imagen.replace(".png","Seleccionado.png");
         }
         public String getImagen(){
             return imagenDefault;

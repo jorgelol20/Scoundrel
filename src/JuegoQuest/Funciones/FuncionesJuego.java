@@ -48,12 +48,11 @@ public class FuncionesJuego {
                 }
             }
         }
-        if (cartaEnemigo.getNombreCarta().equalsIgnoreCase("ReyPica") && juego.questDracula) {
-            System.out.println("Quest Hecha");
+        if (cartaEnemigo.getNombreCarta().contains("ReyPica") && juego.questDracula) {
             Modificador.questDracula(juego);
-        }if (cartaEnemigo.getNombreCarta().equalsIgnoreCase("AsPica") && juego.questDragon) {
+        }if (cartaEnemigo.getNombreCarta().contains("AsPica") && juego.questDragon) {
             Modificador.questDragon(juego);
-        }if (cartaEnemigo.getNombreCarta().equalsIgnoreCase("CincoTrebol") && juego.questSans) {
+        }if (cartaEnemigo.getNombreCarta().contains("CincoTrebol") && juego.questSans) {
             Modificador.questSans(juego);
         }
         if (juego.pentakill){
